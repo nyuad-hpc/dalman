@@ -1,0 +1,72 @@
+Dalma Man Pages (daman) -- Shows help about different topics related to Dalma
+====
+
+## SINOPSIS  
+
+Here you will find information about the different filesystems available in 'Dalma'.
+
+In 'Dalma' there are four filesystem available. Each catering a different purpose. 
+
+Obviously every filesystem is used to stored data but users should use one or the other
+depending on the nature of their data or how it will be used.
+
+## DESCRIPTION  
+
+Here are the features of each filesystem
+
+**/home**
+
+	- 4.3 TB
+	- Program development
+	- Scripts
+	- Libraries
+	- BeeGFS file system
+	- No CLEANUP
+	- No back up
+
+**/fastscratch**
+
+	- 216 TB
+	- Results and data
+	- Very fast - 500,000 file operations per second
+	- BeeGFS file system
+	- CLEANUP policy applies (90 days guaranteed)
+
+**/archive**
+
+	- 750 TB
+	- Archive results, data, etc.
+	- Slower I/O (tape)
+	- Accessible only from "login" nodes
+	- Use of TAR / ZIP will be highly recommended
+
+**/scratch**
+
+	- 965 TB
+	- Large data and result files
+	- Lustre file system
+	- 50 GB/s bandwidth
+	- CLEANUP policy applies (90 days guaranteed)
+	- Access controlled -> must request and demonstrate need
+
+
+## ENVIRONMENT VARIABLES 
+
+$HOME => /home/$USER
+
+$ARCHIVE => /archive/$USER
+
+$FASTSCRATCH => /fastscratch/$USER
+
+$SCRATCH => /scratch/$USER    
+
+## AUTHORS 
+	NYUAD HPC Apps Team:
+	--------------------
+		- Benoit Marchand
+		- Guowei He
+		- Jorge Naranjo
+
+## SEE ALSO
+
+[Please refer to the online documentation available at:](https://sites.google.com/a/nyu.edu/hpcad/howtos "Documentation")

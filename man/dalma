@@ -1,0 +1,138 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "DALMA" "" "June 2016" "" ""
+.
+.SH "SINOPSIS"
+Here you will find a list of all the available topics for help related to \fBDalma\fR and how to call for help
+.
+.SH "DESCRIPTION"
+Users can request help on any specific topic using the following command:
+.
+.P
+\fBman dalma\-<topic>\fR
+.
+.SS "where \'topic\' can be one of:"
+.
+.IP "\(bu" 4
+\fIstorage\fR \fI\.\./html/dalma\-storage\.html\fR : Display information about the different filesystems and how to use them
+.
+.IP "\(bu" 4
+\fIqueues\fR : Display the different queues information and when to use them
+.
+.IP "\(bu" 4
+\fImodules\fR : NYUME modules description\. How to access to the available software in the system
+.
+.IP "\(bu" 4
+\fIvisualisation\fR : Do you have any visualisation needs ?
+.
+.IP "\(bu" 4
+\fIsoftware\fR : List of the available software
+.
+.IP "\(bu" 4
+\fIhardware\fR : Hardware description
+.
+.IP "\(bu" 4
+\fIlogin\fR : How to log into the system, from inside and outside NYUAD
+.
+.IP "\(bu" 4
+\fIcompiling\fR : Compilation best practices and guidelines
+.
+.IP "\(bu" 4
+\fIpolicies\fR : Want to know the limits that affect you according to NYU policies ?
+.
+.IP "\(bu" 4
+\fIdebugging\fR : How to debug your code
+.
+.IP "\(bu" 4
+\fIget_account\fR : Requesting/renewing an account in Dalma
+.
+.IP "\(bu" 4
+\fIdata_movement\fR : How to move data efficiently in/out Dalma
+.
+.IP "\(bu" 4
+\fIjob_monitoring\fR : How to monitor your job
+.
+.IP "" 0
+.
+.SS "\.\.\. and with the following options users can have access to recipes:"
+.
+.IP "\(bu" 4
+[\fIrun_jobs_interactive\fR] : How to run jobs interactively
+.
+.IP "\(bu" 4
+\fIrun_jobs_serial\fR : How to run serial jobs
+.
+.IP "\(bu" 4
+\fIrun_jobs_mpi\fR : How to run parallel (mpi) jobs
+.
+.IP "\(bu" 4
+\fIrun_jobs_threads\fR : How to run parallel (threaded/openmp) jobs
+.
+.IP "\(bu" 4
+\fIrun_job_array\fR : What is a job array and how to use it
+.
+.IP "\(bu" 4
+\fIrun_job_bigmem\fR : What should you do when you have a memory bound job
+.
+.IP "\(bu" 4
+\fIrun_parallel_job_array\fR : What is a parallel job array and how to use it
+.
+.IP "\(bu" 4
+\fIrun_job_dependencies\fR : How to run jobs with dependencies
+.
+.IP "\(bu" 4
+\fIrun_gaussian_tcplinda\fR : How to run Gaussian using TCP\-Linda
+.
+.IP "\(bu" 4
+\fIrun_wien2k\fR : How to run Wien2K
+.
+.IP "\(bu" 4
+\fIrun_python\fR : How to run Python, personalized environments and Anaconda
+.
+.IP "\(bu" 4
+\fIrun_perl\fR : How to run perl jobs
+.
+.IP "\(bu" 4
+\fIrun_r\fR : How to run R, personalized environments and Anaconda
+.
+.IP "\(bu" 4
+\fIrun_matlab\fR : How to run Matlab, serial and parallel toolbox
+.
+.IP "" 0
+.
+.SH "EXAMPLES"
+\fBman dalma\-storage\fR
+.
+.P
+\fBman dalma\-queues\fR
+.
+.P
+\fBman dalma\-modules\fR
+.
+.P
+\fBman dalma\-hardware\fR
+.
+.P
+\fBman dalma\-run_jobs_mpi\fR
+.
+.P
+\fBman dalma\-run_bigmem\fR
+.
+.P
+\fBman dalma\-run_matlab\fR
+.
+.SH "AUTHORS"
+.
+.nf
+
+NYUAD HPC Apps Team:
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+    \- Benoit Marchand
+    \- Guowei He
+    \- Jorge Naranjo
+.
+.fi
+.
+.SH "SEE ALSO"
+Please refer to the online documentation available at: \fIhttps://sites\.google\.com/a/nyu\.edu/hpcad/howtos\fR
