@@ -1,0 +1,19 @@
+Dalma Man Pages (daman) -- Shows help about different topics related to Dalma
+====
+
+## SYNOPSIS  
+
+## DESCRIPTION  
+
+
+
+## AUTHORS 
+	NYUAD HPC Apps Team:
+	--------------------
+		- Benoit Marchand
+		- Guowei He
+		- Jorge Naranjo
+
+## SEE ALSO
+
+[Please refer to the online documentation available at:](https://sites.google.com/a/nyu.edu/hpcad/howtos "Documentation")
