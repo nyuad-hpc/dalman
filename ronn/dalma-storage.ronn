@@ -1,7 +1,7 @@
 Dalma Man Pages (daman) -- Shows help about different topics related to Dalma
 ====
 
-## SINOPSIS  
+## SYNOPSIS  
 
 Here you will find information about the different filesystems available in 'Dalma'.
 

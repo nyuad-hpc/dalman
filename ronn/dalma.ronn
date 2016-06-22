@@ -1,7 +1,7 @@
 Dalma Man Pages (daman) -- Shows help about different topics related to Dalma
 =============================================================================
 
-## SINOPSIS  
+## SYNOPSIS  
 
 Here you will find a list of all the available topics for help related to __Dalma__ and how to call for help
 
