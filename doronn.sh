@@ -1,7 +1,15 @@
 #!/bin/bash 
 
-module purge
-module load ruby
+
+if [ "$(type -t module)" = function ]; 
+then
+    module purge
+    module load ruby
+elif [ ! "$(type -t ronn)" = file ];
+then
+    echo "ronn not available"
+    exit 1
+fi
 
 dirpath=`dirname $0`
 
