@@ -3,7 +3,44 @@ Dalma Man Pages (dalman)
 
 ## SYNOPSIS  
 
+With new new scheduler SLURM, the concept of queue has changed. Now queues are referred as _partitions_
+
+There are only three partitions (queues): 'parallel', 'serial' and 'preempt'
+
 ## DESCRIPTION  
+
+With new new scheduler SLURM, the concept of queue has changed. Now queues are referred as _partitions_
+
+There are only three partitions (queues): 'parallel', 'serial' and 'preempt'
+
+With Slurm is possible to use the old _qsub_ command (although compatibility is not 100% guaranteed) which means that some of the old queues could still work.
+In this case they will be redirected to either 'serial' or 'parallel':
+
+	- s48 --> serial
+	- adserial --> serial
+	- p24 --> parallel 
+	- adparallel --> parallel 
+
+
+Now there is no 'interactive' queue anymore. Interactive jobs can be started either in 'parallel' or 'serial'
+
+There is no more 'gpu' or 'bigmem' queues
+
+## EXAMPLES 
+
+The correct way to select a partition (queue) is with the **-p** option in the submission script:
+
+\#SBATCH -p parallel  
+
+or
+
+\#SBATCH -p serial
+
+If the user has an old PBS script the following may still work:
+
+\#PBS -q p24
+
+But remember that in this case will be redirected to the partition 'parallel'
 
 
 

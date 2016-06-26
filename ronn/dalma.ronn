@@ -31,10 +31,10 @@ Users can request help on any specific topic using the following command:
 
 ### ... and with the following options users can have access to recipes:
 
-- [_run_jobs_interactive_] : How to run jobs interactively	
-- _run_jobs_serial_	   : How to run serial jobs
-- _run_jobs_mpi_	   : How to run parallel (mpi) jobs
-- _run_jobs_threads_	   : How to run parallel (threaded/openmp) jobs
+- [_run_job_interactive_]  : How to run jobs interactively	
+- _run_job_serial_	   : How to run serial jobs
+- _run_job_mpi_	  	   : How to run parallel (mpi) jobs
+- _run_job_threads_	   : How to run parallel (threaded/openmp) jobs
 - _run_job_array_	   : What is a job array and how to use it
 - _run_job_bigmem_	   : What should you do when you have a memory bound job
 - _run_parallel_job_array_ : What is a parallel job array and how to use it

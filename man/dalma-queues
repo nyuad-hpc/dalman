@@ -4,8 +4,59 @@
 .TH "DALMA\-QUEUES" "" "June 2016" "" ""
 .
 .SH "SYNOPSIS"
+With new new scheduler SLURM, the concept of queue has changed\. Now queues are referred as \fIpartitions\fR
+.
+.P
+There are only three partitions (queues): \'parallel\', \'serial\' and \'preempt\'
 .
 .SH "DESCRIPTION"
+With new new scheduler SLURM, the concept of queue has changed\. Now queues are referred as \fIpartitions\fR
+.
+.P
+There are only three partitions (queues): \'parallel\', \'serial\' and \'preempt\'
+.
+.P
+With Slurm is possible to use the old \fIqsub\fR command (although compatibility is not 100% guaranteed) which means that some of the old queues could still work\. In this case they will be redirected to either \'serial\' or \'parallel\':
+.
+.IP "" 4
+.
+.nf
+
+\- s48 \-\-> serial
+\- adserial \-\-> serial
+\- p24 \-\-> parallel
+\- adparallel \-\-> parallel
+.
+.fi
+.
+.IP "" 0
+.
+.P
+Now there is no \'interactive\' queue anymore\. Interactive jobs can be started either in \'parallel\' or \'serial\'
+.
+.P
+There is no more \'gpu\' or \'bigmem\' queues
+.
+.SH "EXAMPLES"
+The correct way to select a partition (queue) is with the \fB\-p\fR option in the submission script:
+.
+.P
+#SBATCH \-p parallel
+.
+.P
+or
+.
+.P
+#SBATCH \-p serial
+.
+.P
+If the user has an old PBS script the following may still work:
+.
+.P
+#PBS \-q p24
+.
+.P
+But remember that in this case will be redirected to the partition \'parallel\'
 .
 .SH "AUTHORS"
 .

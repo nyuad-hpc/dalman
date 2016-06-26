@@ -55,6 +55,7 @@
   <div class='man-navigation' style='display:none'>
     <a href="#SYNOPSIS">SYNOPSIS</a>
     <a href="#DESCRIPTION">DESCRIPTION</a>
+    <a href="#EXAMPLES">EXAMPLES</a>
     <a href="#AUTHORS">AUTHORS</a>
     <a href="#SEE-ALSO">SEE ALSO</a>
   </div>
@@ -68,7 +69,44 @@
   <h1>Dalma Man Pages (dalman) </h1>
 <h2 id="SYNOPSIS">SYNOPSIS</h2>
 
+<p>With new new scheduler SLURM, the concept of queue has changed. Now queues are referred as <em>partitions</em></p>
+
+<p>There are only three partitions (queues): 'parallel', 'serial' and 'preempt'</p>
+
 <h2 id="DESCRIPTION">DESCRIPTION</h2>
+
+<p>With new new scheduler SLURM, the concept of queue has changed. Now queues are referred as <em>partitions</em></p>
+
+<p>There are only three partitions (queues): 'parallel', 'serial' and 'preempt'</p>
+
+<p>With Slurm is possible to use the old <em>qsub</em> command (although compatibility is not 100% guaranteed) which means that some of the old queues could still work.
+In this case they will be redirected to either 'serial' or 'parallel':</p>
+
+<pre><code>- s48 --&gt; serial
+- adserial --&gt; serial
+- p24 --&gt; parallel 
+- adparallel --&gt; parallel 
+</code></pre>
+
+<p>Now there is no 'interactive' queue anymore. Interactive jobs can be started either in 'parallel' or 'serial'</p>
+
+<p>There is no more 'gpu' or 'bigmem' queues</p>
+
+<h2 id="EXAMPLES">EXAMPLES</h2>
+
+<p>The correct way to select a partition (queue) is with the <strong>-p</strong> option in the submission script:</p>
+
+<p>#SBATCH -p parallel</p>
+
+<p>or</p>
+
+<p>#SBATCH -p serial</p>
+
+<p>If the user has an old PBS script the following may still work:</p>
+
+<p>#PBS -q p24</p>
+
+<p>But remember that in this case will be redirected to the partition 'parallel'</p>
 
 <h2 id="AUTHORS">AUTHORS</h2>
 
