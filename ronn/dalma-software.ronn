@@ -1,4 +1,4 @@
-Dalma Man Pages (daman) 
+Dalma Man Pages (dalman) 
 ====
 
 ## SYNOPSIS  
