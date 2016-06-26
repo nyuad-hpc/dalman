@@ -18,7 +18,7 @@ Users can request help on any specific topic using the following command:
 \fIstorage\fR \fI\.\./html/dalma\-storage\.html\fR : Display information about the different filesystems and how to use them
 .
 .IP "\(bu" 4
-\fIqueues\fR \fI\.\./html/dalma\-queues\fR : Display the different queues information and when to use them
+\fIqueues\fR \fI\.\./html/dalma\-queues\.html\fR : Display the different queues information and when to use them
 .
 .IP "\(bu" 4
 \fImodules\fR : NYUME modules description\. How to access to the available software in the system
@@ -64,7 +64,7 @@ Users can request help on any specific topic using the following command:
 \fIrun_job_serial\fR : How to run serial jobs
 .
 .IP "\(bu" 4
-\fIrun_job_mpi\fR \fI\.\./html/dalma\-run_job_mpi\fR : How to run parallel (mpi) jobs
+\fIrun_job_mpi\fR \fI\.\./html/dalma\-run_job_mpi\.html\fR : How to run parallel (mpi) jobs
 .
 .IP "\(bu" 4
 \fIrun_job_threads\fR : How to run parallel (threaded/openmp) jobs
