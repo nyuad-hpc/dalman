@@ -3,7 +3,67 @@ Dalma Man Pages (dalman)
 
 ## SYNOPSIS  
 
+SLURM has a tight integration with almost any MPI implementation. It has it's own launcher called **srun** but any MPI launcher as **mpirun** provided by the MPI implementation will work
+
 ## DESCRIPTION  
+
+SLURM has a tight integration with almost any MPI implementation. It has it's own launcher called **srun** which is smart enough to know the specifics of the MPI needed to run a specific application.
+Also, any MPI launcher as **mpirun** provided by the MPI implementation will work but in this case the environment need to know about the MPI implementation and where to find the launcher (mpirun). That's why the users need to load the requiered module if they choose to start an MPI app with the MPI implementation launcher.
+
+## EXAMPLES
+
+\----------------------------------------------------------
+
+starting MPI app using slurm launcher **srun**
+
+\----------------------------------------------------------
+
+`#!/bin/bash` 
+
+`# Number of MPI tasks (default 1 core per task)`
+
+`#SBATCH -n 56`
+
+`#SBATCH -p parallel`  
+
+`#SBATCH -o job.%J.out`
+
+`#SBATCH -e job.%J.err`
+
+`# Load modules here (safety measure)`
+
+`module purge`
+
+`srun   ./mpi-hello`
+
+
+\----------------------------------------------------------
+
+starting MPI app using MPI launcher **mpirun**
+
+\----------------------------------------------------------
+
+`#!/bin/bash` 
+
+`# Number of MPI tasks (default 1 core per task)`
+
+`#SBATCH -n 56`
+
+`# Parallel partition nodes are exclusive`
+
+`#SBATCH -p parallel`
+
+`#SBATCH -o job.%J.out`
+
+`#SBATCH -e job.%J.err`
+
+`# Load modules here (safety measure)`
+
+`module purge`
+
+`module load openmpi`
+
+`mpirun ./mpi-hello`
 
 
 
