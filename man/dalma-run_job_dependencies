@@ -1,0 +1,23 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "DALMA\-RUN_JOB_DEPENDENCIES" "" "June 2016" "" ""
+.
+.SH "SYNOPSIS"
+.
+.SH "DESCRIPTION"
+.
+.SH "AUTHORS"
+.
+.nf
+
+NYUAD HPC Apps Team:
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+    \- Benoit Marchand
+    \- Guowei He
+    \- Jorge Naranjo
+.
+.fi
+.
+.SH "SEE ALSO"
+Please refer to the online documentation available at: \fIhttps://sites\.google\.com/a/nyu\.edu/hpcad/howtos\fR

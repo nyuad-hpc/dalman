@@ -1,4 +1,4 @@
-Dalma Man Pages (daman) -- Shows help about different topics related to Dalma
+Dalma Man Pages (daman)
 ====
 
 ## SYNOPSIS  
