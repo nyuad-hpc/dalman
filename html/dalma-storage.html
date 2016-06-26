@@ -3,9 +3,7 @@
 <head>
   <meta http-equiv='content-type' value='text/html;charset=utf8'>
   <meta name='generator' value='Ronn/v0.7.3 (http://github.com/rtomayko/ronn/tree/0.7.3)'>
-  <title>&lt;p&gt;Dalma Man Pages (daman)&lt;/p&gt;
-
- Shows help about different topics related to Dalma</title>
+  <title>Dalma Man Pages (dalman) </title>
   <style type='text/css' media='all'>
   /* style: man */
   body#manpage {margin:0}
@@ -68,9 +66,7 @@
     <li class='tr'>dalma-storage</li>
   </ol>
 
-  <h1><p>Dalma Man Pages (daman)</p>
-
- Shows help about different topics related to Dalma</h1>
+  <h1>Dalma Man Pages (dalman) </h1>
 <h2 id="SYNOPSIS">SYNOPSIS</h2>
 
 <p>Here you will find information about the different filesystems available in 'Dalma'.</p>
@@ -80,47 +76,57 @@
 <p>Obviously every filesystem is used to stored data but users should use one or the other
 depending on the nature of their data or how it will be used.</p>
 
+<p><strong>WARNING:</strong>  there is no automatic backup of '/home'; users must copy files to '/archive' for tape storage.</p>
+
 <h2 id="DESCRIPTION">DESCRIPTION</h2>
 
 <p>Here are the features of each filesystem</p>
 
 <p><strong>/home</strong></p>
 
-<pre><code>- 4.3 TB
-- Program development
-- Scripts
-- Libraries
+<pre><code>- 4.3 TB total size
 - BeeGFS file system
+- For general use
+- Not optimized for demanding I/O
+- Designed for storing programs, libraries, scripts and etc.
 - No CLEANUP
 - No back up
+- User's quota: 5GB and 100.000 files 
 </code></pre>
 
 <p><strong>/fastscratch</strong></p>
 
-<pre><code>- 216 TB
-- Results and data
-- Very fast - 500,000 file operations per second
+<pre><code>- 216 TB total size
 - BeeGFS file system
+- Very fast - 500,000 file operations per second
+- Optimised for small files (eg &lt; 10MB)
+- Designed for use with serial apps (non-MPI)
 - CLEANUP policy applies (90 days guaranteed)
+- User's quota: 2TB and 500.000 files 
 </code></pre>
 
 <p><strong>/archive</strong></p>
 
-<pre><code>- 750 TB
+<pre><code>- 750 TB total size
 - Archive results, data, etc.
 - Slower I/O (tape)
 - Accessible only from "login" nodes
 - Use of TAR / ZIP will be highly recommended
+- Designed for long term storage
+- User's quota: 2TB and 500.000 files 
 </code></pre>
 
 <p><strong>/scratch</strong></p>
 
-<pre><code>- 965 TB
-- Large data and result files
+<pre><code>- 965 TB total size
 - Lustre file system
+- Large data and result files
+- Optimised for large files (eg &gt; 100MB)
+- Designed for use with large MPI apps
 - 50 GB/s bandwidth
 - CLEANUP policy applies (90 days guaranteed)
 - Access controlled -&gt; must request and demonstrate need
+- User's quota: 5TB and 500.000 files 
 </code></pre>
 
 <h2 id="ENVIRONMENT-VARIABLES">ENVIRONMENT VARIABLES</h2>
