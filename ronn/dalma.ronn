@@ -1,6 +1,6 @@
 Dalma Man Pages (daman) 
 
-Shows help about different topics related to Dalma
+ Shows help about different topics related to Dalma
 =============================================================================
 
 ## SYNOPSIS  
