@@ -1,0 +1,103 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "DALMA\-RUN_JOB_MPI" "" "June 2016" "" ""
+.
+.SH "SYNOPSIS"
+SLURM has a tight integration with almost any MPI implementation\. It has it\'s own launcher called \fBsrun\fR but any MPI launcher as \fBmpirun\fR provided by the MPI implementation will work
+.
+.SH "DESCRIPTION"
+SLURM has a tight integration with almost any MPI implementation\. It has it\'s own launcher called \fBsrun\fR which is smart enough to know the specifics of the MPI needed to run a specific application\. Also, any MPI launcher as \fBmpirun\fR provided by the MPI implementation will work but in this case the environment need to know about the MPI implementation and where to find the launcher (mpirun)\. That\'s why the users need to load the requiered module if they choose to start an MPI app with the MPI implementation launcher\.
+.
+.SH "EXAMPLES"
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.P
+starting MPI app using slurm launcher \fBsrun\fR
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.P
+\fB#!/bin/bash\fR
+.
+.P
+\fB# Number of MPI tasks (default 1 core per task)\fR
+.
+.P
+\fB#SBATCH \-n 56\fR
+.
+.P
+\fB#SBATCH \-p parallel\fR
+.
+.P
+\fB#SBATCH \-o job\.%J\.out\fR
+.
+.P
+\fB#SBATCH \-e job\.%J\.err\fR
+.
+.P
+\fB# Load modules here (safety measure)\fR
+.
+.P
+\fBmodule purge\fR
+.
+.P
+\fBsrun \./mpi\-hello\fR
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.P
+starting MPI app using MPI launcher \fBmpirun\fR
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.P
+\fB#!/bin/bash\fR
+.
+.P
+\fB# Number of MPI tasks (default 1 core per task)\fR
+.
+.P
+\fB#SBATCH \-n 56\fR
+.
+.P
+\fB# Parallel partition nodes are exclusive\fR
+.
+.P
+\fB#SBATCH \-p parallel\fR
+.
+.P
+\fB#SBATCH \-o job\.%J\.out\fR
+.
+.P
+\fB#SBATCH \-e job\.%J\.err\fR
+.
+.P
+\fB# Load modules here (safety measure)\fR
+.
+.P
+\fBmodule purge\fR
+.
+.P
+\fBmodule load openmpi\fR
+.
+.P
+\fBmpirun \./mpi\-hello\fR
+.
+.SH "AUTHORS"
+.
+.nf
+
+NYUAD HPC Apps Team:
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+    \- Benoit Marchand
+    \- Guowei He
+    \- Jorge Naranjo
+.
+.fi
+.
+.SH "SEE ALSO"
+Please refer to the online documentation available at: \fIhttps://sites\.google\.com/a/nyu\.edu/hpcad/howtos\fR
