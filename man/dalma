@@ -18,7 +18,7 @@ Users can request help on any specific topic using the following command:
 \fIstorage\fR \fI\.\./html/dalma\-storage\.html\fR : Display information about the different filesystems and how to use them
 .
 .IP "\(bu" 4
-\fIqueues\fR : Display the different queues information and when to use them
+\fIqueues\fR \fI\.\./html/dalma\-queues\fR : Display the different queues information and when to use them
 .
 .IP "\(bu" 4
 \fImodules\fR : NYUME modules description\. How to access to the available software in the system
@@ -58,16 +58,16 @@ Users can request help on any specific topic using the following command:
 .SS "\.\.\. and with the following options users can have access to recipes:"
 .
 .IP "\(bu" 4
-[\fIrun_jobs_interactive\fR] : How to run jobs interactively
+[\fIrun_job_interactive\fR] : How to run jobs interactively
 .
 .IP "\(bu" 4
-\fIrun_jobs_serial\fR : How to run serial jobs
+\fIrun_job_serial\fR : How to run serial jobs
 .
 .IP "\(bu" 4
-\fIrun_jobs_mpi\fR : How to run parallel (mpi) jobs
+\fIrun_job_mpi\fR \fI\.\./html/dalma\-run_job_mpi\fR : How to run parallel (mpi) jobs
 .
 .IP "\(bu" 4
-\fIrun_jobs_threads\fR : How to run parallel (threaded/openmp) jobs
+\fIrun_job_threads\fR : How to run parallel (threaded/openmp) jobs
 .
 .IP "\(bu" 4
 \fIrun_job_array\fR : What is a job array and how to use it

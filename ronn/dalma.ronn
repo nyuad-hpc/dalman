@@ -16,7 +16,7 @@ Users can request help on any specific topic using the following command:
 ### where 'topic' can be one of:
 
 - [_storage_](../html/dalma-storage.html)        : Display information about the different filesystems and how to use them
-- _queues_         : Display the different queues information and when to use them
+- [_queues_](../html/dalma-queues)	         : Display the different queues information and when to use them
 - _modules_        : NYUME modules description. How to access to the available software in the system 
 - _visualisation_  : Do you have any visualisation needs ?
 - _software_       : List of the available software
@@ -33,7 +33,7 @@ Users can request help on any specific topic using the following command:
 
 - [_run_job_interactive_]  : How to run jobs interactively	
 - _run_job_serial_	   : How to run serial jobs
-- _run_job_mpi_	  	   : How to run parallel (mpi) jobs
+- [_run_job_mpi_](../html/dalma-run_job_mpi)  : How to run parallel (mpi) jobs
 - _run_job_threads_	   : How to run parallel (threaded/openmp) jobs
 - _run_job_array_	   : What is a job array and how to use it
 - _run_job_bigmem_	   : What should you do when you have a memory bound job
