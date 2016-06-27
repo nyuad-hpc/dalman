@@ -15,7 +15,7 @@ Users can request help on any specific topic using the following command:
 .SS "where \'topic\' can be one of:"
 .
 .IP "\(bu" 4
-\fIstorage\fR(\.\./html/dalma\-storage\.html) : Display information about the different filesystems and how to use them
+\fI\fIstorage\fR\fR : Display information about the different filesystems and how to use them
 .
 .IP "\(bu" 4
 \fIqueues\fR \fI\.\./html/dalma\-queues\.html\fR : Display the different queues information and when to use them
