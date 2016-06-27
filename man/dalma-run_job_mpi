@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "DALMA\-RUN_JOB_MPI" "" "June 2016" "" ""
+.TH "DALMA\-RUN_JOB_MPI" "" "June 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
 SLURM has a tight integration with almost any MPI implementation\. It has it\'s own launcher called \fBsrun\fR but any MPI launcher as \fBmpirun\fR provided by the MPI implementation will work
