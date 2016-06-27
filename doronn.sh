@@ -18,7 +18,7 @@ for f in $@
 do
 	if [ -f  $f ]; then 
 		manfile=`basename $f | cut -d "." -f 1`
-		ronn $f
+		ronn --style=toc $f
 		mv $dirpath/ronn/$manfile.html $dirpath/html/
 		mv $dirpath/ronn/$manfile      $dirpath/man/
 	fi
