@@ -61,6 +61,9 @@ slurm_environment \fI\.\./html/dalma\-slurm_environment\.html\fR : Environment v
 .IP "\(bu" 4
 slurm_commands \fI\.\./html/dalma\-slurm_commands\.html\fR : Commands most commonly used by users
 .
+.IP "\(bu" 4
+slurm_sbatch \fI\.\./html/dalma\-slurm_sbatch\.html\fR : sbatch options to be used inside the submission script or invoking \'sbatch\' from the command line
+.
 .IP "" 0
 .
 .SH "RECIPE TOPICS"
