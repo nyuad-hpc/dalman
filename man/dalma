@@ -14,90 +14,94 @@ Users can request help on any specific topic using the following command:
 .
 .SS "where \'topic\' can be one of:"
 .
-.IP "\(bu" 4
-storage \fI\.\./html/dalma\-storage\.html\fR : Display information about the different filesystems and how to use them
+.br
 .
 .IP "\(bu" 4
-\fIqueues\fR \fI\.\./html/dalma\-queues\.html\fR : Display the different queues information and when to use them
+[storage][] : Display information about the different filesystems and how to use them
 .
 .IP "\(bu" 4
-\fImodules\fR : NYUME modules description\. How to access to the available software in the system
+queues \fI\.\./html/dalma\-queues\.html\fR : Display the different login information and when to use them
 .
 .IP "\(bu" 4
-\fIvisualisation\fR : Do you have any visualisation needs ?
+modules \fI\.\./html/dalma\-modules\.html\fR : NYUME login description\. How to access to the available software in the system
 .
 .IP "\(bu" 4
-\fIsoftware\fR : List of the available software
+visualisation \fI\.\./html/dalma\-visualisation\.html\fR : Do you have any login needs ?
 .
 .IP "\(bu" 4
-\fIhardware\fR : Hardware description
+software \fI\.\./html/dalma\-software\.html\fR : List of the available login
 .
 .IP "\(bu" 4
-\fIlogin\fR : How to log into the system, from inside and outside NYUAD
+hardware \fI\.\./html/dalma\-hardware\.html\fR : Hardware description
 .
 .IP "\(bu" 4
-\fIcompiling\fR : Compilation best practices and guidelines
+login \fI\.\./html/dalma\-login\.html\fR : How to log into the system, from inside and outside NYUAD
 .
 .IP "\(bu" 4
-\fIpolicies\fR : Want to know the limits that affect you according to NYU policies ?
+compiling \fI\.\./html/dalma\-compiling\.html\fR : Compilation best practices and guidelines
 .
 .IP "\(bu" 4
-\fIdebugging\fR : How to debug your code
+policies \fI\.\./html/dalma\-policies\.html\fR : Want to know the limits that affect you according to NYU policies ?
 .
 .IP "\(bu" 4
-\fIget_account\fR : Requesting/renewing an account in Dalma
+debugging \fI\.\./html/dalma\-debugging\.html\fR : How to debug your code
 .
 .IP "\(bu" 4
-\fIdata_movement\fR : How to move data efficiently in/out Dalma
+get_account \fI\.\./html/dalma\-get_account\.html\fR : Requesting/renewing an account in Dalma
 .
 .IP "\(bu" 4
-\fIjob_monitoring\fR : How to monitor your job
+data_movement \fI\.\./html/dalma\-data_movement\.html\fR : How to move data efficiently in/out Dalma
+.
+.IP "\(bu" 4
+job_monitoring \fI\.\./html/dalma\-job_monitoring\.html\fR : How to monitor your job
 .
 .IP "" 0
 .
 .SS "\.\.\. and with the following options users can have access to recipes:"
 .
-.IP "\(bu" 4
-[\fIrun_job_interactive\fR] : How to run jobs interactively
+.br
 .
 .IP "\(bu" 4
-\fIrun_job_serial\fR : How to run serial jobs
+run_job_interactive \fI\.\./html/dalma\-job_interactive\.html\fR : How to run jobs interactively
 .
 .IP "\(bu" 4
-\fIrun_job_mpi\fR \fI\.\./html/dalma\-run_job_mpi\.html\fR : How to run parallel (mpi) jobs
+run_job_serial \fI\.\./html/dalma\-run_job_serial\.html\fR : How to run serial jobs
 .
 .IP "\(bu" 4
-\fIrun_job_threads\fR : How to run parallel (threaded/openmp) jobs
+run_job_mpi \fI\.\./html/dalma\-run_job_mpi\.html\fR : How to run parallel (mpi) jobs
 .
 .IP "\(bu" 4
-\fIrun_job_array\fR : What is a job array and how to use it
+run_job_threads \fI\.\./html/dalma\-run_job_threads\.html\fR : How to run parallel (threaded/openmp) jobs
 .
 .IP "\(bu" 4
-\fIrun_job_bigmem\fR : What should you do when you have a memory bound job
+run_job_array \fI\.\./html/dalma\-run_job_array\.html\fR : What is a job array and how to use it
 .
 .IP "\(bu" 4
-\fIrun_parallel_job_array\fR : What is a parallel job array and how to use it
+run_job_bigmem \fI\.\./html/dalma\-run_job_bigmem\.html\fR : What should you do when you have a memory bound job
 .
 .IP "\(bu" 4
-\fIrun_job_dependencies\fR : How to run jobs with dependencies
+run_parallel_job_array \fI\.\./html/dalma\-run_parallel_job_array\.html\fR : What is a parallel job array and how to use it
 .
 .IP "\(bu" 4
-\fIrun_gaussian_tcplinda\fR : How to run Gaussian using TCP\-Linda
+run_job_dependencies \fI\.\./html/dalma\-run_job_dependencies\.html\fR : How to run jobs with dependencies
 .
 .IP "\(bu" 4
-\fIrun_wien2k\fR : How to run Wien2K
+run_gaussian_tcplinda \fI\.\./html/dalma\-run_gaussian_tcplinda\.html\fR : How to run Gaussian using TCP\-Linda
 .
 .IP "\(bu" 4
-\fIrun_python\fR : How to run Python, personalized environments and Anaconda
+run_wien2k \fI\.\./html/dalma\-run_wien2k\.html\fR : How to run Wien2K
 .
 .IP "\(bu" 4
-\fIrun_perl\fR : How to run perl jobs
+run_python \fI\.\./html/dalma\-run_python\.html\fR : How to run Python, personalized environments and Anaconda
 .
 .IP "\(bu" 4
-\fIrun_r\fR : How to run R, personalized environments and Anaconda
+run_perl \fI\.\./html/dalma\-run_perl\.html\fR : How to run perl jobs
 .
 .IP "\(bu" 4
-\fIrun_matlab\fR : How to run Matlab, serial and parallel toolbox
+run_r \fI\.\./html/dalma\-run_r\.html\fR : How to run R, personalized environments and Anaconda
+.
+.IP "\(bu" 4
+run_matlab \fI\.\./html/dalma\-run_matlab\.html\fR : How to run Matlab, serial and parallel toolbox
 .
 .IP "" 0
 .

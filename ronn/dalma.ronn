@@ -13,40 +13,73 @@ Users can request help on any specific topic using the following command:
 
 `man dalma-<topic>`
 
-### where 'topic' can be one of:
+
+
+# Remove the following when creating a man page ... uncomment only for web
 
 [storage]: ../html/dalma-storage.html  "storage"
+[queues]: ../html/dalma-queues.html  "queues"
+[modules]: ../html/dalma-modules.html  "modules"
+[visualisation]: ../html/dalma-visualisation.html  "visualisation"
+[software]: ../html/dalma-software.html  "software"
+[hardware]: ../html/dalma-hardware.html  "hardware"
+[login]: ../html/dalma-login.html  "login"
+[compiling]: ../html/dalma-compiling.html  "compiling"
+[policies]: ../html/dalma-policies.html  "policies"
+[debugging]: ../html/dalma-debugging.html  "debugging"
+[get_account]: ../html/dalma-get_account.html  "get_account"
+[data_movement]: ../html/dalma-data_movement.html  "data_movement"
+[job_monitoring]: ../html/dalma-job_monitoring.html  "job_monitoring"
 
-- [storage][]    : Display information about the different filesystems and how to use them
-- [_queues_](../html/dalma-queues.html)	         : Display the different queues information and when to use them
-- _modules_        : NYUME modules description. How to access to the available software in the system 
-- _visualisation_  : Do you have any visualisation needs ?
-- _software_       : List of the available software
-- _hardware_       : Hardware description
-- _login_          : How to log into the system, from inside and outside NYUAD
-- _compiling_      : Compilation best practices and guidelines
-- _policies_       : Want to know the limits that affect you according to NYU policies ? 
-- _debugging_      : How to debug your code
-- _get_account_    : Requesting/renewing an account in Dalma
-- _data_movement_  : How to move data efficiently in/out Dalma
-- _job_monitoring_ : How to monitor your job
+[run_job_interactive]: ../html/dalma-job_interactive.html "run_job_interactive"
+[run_job_serial]: ../html/dalma-run_job_serial.html "run_job_serial"
+[run_job_mpi]: ../html/dalma-run_job_mpi.html "run_job_mpi"
+[run_job_threads]: ../html/dalma-run_job_threads.html "run_job_threads"
+[run_job_array]: ../html/dalma-run_job_array.html "run_job_array"
+[run_job_bigmem]: ../html/dalma-run_job_bigmem.html "run_job_bigmem"
+[run_parallel_job_array]: ../html/dalma-run_parallel_job_array.html  "run_parallel_job_array"
+[run_job_dependencies]: ../html/dalma-run_job_dependencies.html  "run_job_dependencies"
+[run_gaussian_tcplinda]: ../html/dalma-run_gaussian_tcplinda.html  "run_gaussian_tcplinda"
+[run_wien2k]: ../html/dalma-run_wien2k.html  "run_wien2k"
+[run_python]: ../html/dalma-run_python.html  "run_python"
+[run_perl]: ../html/dalma-run_perl.html  "run_perl"
+[run_r]: ../html/dalma-run_r.html  "run_r"
+[run_matlab]: ../html/dalma-run_matlab.html  "run_matlab"
+
+### where 'topic' can be one of:
+<br />  
+
+- [storage][]        : Display information about the different filesystems and how to use them
+- [queues][]         : Display the different login information and when to use them
+- [modules][]        : NYUME login description. How to access to the available software in the system 
+- [visualisation][]  : Do you have any login needs ?
+- [software][]       : List of the available login
+- [hardware][]       : Hardware description
+- [login][]          : How to log into the system, from inside and outside NYUAD
+- [compiling][]      : Compilation best practices and guidelines
+- [policies][]       : Want to know the limits that affect you according to NYU policies ? 
+- [debugging][]      : How to debug your code
+- [get_account][]    : Requesting/renewing an account in Dalma
+- [data_movement][]  : How to move data efficiently in/out Dalma
+- [job_monitoring][] : How to monitor your job
 
 ### ... and with the following options users can have access to recipes:
-
-- [_run_job_interactive_]  : How to run jobs interactively	
-- _run_job_serial_	   : How to run serial jobs
-- [_run_job_mpi_](../html/dalma-run_job_mpi.html)  : How to run parallel (mpi) jobs
-- _run_job_threads_	   : How to run parallel (threaded/openmp) jobs
-- _run_job_array_	   : What is a job array and how to use it
-- _run_job_bigmem_	   : What should you do when you have a memory bound job
-- _run_parallel_job_array_ : What is a parallel job array and how to use it
-- _run_job_dependencies_   : How to run jobs with dependencies
-- _run_gaussian_tcplinda_  : How to run Gaussian using TCP-Linda
-- _run_wien2k_		   : How to run Wien2K
-- _run_python_		   : How to run Python, personalized environments and Anaconda
-- _run_perl_		   : How to run perl jobs
-- _run_r_		   : How to run R,  personalized environments and Anaconda
-- _run_matlab_		   : How to run Matlab, serial and parallel toolbox
+<br /> 
+ 
+- [run_job_interactive][]  	: How to run jobs interactively	
+- [run_job_serial][]	   	: How to run serial jobs
+- [run_job_mpi][] 	   	: How to run parallel (mpi) jobs
+- [run_job_threads][]	   	: How to run parallel (threaded/openmp) jobs
+- [run_job_array][]	   	: What is a job array and how to use it
+- [run_job_bigmem][]	   	: What should you do when you have a memory bound job
+- [run_parallel_job_array][] 	: What is a parallel job array and how to use it
+- [run_job_dependencies][]   	: How to run jobs with dependencies
+- [run_gaussian_tcplinda][]  	: How to run Gaussian using TCP-Linda
+- [run_wien2k][]		: How to run Wien2K
+- [run_python][]		: How to run Python, personalized environments and Anaconda
+- [run_perl][]		 	: How to run perl jobs
+- [run_r][]		   	: How to run R,  personalized environments and Anaconda
+- [run_matlab][]		: How to run Matlab, serial and parallel toolbox
 
 ## EXAMPLES 
 
