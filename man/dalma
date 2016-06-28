@@ -71,7 +71,7 @@ slurm_sbatch \fI\.\./html/dalma\-slurm_sbatch\.html\fR : sbatch options to be us
 .SS "with the following options users can have access to recipes:"
 .
 .IP "\(bu" 4
-run_job_interactive \fI\.\./html/dalma\-job_interactive\.html\fR : How to run jobs interactively
+run_job_interactive \fI\.\./html/dalma\-run_job_interactive\.html\fR : How to run jobs interactively
 .
 .IP "\(bu" 4
 run_job_serial \fI\.\./html/dalma\-run_job_serial\.html\fR : How to run serial jobs
