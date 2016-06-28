@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv='content-type' value='text/html;charset=utf8'>
+  <meta name='generator' value='Ronn/v0.7.3 (http://github.com/rtomayko/ronn/tree/0.7.3)'>
+  <title>Dalma Man Pages (dalman) </title>
+  <style type='text/css' media='all'>
+  /* style: man */
+  body#manpage {margin:0}
+  .mp {max-width:100ex;padding:0 9ex 1ex 4ex}
+  .mp p,.mp pre,.mp ul,.mp ol,.mp dl {margin:0 0 20px 0}
+  .mp h2 {margin:10px 0 0 0}
+  .mp > p,.mp > pre,.mp > ul,.mp > ol,.mp > dl {margin-left:8ex}
+  .mp h3 {margin:0 0 0 4ex}
+  .mp dt {margin:0;clear:left}
+  .mp dt.flush {float:left;width:8ex}
+  .mp dd {margin:0 0 0 9ex}
+  .mp h1,.mp h2,.mp h3,.mp h4 {clear:left}
+  .mp pre {margin-bottom:20px}
+  .mp pre+h2,.mp pre+h3 {margin-top:22px}
+  .mp h2+pre,.mp h3+pre {margin-top:5px}
+  .mp img {display:block;margin:auto}
+  .mp h1.man-title {display:none}
+  .mp,.mp code,.mp pre,.mp tt,.mp kbd,.mp samp,.mp h3,.mp h4 {font-family:monospace;font-size:14px;line-height:1.42857142857143}
+  .mp h2 {font-size:16px;line-height:1.25}
+  .mp h1 {font-size:20px;line-height:2}
+  .mp {text-align:justify;background:#fff}
+  .mp,.mp code,.mp pre,.mp pre code,.mp tt,.mp kbd,.mp samp {color:#131211}
+  .mp h1,.mp h2,.mp h3,.mp h4 {color:#030201}
+  .mp u {text-decoration:underline}
+  .mp code,.mp strong,.mp b {font-weight:bold;color:#131211}
+  .mp em,.mp var {font-style:italic;color:#232221;text-decoration:none}
+  .mp a,.mp a:link,.mp a:hover,.mp a code,.mp a pre,.mp a tt,.mp a kbd,.mp a samp {color:#0000ff}
+  .mp b.man-ref {font-weight:normal;color:#434241}
+  .mp pre {padding:0 4ex}
+  .mp pre code {font-weight:normal;color:#434241}
+  .mp h2+pre,h3+pre {padding-left:0}
+  ol.man-decor,ol.man-decor li {margin:3px 0 10px 0;padding:0;float:left;width:33%;list-style-type:none;text-transform:uppercase;color:#999;letter-spacing:1px}
+  ol.man-decor {width:100%}
+  ol.man-decor li.tl {text-align:left}
+  ol.man-decor li.tc {text-align:center;letter-spacing:4px}
+  ol.man-decor li.tr {text-align:right;float:right}
+  </style>
+  <style type='text/css' media='all'>
+  /* style: toc */
+  .man-navigation {display:block !important;position:fixed;top:0;left:113ex;height:100%;width:100%;padding:48px 0 0 0;border-left:1px solid #dbdbdb;background:#eee}
+  .man-navigation a,.man-navigation a:hover,.man-navigation a:link,.man-navigation a:visited {display:block;margin:0;padding:5px 2px 5px 30px;color:#999;text-decoration:none}
+  .man-navigation a:hover {color:#111;text-decoration:underline}
+  </style>
+</head>
+<!--
+  The following styles are deprecated and will be removed at some point:
+  div#man, div#man ol.man, div#man ol.head, div#man ol.man.
+
+  The .man-page, .man-decor, .man-head, .man-foot, .man-title, and
+  .man-navigation should be used instead.
+-->
+<body id='manpage'>
+  <div class='mp' id='man'>
+
+  <div class='man-navigation' style='display:none'>
+    <a href="#SYNOPSIS">SYNOPSIS</a>
+    <a href="#DESCRIPTION">DESCRIPTION</a>
+    <a href="#EXAMPLE">EXAMPLE</a>
+    <a href="#AUTHORS">AUTHORS</a>
+    <a href="#SEE-ALSO">SEE ALSO</a>
+  </div>
+
+  <ol class='man-decor man-head man head'>
+    <li class='tl'>dalma-slurm_sbatch</li>
+    <li class='tc'>Dalma Manual</li>
+    <li class='tr'>dalma-slurm_sbatch</li>
+  </ol>
+
+  <h1>Dalma Man Pages (dalman) </h1>
+<h2 id="SYNOPSIS">SYNOPSIS</h2>
+
+<p>Here you will find information about the options allowed in the submission script or invoking <strong>sbatch</strong> from the command line</p>
+
+<h2 id="DESCRIPTION">DESCRIPTION</h2>
+
+<p>The following options are used to request for resources in the submission script or while invoking <strong>sbatch</strong> from the command line.
+If they are used in the submission script the line should always start with <strong>#SBATCH</strong> following the specific option</p>
+
+<pre><code>-n              Select number of tasks to run
+-N              Select number of nodes on which to run
+-t              Wallclock in minutes
+-p              Select 'partition' (queue). Currently supported: 'serial' and 'parallel'
+-o              Output file ( with no -e option, err and out are merged to the Outfile)
+-e              Error File 
+-d              Dependencies
+-A              Select account
+--exclusive         Allocate nodes in exclusive mode
+--cpus-per-task     Number of cores required per task (default 1)
+--tasks-per-node    Number of tasks on each node
+--pty               Run task zero in pseudo terminal
+--mail-type=type    Notify on state change: BEGIN, END, FAIL or ALL
+--mail-user=user    Who to send email notification 
+--mem-per-cpu=MB    Maximum amount of real memory per allocated cpu
+</code></pre>
+
+<h2 id="EXAMPLE">EXAMPLE</h2>
+
+<p><code>Submitting an OpenMP job</code></p>
+
+<pre><code>#!/bin/bash 
+# Set number of tasks to run
+#SBATCH -n 1
+
+# Set number of cores per task (default is 1)
+#SBATCH --cpus-per-task=6
+
+# You may want to be exclusive on the compute node
+##SBATCH --exclusive
+
+# Use serial partition
+#SBATCH -p serial  
+
+# Output and error files
+#SBATCH -o job.%J.out
+#SBATCH -e job.%J.err
+
+# Set number of OMP threads
+export OMP_NUM_THREADS 6
+
+# Load modules here (safety measure)
+module purge
+
+# You may need to load gcc here .. This is application specific
+# module load gcc 
+
+./omp-hello
+</code></pre>
+
+<h2 id="AUTHORS">AUTHORS</h2>
+
+<pre><code>NYUAD HPC Apps Team:
+--------------------
+    - Benoit Marchand
+    - Guowei He
+    - Jorge Naranjo
+</code></pre>
+
+<h2 id="SEE-ALSO">SEE ALSO</h2>
+
+<p><a href="https://sites.google.com/a/nyu.edu/hpcad/howtos" title="Documentation">Please refer to the online documentation available at:</a></p>
+
+
+  <ol class='man-decor man-foot man foot'>
+    <li class='tl'>NYUAD</li>
+    <li class='tc'>June 2016</li>
+    <li class='tr'>dalma-slurm_sbatch</li>
+  </ol>
+
+  </div>
+</body>
+</html>

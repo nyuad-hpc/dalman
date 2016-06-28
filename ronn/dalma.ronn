@@ -28,6 +28,7 @@ Users can request help on any specific topic using the following command:
 [job_monitoring]: ../html/dalma-job_monitoring.html  "job_monitoring"
 [slurm_environment]: ../html/dalma-slurm_environment.html  "slurm_environment"
 [slurm_commands]: ../html/dalma-slurm_commands.html  "slurm_commands"
+[slurm_sbatch]: ../html/dalma-slurm_sbatch.html  "slurm_sbatch"
 
 [run_job_interactive]: ../html/dalma-job_interactive.html "run_job_interactive"
 [run_job_serial]: ../html/dalma-run_job_serial.html "run_job_serial"
@@ -63,7 +64,8 @@ Users can request help on any specific topic using the following command:
 - [job_monitoring][] 	: How to monitor your job
 - [slurm_environment][] : Environment variables set by SLURM during the job lifetime
 - [slurm_commands][] 	: Commands most commonly used by users 
-
+- [slurm_sbatch][] 	: sbatch optinons to be used inside the submission script or  invoking 'sbatch' from the command line
+ 
 ## RECIPE TOPICS
 
 ### with the following options users can have access to recipes:
