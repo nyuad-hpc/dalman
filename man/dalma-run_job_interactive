@@ -4,8 +4,31 @@
 .TH "DALMA\-RUN_JOB_INTERACTIVE" "" "June 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
+Here you can find information on how to run a job interactively
 .
 .SH "DESCRIPTION"
+Iteractive jobs will allow users to \'interact\' with the application being run because STDOUT an STDIN are redirected to the terminal the user is working on\. To be precise, in SLURM starting an interactive session means connecting to the \'master\' node, start a bash shell there and redirect all the STDIN and STDOUT to this terminal\.
+.
+.P
+There is no specific queue for interactive jobs which means that users can submit interactively to any partition
+.
+.SH "EXAMPLES"
+Start an interactive bash on a compute node\. Node can be shared by someone elses job and It will be allocated in the \'serial\' partition
+.
+.P
+\fB$> srun \-\-pty \-n 1 /bin/bash\fR
+.
+.P
+Start an interactive bash on a compute node\. Node is \fBNOT shared\fR with anyone\. It will be allocated in the \'serial\' partition
+.
+.P
+\fB$> srun \-\-pty \-n 1 \-\-exclusive /bin/bash\fR
+.
+.P
+Start an interactive bash on 2 compute nodes\. Nodes are \fBNOT available\fR to anyone else\. It will be allocated in the \'parallel\' partition
+.
+.P
+\fB$> srun \-\-pty \-N2 \-\-exclusive /bin/bash\fR
 .
 .SH "AUTHORS"
 .

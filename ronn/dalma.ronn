@@ -44,6 +44,8 @@ Users can request help on any specific topic using the following command:
 [run_r]: ../html/dalma-run_r.html  "run_r"
 [run_matlab]: ../html/dalma-run_matlab.html  "run_matlab"
 
+## MAIN TOPICS
+
 ### where 'topic' can be one of:
 
 - [storage][]        	: Display information about the different filesystems and how to use them
@@ -62,7 +64,9 @@ Users can request help on any specific topic using the following command:
 - [slurm_environment][] : Environment variables set by SLURM during the job lifetime
 - [slurm_commands][] 	: Commands most commonly used by users 
 
-### ... and with the following options users can have access to recipes:
+## RECIPE TOPICS
+
+### with the following options users can have access to recipes:
  
 - [run_job_interactive][]  	: How to run jobs interactively	
 - [run_job_serial][]	   	: How to run serial jobs

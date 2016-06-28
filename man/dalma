@@ -12,6 +12,8 @@ Users can request help on any specific topic using the following command:
 .P
 \fBman dalma\-<topic>\fR
 .
+.SH "MAIN TOPICS"
+.
 .SS "where \'topic\' can be one of:"
 .
 .IP "\(bu" 4
@@ -61,7 +63,9 @@ slurm_commands \fI\.\./html/dalma\-slurm_commands\.html\fR : Commands most commo
 .
 .IP "" 0
 .
-.SS "\.\.\. and with the following options users can have access to recipes:"
+.SH "RECIPE TOPICS"
+.
+.SS "with the following options users can have access to recipes:"
 .
 .IP "\(bu" 4
 run_job_interactive \fI\.\./html/dalma\-job_interactive\.html\fR : How to run jobs interactively

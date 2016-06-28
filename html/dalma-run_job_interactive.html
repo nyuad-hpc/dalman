@@ -61,6 +61,7 @@
   <div class='man-navigation' style='display:none'>
     <a href="#SYNOPSIS">SYNOPSIS</a>
     <a href="#DESCRIPTION">DESCRIPTION</a>
+    <a href="#EXAMPLES">EXAMPLES</a>
     <a href="#AUTHORS">AUTHORS</a>
     <a href="#SEE-ALSO">SEE ALSO</a>
   </div>
@@ -74,7 +75,27 @@
   <h1>Dalma Man Pages (dalman) </h1>
 <h2 id="SYNOPSIS">SYNOPSIS</h2>
 
+<p>Here you can find information on how to run a job interactively</p>
+
 <h2 id="DESCRIPTION">DESCRIPTION</h2>
+
+<p>Iteractive jobs will allow users to 'interact' with the application being run because STDOUT an STDIN are redirected to the terminal the user is working on. To be precise, in  SLURM starting an interactive session means connecting to the 'master' node, start a bash shell there and redirect all the STDIN and STDOUT to this terminal.</p>
+
+<p>There is no specific queue for interactive jobs which means that users can submit interactively to any partition</p>
+
+<h2 id="EXAMPLES">EXAMPLES</h2>
+
+<p>Start an interactive bash on a compute node. Node can be shared by someone elses job and It will be allocated in the 'serial' partition</p>
+
+<p><code>$&gt; srun --pty -n 1 /bin/bash</code></p>
+
+<p>Start an interactive bash on a compute node. Node is <strong>NOT shared</strong> with anyone. It will be allocated in the 'serial' partition</p>
+
+<p><code>$&gt; srun --pty -n 1 --exclusive  /bin/bash</code></p>
+
+<p>Start an interactive bash on 2 compute nodes. Nodes are <strong>NOT available</strong> to anyone else. It will be allocated in the 'parallel' partition</p>
+
+<p><code>$&gt; srun --pty -N2 --exclusive  /bin/bash</code></p>
 
 <h2 id="AUTHORS">AUTHORS</h2>
 
