@@ -2,7 +2,7 @@ Dalma Man Pages (dalman)
 ====
 
 ## SYNOPSIS  
-
+  
 Here you will find information about the options allowed in the submission script or invoking **sbatch** from the command line
 
 ## DESCRIPTION  
