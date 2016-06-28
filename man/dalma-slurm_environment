@@ -1,0 +1,73 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "DALMA\-SLURM_ENVIRONMENT" "" "June 2016" "NYUAD" "Dalma Manual"
+.
+.SH "SYNOPSIS"
+Here is the list of some of the environment variables set by SLURM when a job starts in the master node
+.
+.SH "DESCRIPTION"
+\fISLURM_JOB_ID\fR: The ID of the job
+.
+.P
+\fISLURM_JOB_NAME\fR: Name of the job
+.
+.P
+\fISLURM_JOB_NODELIST\fR: List of nodes allocated to the job
+.
+.P
+\fISLURM_JOB_NUM_NODES\fR: Total number of nodes in the job\'s resource allocation
+.
+.P
+\fISLURM_JOB_CPUS_PER_NODE\fR: Count of processors available to the job on this node
+.
+.P
+\fISLURM_PROCID\fR: The MPI rank (or relative process ID) of the current process
+.
+.P
+\fISLURM_ARRAY_JOB_ID\fR: Job array\'s master job ID number
+.
+.P
+\fISLURM_ARRAY_TASK_ID\fR: Job array ID (index) number
+.
+.P
+\fISLURM_ARRAY_TASK_MAX\fR: Job array\'s maximum ID (index) number
+.
+.P
+\fISLURM_ARRAY_TASK_MIN\fR: Job array\'s minimum ID (index) number
+.
+.P
+\fISLURM_NTASKS\fR: Number of tasks in the job
+.
+.P
+\fISLURM_TASKS_PER_NODE\fR: Number of tasks to be initiated on each node, comma separated list
+.
+.P
+\fISLURM_CPUS_ON_NODE\fR: Number of CPUS on the allocated node
+.
+.P
+\fISLURM_CPUS_PER_TASK\fR: Number of cpus requested per task
+.
+.P
+\fISLURM_STEP_ID\fR: The step ID of the current job (srun)
+.
+.P
+\fISLURM_TASK_PID\fR: The process ID of the task being started
+.
+.P
+\fISLURM_NODEID\fR: The relative node ID of the current node
+.
+.SH "AUTHORS"
+.
+.nf
+
+NYUAD HPC Apps Team:
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+    \- Benoit Marchand
+    \- Guowei He
+    \- Jorge Naranjo
+.
+.fi
+.
+.SH "SEE ALSO"
+Please refer to the online documentation available at: \fIhttps://sites\.google\.com/a/nyu\.edu/hpcad/howtos\fR

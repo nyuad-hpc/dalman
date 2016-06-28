@@ -43,7 +43,6 @@ Users can request help on any specific topic using the following command:
 [run_matlab]: ../html/dalma-run_matlab.html  "run_matlab"
 
 ### where 'topic' can be one of:
-<br />  
 
 - [storage][]        : Display information about the different filesystems and how to use them
 - [queues][]         : Display the different login information and when to use them
@@ -60,7 +59,6 @@ Users can request help on any specific topic using the following command:
 - [job_monitoring][] : How to monitor your job
 
 ### ... and with the following options users can have access to recipes:
-<br /> 
  
 - [run_job_interactive][]  	: How to run jobs interactively	
 - [run_job_serial][]	   	: How to run serial jobs

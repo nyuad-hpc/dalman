@@ -14,8 +14,6 @@ Users can request help on any specific topic using the following command:
 .
 .SS "where \'topic\' can be one of:"
 .
-.br
-.
 .IP "\(bu" 4
 storage \fI\.\./html/dalma\-storage\.html\fR : Display information about the different filesystems and how to use them
 .
@@ -58,8 +56,6 @@ job_monitoring \fI\.\./html/dalma\-job_monitoring\.html\fR : How to monitor your
 .IP "" 0
 .
 .SS "\.\.\. and with the following options users can have access to recipes:"
-.
-.br
 .
 .IP "\(bu" 4
 run_job_interactive \fI\.\./html/dalma\-job_interactive\.html\fR : How to run jobs interactively
