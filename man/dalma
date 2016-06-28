@@ -53,6 +53,12 @@ data_movement \fI\.\./html/dalma\-data_movement\.html\fR : How to move data effi
 .IP "\(bu" 4
 job_monitoring \fI\.\./html/dalma\-job_monitoring\.html\fR : How to monitor your job
 .
+.IP "\(bu" 4
+slurm_environment \fI\.\./html/dalma\-slurm_environment\.html\fR : Environment variables set by SLURM during the job lifetime
+.
+.IP "\(bu" 4
+slurm_commands \fI\.\./html/dalma\-slurm_commands\.html\fR : Commands most commonly used by users
+.
 .IP "" 0
 .
 .SS "\.\.\. and with the following options users can have access to recipes:"

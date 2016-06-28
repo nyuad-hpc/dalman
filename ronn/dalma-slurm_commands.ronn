@@ -1,0 +1,64 @@
+Dalma Man Pages (dalman) 
+====
+
+## SYNOPSIS  
+
+Here is a list of the commands most commonly used by users
+
+## DESCRIPTION  
+
+**sbatch**: 	Submit script for execution
+ 
+**salloc**: 	Job allocation _NOT AVAILABLE ON DALMA_
+
+**srun**:  	Launch a job step (typically an MPI application)
+
+**scancel**: 	Cancel a job
+
+**sinfo**: 	Report system status (nodes, queues, etc.)
+
+**squeue**: 	Report job and job step status
+
+
+## EXAMPLES
+
+1.- _Submitting a parallel job specified in the script **run.slurm**_
+
+	$> sbatch -p parallel run.slurm
+	Submitted batch job 6166
+
+2.- _List the status of the queues_
+
+	$> squeue 
+	JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+	6167  par_std  run.pbs    user1  R       0:00      2 gpu-18-[14-15]  
+	6166  par_std test_par    user1  R       0:05      2 gpu-18-[12-13]
+
+3.- _Cancel a job with ID 6166_
+
+	$> scancel 6166 
+
+
+4.-  _**srun** to spawn an MPI job inside a submission script_
+
+	$> cat run.slurm
+		#!/bin/bash 
+		#SBATCH -n 56
+		#SBATCH -p parallel  
+		#SBATCH -o job.%J.out
+		#SBATCH -e job.%J.err
+		module purge
+	  	srun   ./mpi-hello
+
+
+
+## AUTHORS 
+	NYUAD HPC Apps Team:
+	--------------------
+		- Benoit Marchand
+		- Guowei He
+		- Jorge Naranjo
+
+## SEE ALSO
+
+[Please refer to the online documentation available at:](https://sites.google.com/a/nyu.edu/hpcad/howtos "Documentation")

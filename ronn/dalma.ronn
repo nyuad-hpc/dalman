@@ -26,6 +26,8 @@ Users can request help on any specific topic using the following command:
 [get_account]: ../html/dalma-get_account.html  "get_account"
 [data_movement]: ../html/dalma-data_movement.html  "data_movement"
 [job_monitoring]: ../html/dalma-job_monitoring.html  "job_monitoring"
+[slurm_environment]: ../html/dalma-slurm_environment.html  "slurm_environment"
+[slurm_commands]: ../html/dalma-slurm_commands.html  "slurm_commands"
 
 [run_job_interactive]: ../html/dalma-job_interactive.html "run_job_interactive"
 [run_job_serial]: ../html/dalma-run_job_serial.html "run_job_serial"
@@ -44,19 +46,21 @@ Users can request help on any specific topic using the following command:
 
 ### where 'topic' can be one of:
 
-- [storage][]        : Display information about the different filesystems and how to use them
-- [queues][]         : Display the different login information and when to use them
-- [modules][]        : NYUME login description. How to access to the available software in the system 
-- [visualisation][]  : Do you have any login needs ?
-- [software][]       : List of the available login
-- [hardware][]       : Hardware description
-- [login][]          : How to log into the system, from inside and outside NYUAD
-- [compiling][]      : Compilation best practices and guidelines
-- [policies][]       : Want to know the limits that affect you according to NYU policies ? 
-- [debugging][]      : How to debug your code
-- [get_account][]    : Requesting/renewing an account in Dalma
-- [data_movement][]  : How to move data efficiently in/out Dalma
-- [job_monitoring][] : How to monitor your job
+- [storage][]        	: Display information about the different filesystems and how to use them
+- [queues][]         	: Display the different login information and when to use them
+- [modules][]        	: NYUME login description. How to access to the available software in the system 
+- [visualisation][]  	: Do you have any login needs ?
+- [software][]       	: List of the available login
+- [hardware][]       	: Hardware description
+- [login][]          	: How to log into the system, from inside and outside NYUAD
+- [compiling][]      	: Compilation best practices and guidelines
+- [policies][]       	: Want to know the limits that affect you according to NYU policies ? 
+- [debugging][]      	: How to debug your code
+- [get_account][]    	: Requesting/renewing an account in Dalma
+- [data_movement][]  	: How to move data efficiently in/out Dalma
+- [job_monitoring][] 	: How to monitor your job
+- [slurm_environment][] : Environment variables set by SLURM during the job lifetime
+- [slurm_commands][] 	: Commands most commonly used by users 
 
 ### ... and with the following options users can have access to recipes:
  
