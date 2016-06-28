@@ -30,7 +30,7 @@ Users can request help on any specific topic using the following command:
 [slurm_commands]: ../html/dalma-slurm_commands.html  "slurm_commands"
 [slurm_sbatch]: ../html/dalma-slurm_sbatch.html  "slurm_sbatch"
 
-[run_job_interactive]: ../html/dalma-job_interactive.html "run_job_interactive"
+[run_job_interactive]: ../html/dalma-run_job_interactive.html "run_job_interactive"
 [run_job_serial]: ../html/dalma-run_job_serial.html "run_job_serial"
 [run_job_mpi]: ../html/dalma-run_job_mpi.html "run_job_mpi"
 [run_job_threads]: ../html/dalma-run_job_threads.html "run_job_threads"
