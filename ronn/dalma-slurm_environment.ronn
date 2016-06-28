@@ -7,39 +7,39 @@ Here is the list of some of the environment variables set by SLURM when a job st
 
 ## DESCRIPTION  
 
-*SLURM_JOB_ID*: 			The ID of the job
+**SLURM_JOB_ID**: 			The ID of the job
 
-*SLURM_JOB_NAME*: 			Name of the job
+**SLURM_JOB_NAME**: 			Name of the job
 
-*SLURM_JOB_NODELIST*: 			List of nodes allocated to the job
+**SLURM_JOB_NODELIST**: 			List of nodes allocated to the job
 
-*SLURM_JOB_NUM_NODES*: 			Total number of nodes in the job's resource allocation
+**SLURM_JOB_NUM_NODES**: 			Total number of nodes in the job's resource allocation
 
-*SLURM_JOB_CPUS_PER_NODE*: 		Count of processors available to the job on this node
+**SLURM_JOB_CPUS_PER_NODE**: 		Count of processors available to the job on this node
 
-*SLURM_PROCID*: 			The MPI rank (or relative process ID) of the current process
+**SLURM_PROCID**: 			The MPI rank (or relative process ID) of the current process
 
-*SLURM_ARRAY_JOB_ID*:  			Job array's master job ID number
+**SLURM_ARRAY_JOB_ID**:  			Job array's master job ID number
 
-*SLURM_ARRAY_TASK_ID*: 			Job array ID (index) number
+**SLURM_ARRAY_TASK_ID**: 			Job array ID (index) number
 
-*SLURM_ARRAY_TASK_MAX*:  		Job array's maximum ID (index) number
+**SLURM_ARRAY_TASK_MAX**:  		Job array's maximum ID (index) number
 
-*SLURM_ARRAY_TASK_MIN*: 		Job array's minimum ID (index) number
+**SLURM_ARRAY_TASK_MIN**: 		Job array's minimum ID (index) number
 
-*SLURM_NTASKS*: 			Number of tasks in the job
+**SLURM_NTASKS**: 			Number of tasks in the job
 
-*SLURM_TASKS_PER_NODE*: 		Number of tasks to be initiated on each node, comma separated list
+**SLURM_TASKS_PER_NODE**: 		Number of tasks to be initiated on each node, comma separated list
 
-*SLURM_CPUS_ON_NODE*:  			Number of CPUS on the allocated node
+**SLURM_CPUS_ON_NODE**:  			Number of CPUS on the allocated node
 
-*SLURM_CPUS_PER_TASK*: 			Number of cpus requested per task
+**SLURM_CPUS_PER_TASK**: 			Number of cpus requested per task
 
-*SLURM_STEP_ID*: 			The step ID of the current job (srun)
+**SLURM_STEP_ID**: 			The step ID of the current job (srun)
 
-*SLURM_TASK_PID*: 			The process ID of the task being started
+**SLURM_TASK_PID**: 			The process ID of the task being started
 
-*SLURM_NODEID*: 			The relative node ID of the current node
+**SLURM_NODEID**: 			The relative node ID of the current node
 
 
 ## AUTHORS 
