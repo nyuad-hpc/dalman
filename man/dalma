@@ -17,7 +17,7 @@ Users can request help on any specific topic using the following command:
 .br
 .
 .IP "\(bu" 4
-[storage][] : Display information about the different filesystems and how to use them
+storage \fI\.\./html/dalma\-storage\.html\fR : Display information about the different filesystems and how to use them
 .
 .IP "\(bu" 4
 queues \fI\.\./html/dalma\-queues\.html\fR : Display the different login information and when to use them
