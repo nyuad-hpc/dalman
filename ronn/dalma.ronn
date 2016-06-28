@@ -64,7 +64,7 @@ Users can request help on any specific topic using the following command:
 - [job_monitoring][] 	: How to monitor your job
 - [slurm_environment][] : Environment variables set by SLURM during the job lifetime
 - [slurm_commands][] 	: Commands most commonly used by users 
-- [slurm_sbatch][] 	: sbatch optinons to be used inside the submission script or  invoking 'sbatch' from the command line
+- [slurm_sbatch][] 	: sbatch options to be used inside the submission script or  invoking 'sbatch' from the command line
  
 ## RECIPE TOPICS
 
