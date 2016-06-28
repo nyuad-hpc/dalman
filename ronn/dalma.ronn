@@ -13,10 +13,6 @@ Users can request help on any specific topic using the following command:
 
 `man dalma-<topic>`
 
-
-
-# Remove the following when creating a man page ... uncomment only for web
-
 [storage]: ../html/dalma-storage.html  "storage"
 [queues]: ../html/dalma-queues.html  "queues"
 [modules]: ../html/dalma-modules.html  "modules"
