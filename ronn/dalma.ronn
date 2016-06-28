@@ -15,9 +15,9 @@ Users can request help on any specific topic using the following command:
 
 ### where 'topic' can be one of:
 
-[storage]: ../html/dalma-storage.html  "_storage_"
+[storage]: ../html/dalma-storage.html  "storage"
 
-- [_storage_][]    : Display information about the different filesystems and how to use them
+- [storage][]    : Display information about the different filesystems and how to use them
 - [_queues_](../html/dalma-queues.html)	         : Display the different queues information and when to use them
 - _modules_        : NYUME modules description. How to access to the available software in the system 
 - _visualisation_  : Do you have any visualisation needs ?
