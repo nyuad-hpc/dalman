@@ -4,18 +4,61 @@
 .TH "DALMA\-LOGIN" "" "June 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
+Here you will find information on how to login \'Dalma\'\.
 .
 .SH "DESCRIPTION"
+If you are outside NYU campus, connect to NYU VPN as instructed here \fIhttp://www\.nyu\.edu/life/resources\-and\-services/information\-technology/getting\-started/network\-and\-connectivity/vpn\.html\fR first\.
+.
+.SS "MAC / LINUX"
+For Linux / Mac, execute the following command\. Change username to your actual username\.
+.
+.IP "" 4
+.
+.nf
+
+ssh username@dalma\.abudhabi\.nyu\.edu
+.
+.fi
+.
+.IP "" 0
+.
+.SS "WINDOWS"
+We recommend Putty as your ssh client\. It is available for download here \fIhttp://www\.chiark\.greenend\.org\.uk/~sgtatham/putty/download\.html\fR\.
+.
+.IP "1." 4
+.
+.IP "1." 4
+Open Putty\. Go to Category \-> Session\.
+.
+.IP "2." 4
+Type dalma\.abudhabi\.nyu\.edu in Host Name (or IP address)\.
+.
+.IP "3." 4
+Type Dalma under Saved Sessions\.
+.
+.IP "4." 4
+Click Save button\. A new session called Dalma will appear in Saved Sessions\.
+.
+.IP "" 0
+
+.
+.IP "2." 4
+Select Dalma session\. Click Load button\.
+.
+.IP "3." 4
+Click Open button\.
+.
+.IP "" 0
 .
 .SH "AUTHORS"
 .
 .nf
 
-NYUAD HPC Apps Team:
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
-    \- Benoit Marchand
-    \- Guowei He
-    \- Jorge Naranjo
+ NYUAD HPC Apps Team:
+ \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+     \- Benoit Marchand
+     \- Guowei He
+     \- Jorge Naranjo
 .
 .fi
 .
