@@ -4,18 +4,31 @@
 .TH "DALMA\-GET_ACCOUNT" "" "June 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
+Here you will find information on how to get an account on \'Dalma\'
 .
 .SH "DESCRIPTION"
+This is a two\-step process:
+.
+.IP "1." 4
+Request an account as instructed here \fIhttps://wikis\.nyu\.edu/display/NYUHPC/Requesting+an+HPC+account+with+IIQ\fR\. You need a valid NetID \fIhttp://www\.nyu\.edu/life/resources\-and\-services/information\-technology/getting\-started/netid\-and\-password\.html\fR to apply\.
+.
+.IP "2." 4
+Ask your sponser \fIhttps://wikis\.nyu\.edu/display/NYUHPC/Account+Eligibility\fR to follow this link \fIhttps://wikis\.nyu\.edu/display/NYUHPC/How+to+approve+an+HPC+account+request\fR to approve your request\.
+.
+.IP "" 0
+.
+.P
+The IIQ, NYU Identity Management service in NY will generate the account on Dalma in 2 business days\. You can then use your NetID and password to login\.
 .
 .SH "AUTHORS"
 .
 .nf
 
-NYUAD HPC Apps Team:
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
-    \- Benoit Marchand
-    \- Guowei He
-    \- Jorge Naranjo
+ NYUAD HPC Apps Team:
+ \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+     \- Benoit Marchand
+     \- Guowei He
+     \- Jorge Naranjo
 .
 .fi
 .
