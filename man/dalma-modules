@@ -4,8 +4,282 @@
 .TH "DALMA\-MODULES" "" "June 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
+Here you will find basic information about the software modules system users will find in \'Dalma\'
+.
+.P
+The default software environment is NYUAD/3\.0\. The number comes from past iterations we have worked on during the last couple of years and that have helped us to define what we consider is a robust easy to use modules system\. Yet this is an ongoing project and you might expect slight changes in the future\.
 .
 .SH "DESCRIPTION"
+The main features of the current modules environment could be summarised as:
+.
+.IP "\(bu" 4
+The default software environment is NYUAD version 3\.0
+.
+.IP "\(bu" 4
+There is no need to load it explicitly \- as was the case for NYUAD/2\.0
+.
+.IP "\(bu" 4
+NYUAD/2\.0 is now the \'legacy\' environment
+.
+.IP "\(bu" 4
+Designed to help facilitate use and prevent common mistakes
+.
+.IP "\(bu" 4
+Enforces coherency and consistency of software components by automatic dependencies handling
+.
+.IP "\(bu" 4
+Most libraries can be used with any compiler environment
+.
+.IP "\(bu" 4
+All components have been tested and verified for correctness to the extent possible before being released
+.
+.IP "\(bu" 4
+Applications and libraries embed dependencies and can\'t be overriden
+.
+.IP "\(bu" 4
+Dependencies are embedded inside the binaries
+.
+.IP "\(bu" 4
+Eliminates cross\-contamination
+.
+.IP "\(bu" 4
+No need to load all dependent modules
+.
+.IP "\(bu" 4
+Two name spaces \fBdefault\fR and \fBall\fR
+.
+.IP
+1\.\- \fBdefault\fR contains the commonly used software (no need to load it\. It will be available by default)
+.
+.IP "" 0
+.
+.IP "" 4
+.
+.nf
+
+        [hpc@~]$ module avail
+        \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- /share/apps/NYUAD/modules/SOFTWARE \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+        Desmond\-Maestro/2014\.02 cfitsio/3\.380           gaussian/09\.D\.01        lapack/3\.6\.0            ngsTools/1\.0\.0          sofia\-ml/2015\.01
+        R/3\.1\.2                 charm/6\.7\.0             gaussview/5\.0\.9         libffi/3\.2\.1            openmpi/1\.10\.2          spades/3\.7\.1
+        admirable/2015\.01       clapack/3\.2\.1           gcc/4\.9\.3               libgd/2\.1\.1             openssl/1\.0\.1q          sparsehash/2\.0\.2
+        allinea/5\.0             cmake/3\.4\.2             genblasta/1\.0\.4         libtool/2\.4\.6           parallel/20160222       sqlite/3\.11\.0
+        allpathslg/52488        comsol/4\.4              glib/2\.44\.0             libxml2/2\.9\.2           perl/5\.22\.1             srilm/1\.6\.0
+        amber/14                cp2k/2\.6\.0              gmp/6\.0\.0               m4/1\.4\.17               pgplot/5\.2              stata/14
+        anaconda/2\.4\.1          cpmd/3\.17\.1             gnuplot/5\.0\.0           mathematica/10\.3\.0      platanus/1\.2\.4          svmtool/1\.3\.1
+        atlas/3\.10\.2            crystal14/v1\.0\.1        gromacs/5\.0\.4           matlab/R2016a           presto/2015\.02          szip/2\.1
+        autoconf/2\.69           cufflinks/2\.2\.1         gsl/2\.1                 mosesdecoder/3\.0        psrchive/6\.0            tangram/0\.3\.1
+        autodock/4\.2\.6          discovar/52488          hdf5/1\.8\.16             mpiblacs/3              python/2\.7\.11           tcltk/8\.5\.17
+        automake/1\.15           discovardenovo/52488    help2man/1\.47\.3         musket/1\.1              readline/6\.3            tedna/1\.2\.2
+        bedtools/2\.25\.0         eigen/3\.2\.8             hmmer/3\.1b2             mvapich2/2\.2b           root/5\.34\.36            tempo/2015\.02
+        blas/3\.6\.0              expat/2\.1\.0             intel/16\.1              namd/2\.10               root/6\.06\.02            trimmomatic/0\.32
+        blast/2\.3\.0             fftw2/2\.1\.5             jags/3\.4\.0              nbo/6                   ruby/2\.3\.0              vcftools/0\.1\.14
+        boost/1\.57\.0            fftw3/3\.3\.4             jdk/1\.8\.0_31            nco/4\.5\.2               scalapack/2\.0\.2         velvet/1\.2\.10
+        bzip2/1\.0\.6             fftw3_mpi/3\.3\.4         jellyfish/2\.2\.5         ncurses/6\.0             screen/4\.3\.1            velvet\-k127/1\.2\.10
+        cblas/3\.6\.0             fuse/2\.9\.3              jemalloc/4\.1\.0          netcdf/4\.4\.0            soapdenovo2/r240        wien2k/13
+        cegma/2\.5               gapcloser/1\.12r6        lammps/2014\.12          netcdf\-fortran/4\.4\.2    soapdenovo2\-prepare/2\.0 zlib/1\.2\.8
+
+        \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- /share/apps/NYUAD/modules/SECTIONS \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+        all     devel   retired
+
+        \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- /share/apps/NYUAD/modules/BASE \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+        NYUAD/2\.0          NYUAD/3\.0(default) NYUAD\-Test
+.
+.fi
+.
+.IP "" 0
+.
+.IP "" 4
+.
+.nf
+
+2\.\- **all** Contains all available combinations that have been built in the system beyond that what are provided by default
+.
+.fi
+.
+.IP "" 0
+.
+.IP "" 4
+.
+.nf
+
+
+        [hpc@~]$ module load all
+        Loading module \'all\'
+        [hpc@~]$ module avail
+
+        \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- /share/apps/NYUAD/modules/ALL \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+        Desmond\-Maestro/2014\.02                         fftw3/gcc_4\.9\.3/mvapich2_2\.2b/sse4\.2/3\.3\.4      netcdf/gcc_4\.9\.3/openmpi_1\.10\.2/4\.4\.0
+        R/avx2/3\.1\.2                                    fftw3/gcc_4\.9\.3/openmpi_1\.10\.2/avx/3\.3\.4        netcdf/intel_16\.1/mvapich2_2\.2b/4\.4\.0
+        admirable/avx2/2015\.01                          fftw3/gcc_4\.9\.3/openmpi_1\.10\.2/avx2/3\.3\.4       netcdf/intel_16\.1/openmpi_1\.10\.2/4\.4\.0
+        allinea/5\.0                                     fftw3/gcc_4\.9\.3/openmpi_1\.10\.2/sse4\.2/3\.3\.4     netcdf\-fortran/gcc_4\.9\.3/4\.4\.2
+        allpathslg/52488                                fftw3/intel_16\.1/mvapich2_2\.2b/avx/3\.3\.4        netcdf\-fortran/gcc_4\.9\.3/mvapich2_2\.2b/4\.4\.2
+        amber/openmpi_1\.10\.2/sse4\.2/14                  fftw3/intel_16\.1/mvapich2_2\.2b/avx2/3\.3\.4       netcdf\-fortran/gcc_4\.9\.3/openmpi_1\.10\.2/4\.4\.2
+        amber/sse4\.2/14                                 fftw3/intel_16\.1/mvapich2_2\.2b/sse4\.2/3\.3\.4     netcdf\-fortran/intel_16\.1/4\.4\.2
+        anaconda/2\.4\.1                                  fftw3/intel_16\.1/openmpi_1\.10\.2/avx/3\.3\.4       netcdf\-fortran/intel_16\.1/mvapich2_2\.2b/4\.4\.2
+        atlas/avx2/3\.10\.2                               fftw3/intel_16\.1/openmpi_1\.10\.2/avx2/3\.3\.4      netcdf\-fortran/intel_16\.1/openmpi_1\.10\.2/4\.4\.2
+        autoconf/2\.69                                   fftw3/intel_16\.1/openmpi_1\.10\.2/sse4\.2/3\.3\.4    ngsTools/1\.0\.0
+        autodock/4\.2\.6                                  fftw3/sse4\.2/3\.3\.4                              openmpi/gcc_4\.9\.3/1\.10\.2
+        automake/1\.15                                   fuse/2\.9\.3                                      openmpi/intel_16\.1/1\.10\.2
+        bedtools/2\.25\.0                                 gapcloser/1\.12r6                                openssl/1\.0\.1q
+        blas/avx/3\.6\.0                                  gaussian/09\.D\.01                                parallel/20160222
+        blas/avx2/3\.6\.0                                 gaussview/5\.0\.9                                 perl/5\.22\.1
+        blas/sse4\.2/3\.6\.0                               gcc/4\.9\.3                                       pgplot/avx2/5\.2
+        blast/2\.3\.0                                     genblasta/1\.0\.4                                 platanus/1\.2\.4
+        boost/gcc_4\.9\.3/openmpi_1\.10\.2/avx2/1\.57\.0      glib/2\.44\.0                                     pnetcdf/gcc_4\.9\.3/mvapich2_2\.2b/1\.0\.2
+        bzip2/1\.0\.6                                     gmp/6\.0\.0                                       pnetcdf/gcc_4\.9\.3/mvapich2_2\.2b/1\.7\.0
+        cblas/avx/3\.6\.0                                 gnuplot/5\.0\.0                                   pnetcdf/gcc_4\.9\.3/openmpi_1\.10\.2/1\.0\.2
+        cblas/avx2/3\.6\.0                                gromacs/openmpi_1\.10\.2/avx2/5\.0\.4               pnetcdf/gcc_4\.9\.3/openmpi_1\.10\.2/1\.7\.0
+        cblas/sse4\.2/3\.6\.0                              gsl/avx/2\.1                                     pnetcdf/intel_16\.1/mvapich2_2\.2b/1\.0\.2
+        cegma/2\.5                                       gsl/avx2/2\.1                                    pnetcdf/intel_16\.1/mvapich2_2\.2b/1\.7\.0
+        cfitsio/avx2/3\.380                              gsl/sse4\.2/2\.1                                  pnetcdf/intel_16\.1/openmpi_1\.10\.2/1\.0\.2
+        cfitsio/sse4\.2/3\.380                            hdf5/gcc_4\.9\.3/1\.8\.16                           pnetcdf/intel_16\.1/openmpi_1\.10\.2/1\.7\.0
+        charm/openmpi_1\.10\.2/sse4\.2/6\.7\.0               hdf5/gcc_4\.9\.3/mvapich2_2\.2b/1\.8\.16             presto/openmpi_1\.10\.2/avx2/2015\.02
+        clapack/avx/3\.2\.1                               hdf5/gcc_4\.9\.3/openmpi_1\.10\.2/1\.8\.16            psrchive/6\.0
+        clapack/avx2/3\.2\.1                              hdf5/intel_16\.1/1\.8\.16                          python/2\.7\.11
+        clapack/sse4\.2/3\.2\.1                            help2man/1\.47\.3                                 python/3\.5\.1
+        cmake/3\.4\.2                                     hmmer/3\.1b2                                     readline/6\.3
+        comsol/4\.4                                      intel/16\.1                                      root/sse4\.2/5\.34\.36
+        cp2k/avx2/2\.6\.0                                 jags/3\.4\.0                                      root/sse4\.2/6\.06\.02
+        cp2k/openmpi_1\.10\.2/avx2/2\.6\.0                  jdk/1\.8\.0_31                                    ruby/2\.3\.0
+        cpmd/openmpi_1\.10\.2/avx2/3\.17\.1                 jellyfish/2\.2\.5                                 scalapack/gcc_4\.9\.3/openmpi_1\.10\.2/avx/2\.0\.2
+        crystal14/v1\.0\.1                                jemalloc/4\.1\.0                                  scalapack/gcc_4\.9\.3/openmpi_1\.10\.2/avx2/2\.0\.2
+        cufflinks/2\.2\.1                                 lammps/omp/avx2/2014\.12                         scalapack/gcc_4\.9\.3/openmpi_1\.10\.2/sse4\.2/2\.0\.2
+        discovar/52488                                  lammps/openmpi_1\.10\.2/omp/avx2/2014\.12          screen/4\.3\.1
+        discovardenovo/52488                            lapack/avx/3\.6\.0                                soapdenovo2/r240
+        eigen/3\.2\.8                                     lapack/avx2/3\.6\.0                               soapdenovo2\-prepare/2\.0
+        expat/2\.1\.0                                     lapack/sse4\.2/3\.6\.0                             sofia\-ml/2015\.01
+        fftw2/avx/2\.1\.5                                 libffi/3\.2\.1                                    spades/3\.7\.1
+        fftw2/avx2/2\.1\.5                                libgd/2\.1\.1                                     sparsehash/2\.0\.2
+        fftw2/gcc_4\.9\.3/mvapich2_2\.2b/avx/2\.1\.5         libtool/2\.4\.6                                   sqlite/3\.11\.0
+        fftw2/gcc_4\.9\.3/mvapich2_2\.2b/avx2/2\.1\.5        libxml2/2\.9\.2                                   srilm/1\.6\.0
+        fftw2/gcc_4\.9\.3/mvapich2_2\.2b/sse4\.2/2\.1\.5      m4/1\.4\.17                                       stata/14
+        fftw2/gcc_4\.9\.3/openmpi_1\.10\.2/avx/2\.1\.5        mathematica/10\.3\.0                              svmtool/1\.3\.1
+        fftw2/gcc_4\.9\.3/openmpi_1\.10\.2/avx2/2\.1\.5       matlab/R2015b                                   szip/2\.1
+        fftw2/gcc_4\.9\.3/openmpi_1\.10\.2/sse4\.2/2\.1\.5     matlab/R2016a                                   tangram/0\.3\.1
+        fftw2/intel_16\.1/mvapich2_2\.2b/avx/2\.1\.5        mosesdecoder/3\.0                                tcltk/8\.5\.17
+        fftw2/intel_16\.1/mvapich2_2\.2b/avx2/2\.1\.5       mpiblacs/gcc_4\.9\.3/openmpi_1\.10\.2/avx2/3        tedna/1\.2\.2
+        fftw2/intel_16\.1/mvapich2_2\.2b/sse4\.2/2\.1\.5     musket/1\.1                                      tempo/avx2/2015\.02
+        fftw2/intel_16\.1/openmpi_1\.10\.2/avx/2\.1\.5       mvapich2/gcc_4\.9\.3/2\.2b                         trimmomatic/0\.32
+        fftw2/intel_16\.1/openmpi_1\.10\.2/avx2/2\.1\.5      mvapich2/intel_16\.1/2\.2b                        vcftools/0\.1\.14
+        fftw2/intel_16\.1/openmpi_1\.10\.2/sse4\.2/2\.1\.5    namd/openmpi_1\.10\.2/avx2/2\.10                   velvet/1\.2\.10
+        fftw2/sse4\.2/2\.1\.5                              nbo/6                                           velvet\-k127/1\.2\.10
+        fftw3/avx/3\.3\.4                                 nco/4\.5\.2                                       wien2k/openmpi_1\.10\.2/avx2/13
+        fftw3/avx2/3\.3\.4                                ncurses/6\.0                                     zlib/1\.2\.8
+        fftw3/gcc_4\.9\.3/mvapich2_2\.2b/avx/3\.3\.4         netcdf/4\.4\.0
+        fftw3/gcc_4\.9\.3/mvapich2_2\.2b/avx2/3\.3\.4        netcdf/gcc_4\.9\.3/mvapich2_2\.2b/4\.4\.0
+
+        \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- /share/apps/NYUAD/modules/SECTIONS \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+        all     devel   retired
+
+        \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- /share/apps/NYUAD/modules/BASE \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+        NYUAD/2\.0          NYUAD/3\.0(default) NYUAD\-Test
+.
+.fi
+.
+.IP "" 0
+.
+.SH "EXAMPLES"
+1\.\- \fBSelecting the dafault FFTW3\fR
+.
+.IP "" 4
+.
+.nf
+
+    [hpc@~]$ module avail fftw
+    \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- /share/apps/NYUAD/modules/SOFTWARE \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+    fftw2/2\.1\.5     fftw3/3\.3\.4
+
+    [hpc@~]$ module load fftw3
+    Loading module \'fftw3/3\.3\.4\'
+.
+.fi
+.
+.IP "" 0
+.
+.IP "" 4
+.
+.nf
+
+Here FFTW3 is loaded, let\'s confirm it\.\.\.
+.
+.fi
+.
+.IP "" 0
+.
+.IP "" 4
+.
+.nf
+
+    [hpc@~]$ module list
+    Currently Loaded Modulefiles:
+      1) NYUAD/3\.0     2) fftw3/3\.3\.4
+
+    [hpc@~]$ echo $LD_LIBRARY_PATH
+    /share/apps/NYUAD/fftw3/avx2/3\.3\.4/lib
+.
+.fi
+.
+.IP "" 0
+.
+.IP "" 4
+.
+.nf
+
+That shows the default version of FFTW3 is the serial build for avx2\.
+.
+.fi
+.
+.IP "" 0
+.
+.P
+2\.\- \fBSelecting the same FFTW3 as before but from inside \'all\'\fR
+.
+.IP "" 4
+.
+.nf
+
+    [hpc@~]$ module load all
+    Unloading module \'fftw3/3\.3\.4\'
+    Loading module \'all\'
+
+    [hpc@~]$ module avail fftw3
+    \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- /share/apps/NYUAD/modules/ALL \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+    fftw3/avx/3\.3\.4   fftw3/gcc_4\.9\.3/mvapich2_2\.2b/sse4\.2/3\.3\.4   fftw3/intel_16\.1/mvapich2_2\.2b/avx/3\.3\.4     fftw3/intel_16\.1/openmpi_1\.10\.2/avx2/3\.3\.4
+    fftw3/avx2/3\.3\.4  fftw3/gcc_4\.9\.3/openmpi_1\.10\.2/avx/3\.3\.4     fftw3/intel_16\.1/mvapich2_2\.2b/avx2/3\.3\.4    fftw3/intel_16\.1/openmpi_1\.10\.2/sse4\.2/3\.3\.4
+    fftw3/gcc_4\.9\.3/mvapich2_2\.2b/avx/3\.3\.4      fftw3/gcc_4\.9\.3/openmpi_1\.10\.2/avx2/3\.3\.4    fftw3/intel_16\.1/mvapich2_2\.2b/sse4\.2/3\.3\.4  fftw3/sse4\.2/3\.3\.4
+    fftw3/gcc_4\.9\.3/mvapich2_2\.2b/avx2/3\.3\.4     fftw3/gcc_4\.9\.3/openmpi_1\.10\.2/sse4\.2/3\.3\.4  fftw3/intel_16\.1/openmpi_1\.10\.2/avx/3\.3\.4
+
+    [hpc@~]$ module load fftw3/avx2/3\.3\.4
+    Loading module \'fftw3/avx2/3\.3\.4\'
+.
+.fi
+.
+.IP "" 0
+.
+.IP "" 4
+.
+.nf
+
+Here FFTW3 is loaded, let\'s confirm it\.\.\.
+.
+.fi
+.
+.IP "" 0
+.
+.IP "" 4
+.
+.nf
+
+    [hpc@~]$ module list
+    Currently Loaded Modulefiles:
+      1) NYUAD/3\.0          2) all                3) fftw3/avx2/3\.3\.4
+
+    [hpc@~]$ echo $LD_LIBRARY_PATH
+    /share/apps/NYUAD/fftw3/avx2/3\.3\.4/lib
+.
+.fi
+.
+.IP "" 0
 .
 .SH "AUTHORS"
 .
