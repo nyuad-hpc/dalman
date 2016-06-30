@@ -18,7 +18,8 @@ for f in $@
 do
 	if [ -f  $f ]; then 
 		manfile=`basename $f | cut -d "." -f 1`
-		ronn --style=toc --manual="Dalma Manual" --organization=NYUAD  $f
+		#ronn --style=toc --manual="Dalma Manual" --organization=NYUAD  $f
+		ronn  --manual="Dalma Manual" --organization=NYUAD  $f
 		mv $dirpath/ronn/$manfile.html $dirpath/html/
 		mv $dirpath/ronn/$manfile      $dirpath/man/
 	fi
