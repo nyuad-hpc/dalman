@@ -17,13 +17,16 @@ ssh username@dalma.abudhabi.nyu.edu
 ### WINDOWS 
 We recommend Putty as your ssh client. It is available for download [here](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
  
-1. (First-time login only) Setup Butinah session in your putty.
-    1. Open Putty. Go to Category -> Session. 
-    2. Type dalma.abudhabi.nyu.edu in Host Name (or IP address).
-    3. Type Dalma under Saved Sessions.
-    4. Click Save button. A new session called Dalma will appear in Saved Sessions. 
-2. Select Dalma session. Click Load button. 
-3. Click Open button.
+1.- (First-time login only) Setup Butinah session in your putty.
+
+	- Open Putty. Go to Category -> Session. 
+	- Type dalma.abudhabi.nyu.edu in Host Name (or IP address).
+	- Type Dalma under Saved Sessions.
+	- Click Save button. A new session called Dalma will appear in Saved Sessions. 
+
+2.- Select Dalma session. Click Load button. 
+
+3.- Click Open button.
  
  
 ## AUTHORS 
