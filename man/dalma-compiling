@@ -4,7 +4,7 @@
 .TH "DALMA\-COMPILING" "" "July 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
-<<<<<<< HEAD Here you will find a short guideline about how to compile in \'Dalma\'
+Here you will find a short guideline about how to compile in \'Dalma\'
 .
 .SH "DESCRIPTION"
 Before starting any compilation, user have to make some decisions first, like
@@ -156,7 +156,8 @@ For intel compiler, the flags become
 .P
 \fB\-O3 \-mieee\-fp \-xCORE\-AVX2\fR
 .
-.SH "DESCRIPTION"
+.P
+Those options are valid for the processor architecture used in \'Dalma\'\. For a different machine you will have to use a different set of flags\.
 .
 .SH "AUTHORS"
 .
