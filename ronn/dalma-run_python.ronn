@@ -2,10 +2,67 @@ Dalma Man Pages (dalman)
 ====
 
 ## SYNOPSIS  
+Ths page explains how to load our highly cusomized Python environments on Dalma.
 
-## DESCRIPTION  
+## DESCRIPTION
 
+1.- Login Dalma.
 
+2.- Run this in terminal to load Anaconda module:
+
+```
+  module load NYUAD
+  module load Anaconda
+```
+
+3.- Run this in terminal to inspect available environment:
+
+```
+  conda env list
+```
+ 
+    Example screen output from previous command:
+
+```
+  [hpc@login-0-1 ~]$ conda env list
+  # conda environments:
+  # #
+  # p27-NLP                  /share/apps/NYUAD3/anaconda/2.4.1/envs/p27-NLP
+  # p27-astro                /share/apps/NYUAD3/anaconda/2.4.1/envs/p27-astro
+  # p27-cpd                  /share/apps/NYUAD3/anaconda/2.4.1/envs/p27-cpd
+  # p27-scient               /share/apps/NYUAD3/anaconda/2.4.1/envs/p27-scient
+  # pyferret                 /share/apps/NYUAD3/anaconda/2.4.1/envs/pyferret
+  # python-27                /share/apps/NYUAD3/anaconda/2.4.1/envs/python-27
+  # python-3                 /share/apps/NYUAD3/anaconda/2.4.1/envs/python-3
+  # r-322                    /share/apps/NYUAD3/anaconda/2.4.1/envs/r-322
+  # test                     /share/apps/NYUAD3/anaconda/2.4.1/envs/test
+  # root                  *  /share/apps/NYUAD3/anaconda/2.4.1
+```
+
+    The symbol "*" means the current loaded environment. In this case, "root" is loaded.
+
+4.- Load specific Python / R environment. This example loads the environment p27-cpd, the Python 2.7 environment for Center of Particle Detection. Run this in terminal:
+
+```
+  source activate p27-cpd
+```
+
+    Example screen output from previous command:
+
+```
+  [hpc@login-0-1 ~]$ source activate p27-cpd
+  discarding /share/apps/NYUAD3/anaconda/2.4.1/bin from PATH
+  prepending /share/apps/NYUAD3/anaconda/2.4.1/envs/p27-cpd/bin to PATH
+  (p27-cpd)[hpc@login-0-1 ~]$
+```
+
+    Notice the (p27-cpd) prefix. It indicates the current loaded environment.
+
+4.- Run this in terminal to unload the environment:
+
+```
+  source deactivate
+```
 
 ## AUTHORS 
 	NYUAD HPC Apps Team:

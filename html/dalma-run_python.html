@@ -68,7 +68,65 @@
   <h1>Dalma Man Pages (dalman) </h1>
 <h2 id="SYNOPSIS">SYNOPSIS</h2>
 
+<p>Ths page explains how to load our highly cusomized Python environments on Dalma.</p>
+
 <h2 id="DESCRIPTION">DESCRIPTION</h2>
+
+<p>1.- Login Dalma.</p>
+
+<p>2.- Run this in terminal to load Anaconda module:</p>
+
+<pre><code>  module load NYUAD
+  module load Anaconda
+</code></pre>
+
+<p>3.- Run this in terminal to inspect available environment:</p>
+
+<pre><code>  conda env list
+</code></pre>
+
+<pre><code>Example screen output from previous command:
+</code></pre>
+
+<pre><code>  [hpc@login-0-1 ~]$ conda env list
+  # conda environments:
+  # #
+  # p27-NLP                  /share/apps/NYUAD3/anaconda/2.4.1/envs/p27-NLP
+  # p27-astro                /share/apps/NYUAD3/anaconda/2.4.1/envs/p27-astro
+  # p27-cpd                  /share/apps/NYUAD3/anaconda/2.4.1/envs/p27-cpd
+  # p27-scient               /share/apps/NYUAD3/anaconda/2.4.1/envs/p27-scient
+  # pyferret                 /share/apps/NYUAD3/anaconda/2.4.1/envs/pyferret
+  # python-27                /share/apps/NYUAD3/anaconda/2.4.1/envs/python-27
+  # python-3                 /share/apps/NYUAD3/anaconda/2.4.1/envs/python-3
+  # r-322                    /share/apps/NYUAD3/anaconda/2.4.1/envs/r-322
+  # test                     /share/apps/NYUAD3/anaconda/2.4.1/envs/test
+  # root                  *  /share/apps/NYUAD3/anaconda/2.4.1
+</code></pre>
+
+<pre><code>The symbol "*" means the current loaded environment. In this case, "root" is loaded.
+</code></pre>
+
+<p>4.- Load specific Python / R environment. This example loads the environment p27-cpd, the Python 2.7 environment for Center of Particle Detection. Run this in terminal:</p>
+
+<pre><code>  source activate p27-cpd
+</code></pre>
+
+<pre><code>Example screen output from previous command:
+</code></pre>
+
+<pre><code>  [hpc@login-0-1 ~]$ source activate p27-cpd
+  discarding /share/apps/NYUAD3/anaconda/2.4.1/bin from PATH
+  prepending /share/apps/NYUAD3/anaconda/2.4.1/envs/p27-cpd/bin to PATH
+  (p27-cpd)[hpc@login-0-1 ~]$
+</code></pre>
+
+<pre><code>Notice the (p27-cpd) prefix. It indicates the current loaded environment.
+</code></pre>
+
+<p>4.- Run this in terminal to unload the environment:</p>
+
+<pre><code>  source deactivate
+</code></pre>
 
 <h2 id="AUTHORS">AUTHORS</h2>
 
@@ -86,7 +144,7 @@
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'>NYUAD</li>
-    <li class='tc'>June 2016</li>
+    <li class='tc'>July 2016</li>
     <li class='tr'>dalma-run_python</li>
   </ol>
 
