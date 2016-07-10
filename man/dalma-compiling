@@ -1,9 +1,160 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "DALMA\-COMPILING" "" "June 2016" "NYUAD" "Dalma Manual"
+.TH "DALMA\-COMPILING" "" "July 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
+<<<<<<< HEAD Here you will find a short guideline about how to compile in \'Dalma\'
+.
+.SH "DESCRIPTION"
+Before starting any compilation, user have to make some decisions first, like
+.
+.P
+1\.\- decide the compiler to use
+.
+.P
+2\.\- select the requiered dependencies
+.
+.P
+3\.\- if it is a parallel application, decide which MPI implementation to use
+.
+.P
+4\.\- choose the best compilation flags
+.
+.P
+5\.\- compile the code
+.
+.SS "SELECTING COMPILER"
+For the compiler, we have available GCC compiler suite version 4\.9\.3 and INTEL compiler version 16\.1 Both are easily available through the modules system:
+.
+.IP "" 4
+.
+.nf
+
+    [hpc@~]$ module load gcc
+    Loading module \'gcc/4\.9\.3\'
+
+    [hpc@~]$ module load intel
+    Loading module \'intel/16\.1\'
+.
+.fi
+.
+.IP "" 0
+.
+.SS "SELECTING DEPENDENCIES"
+Dependencies are application specific and users should know what they need\. They just could inquire the modules system to check if the required dependency is available either as \'default\' or inside \'all\'
+.
+.P
+To see if a specific dependecy is available, users may need execute \fBmodule avail\fR command\. For instance, to inquire the modules if your dependency (let\'s say fftw3) is available as default, you may need to
+.
+.IP "" 4
+.
+.nf
+
+    [hpc@~]$ module purge
+    [hpc@~]$ module avail fftw3
+    \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- /share/apps/NYUAD/modules/SOFTWARE \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+    fftw3/3\.3\.4
+
+    [hpc@~]$ module show fftw3
+    \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+    /share/apps/NYUAD/modules/SOFTWARE/fftw3/3\.3\.4:
+
+    module\-whatis    \'fftw3\'  HERE GOES THE DESCRIPTION
+    setenv       FFTW3_ROOT /share/apps/NYUAD/fftw3/avx2/3\.3\.4
+    setenv       FFTW3_INC /share/apps/NYUAD/fftw3/avx2/3\.3\.4/include
+    setenv       FFTW3_LIB /share/apps/NYUAD/fftw3/avx2/3\.3\.4/lib
+    setenv       FFTW3_BIN /share/apps/NYUAD/fftw3/avx2/3\.3\.4/bin
+    setenv       FFTW3_MAN /share/apps/NYUAD/fftw3/avx2/3\.3\.4/share/man
+    prepend\-path     CPATH /share/apps/NYUAD/fftw3/avx2/3\.3\.4/include
+    prepend\-path     CPLUS_INCLUDE_PATH /share/apps/NYUAD/fftw3/avx2/3\.3\.4/include
+    prepend\-path     C_INCLUDE_PATH /share/apps/NYUAD/fftw3/avx2/3\.3\.4/include
+    prepend\-path     OBJC_INCLUDE_PATH /share/apps/NYUAD/fftw3/avx2/3\.3\.4/include
+    prepend\-path     LD_LIBRARY64_PATH /share/apps/NYUAD/fftw3/avx2/3\.3\.4/lib
+    prepend\-path     LD_LIBRARY_PATH /share/apps/NYUAD/fftw3/avx2/3\.3\.4/lib
+    prepend\-path     LIBRARY_PATH /share/apps/NYUAD/fftw3/avx2/3\.3\.4/lib
+    prepend\-path     PKG_CONFIG_PATH /share/apps/NYUAD/fftw3/avx2/3\.3\.4/lib/pkgconfig
+    prepend\-path     PATH /share/apps/NYUAD/fftw3/avx2/3\.3\.4/bin
+    prepend\-path     MANPATH /share/apps/NYUAD/fftw3/avx2/3\.3\.4/share/man
+    \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.fi
+.
+.IP "" 0
+.
+.P
+If the version that is offered as \'default\' doesn\'t match your needs, you ay want to look into \'all\' and load the specific need
+.
+.IP "" 4
+.
+.nf
+
+    [hpc@~]$ module load all
+    Loading module \'all\'
+
+    [hpc@~]$ module avail fftw3
+    \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- /share/apps/NYUAD/modules/ALL \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+    fftw3/avx/3\.3\.4                              fftw3/gcc_4\.9\.3/mvapich2_2\.2b/sse4\.2/3\.3\.4   fftw3/intel_16\.1/mvapich2_2\.2b/avx/3\.3\.4
+    fftw3/avx2/3\.3\.4                             fftw3/gcc_4\.9\.3/openmpi_1\.10\.2/avx/3\.3\.4     fftw3/intel_16\.1/mvapich2_2\.2b/avx2/3\.3\.4
+    fftw3/gcc_4\.9\.3/mvapich2_2\.2b/avx/3\.3\.4      fftw3/gcc_4\.9\.3/openmpi_1\.10\.2/avx2/3\.3\.4    fftw3/intel_16\.1/mvapich2_2\.2b/sse4\.2/3\.3\.4
+    fftw3/gcc_4\.9\.3/mvapich2_2\.2b/avx2/3\.3\.4     fftw3/gcc_4\.9\.3/openmpi_1\.10\.2/sse4\.2/3\.3\.4  fftw3/intel_16\.1/openmpi_1\.10\.2/avx/3\.3\.4
+.
+.fi
+.
+.IP "" 0
+.
+.SS "SELECTING MPI"
+There are two MPI implementations available: OpenMPI, version 1\.10\.2 and MVAPICH2, version 2\.2b
+.
+.P
+By default, both MPI implementations are available for the GCC compiler suite\. So if you load the module \fBopenmpi\fR or \fBmvapich2\fR outside \'all\', the versions that will be loaded are linked to GCC\.
+.
+.IP "" 4
+.
+.nf
+
+    [hpc@~]$ module load openmpi
+    Loading module \'openmpi/1\.10\.2\'
+.
+.fi
+.
+.IP "" 0
+.
+.P
+the latter will load openmpi to be used with GCC compiler
+.
+.P
+In case you need the ones for INTEL compiler, then you will have to load \'all\' and then select the correct module
+.
+.IP "" 4
+.
+.nf
+
+    [hpc@~]$ module load all
+    Loading module \'all\'
+
+    [hpc@~]$ module avail openmpi
+    \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- /share/apps/NYUAD/modules/ALL \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+    openmpi/gcc_4\.9\.3/1\.10\.2  openmpi/intel_16\.1/1\.10\.2
+
+    [hpc@~]$ module load openmpi/intel_16\.1/1\.10\.2
+    Loading module \'openmpi/intel_16\.1/1\.10\.2\'
+.
+.fi
+.
+.IP "" 0
+.
+.SS "RECOMMENDED COMPILER FLAGS"
+The recommended compiler flags to use with the GCC compiler suite are
+.
+.P
+\fB\-O3 \-mavx2 \-mfma \-march=haswell \-funroll\-loops\fR
+.
+.P
+For intel compiler, the flags become
+.
+.P
+\fB\-O3 \-mieee\-fp \-xCORE\-AVX2\fR
 .
 .SH "DESCRIPTION"
 .

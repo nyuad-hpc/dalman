@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "DALMA\-SLURM_ENVIRONMENT" "" "June 2016" "NYUAD" "Dalma Manual"
+.TH "DALMA\-SLURM_ENVIRONMENT" "" "July 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
 Here is the list of some of the environment variables set by SLURM when a job starts in the master node

@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "DALMA\-SLURM_SBATCH" "" "June 2016" "NYUAD" "Dalma Manual"
+.TH "DALMA\-SLURM_SBATCH" "" "July 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
 Here you will find information about the options allowed in the submission script or invoking \fBsbatch\fR from the command line

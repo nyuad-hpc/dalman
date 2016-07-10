@@ -3,8 +3,128 @@ Dalma Man Pages (dalman)
 
 ## SYNOPSIS  
 
+<<<<<<< HEAD
+Here you will find a short guideline about how to compile in 'Dalma'
+
 ## DESCRIPTION  
 
+Before starting any compilation, user have to make some decisions first, like
+
+1.- decide the compiler to use
+
+2.- select the requiered dependencies
+
+3.- if it is a parallel application, decide which MPI implementation to use
+
+4.- choose the best compilation flags
+
+5.- compile the code
+
+### SELECTING COMPILER
+
+For the compiler, we have available GCC compiler suite version 4.9.3 and INTEL compiler version 16.1
+Both are easily available through the modules system:
+
+```
+	[hpc@~]$ module load gcc
+	Loading module 'gcc/4.9.3'
+
+	[hpc@~]$ module load intel 
+	Loading module 'intel/16.1'
+```
+
+### SELECTING DEPENDENCIES
+
+Dependencies are application specific and users should know what they need. They just could inquire the modules system to check if the required dependency is available either as 'default' or inside 'all'
+
+To see if a specific dependecy is available, users may need execute `module avail` command. For instance, to inquire the modules if your dependency (let's say fftw3) is available as default, you may need to
+
+```
+	[hpc@~]$ module purge
+	[hpc@~]$ module avail fftw3
+	------------------------------------ /share/apps/NYUAD/modules/SOFTWARE -----------------------------------------
+	fftw3/3.3.4    
+
+	[hpc@~]$ module show fftw3
+	-------------------------------------------------------------------
+	/share/apps/NYUAD/modules/SOFTWARE/fftw3/3.3.4:
+
+	module-whatis	 'fftw3'  HERE GOES THE DESCRIPTION  
+	setenv		 FFTW3_ROOT /share/apps/NYUAD/fftw3/avx2/3.3.4 
+	setenv		 FFTW3_INC /share/apps/NYUAD/fftw3/avx2/3.3.4/include 
+	setenv		 FFTW3_LIB /share/apps/NYUAD/fftw3/avx2/3.3.4/lib 
+	setenv		 FFTW3_BIN /share/apps/NYUAD/fftw3/avx2/3.3.4/bin 
+	setenv		 FFTW3_MAN /share/apps/NYUAD/fftw3/avx2/3.3.4/share/man 
+	prepend-path	 CPATH /share/apps/NYUAD/fftw3/avx2/3.3.4/include 
+	prepend-path	 CPLUS_INCLUDE_PATH /share/apps/NYUAD/fftw3/avx2/3.3.4/include 
+	prepend-path	 C_INCLUDE_PATH /share/apps/NYUAD/fftw3/avx2/3.3.4/include 
+	prepend-path	 OBJC_INCLUDE_PATH /share/apps/NYUAD/fftw3/avx2/3.3.4/include 
+	prepend-path	 LD_LIBRARY64_PATH /share/apps/NYUAD/fftw3/avx2/3.3.4/lib 
+	prepend-path	 LD_LIBRARY_PATH /share/apps/NYUAD/fftw3/avx2/3.3.4/lib 
+	prepend-path	 LIBRARY_PATH /share/apps/NYUAD/fftw3/avx2/3.3.4/lib 
+	prepend-path	 PKG_CONFIG_PATH /share/apps/NYUAD/fftw3/avx2/3.3.4/lib/pkgconfig 
+	prepend-path	 PATH /share/apps/NYUAD/fftw3/avx2/3.3.4/bin 
+	prepend-path	 MANPATH /share/apps/NYUAD/fftw3/avx2/3.3.4/share/man 
+	-------------------------------------------------------------------
+```
+
+If the version that is offered as 'default' doesn't match your needs, you ay want to look into 'all' and load the specific need
+
+```
+	[hpc@~]$ module load all
+	Loading module 'all'
+
+	[hpc@~]$ module avail fftw3
+	--------------------------------------------- /share/apps/NYUAD/modules/ALL -----------------------------------------------
+	fftw3/avx/3.3.4                              fftw3/gcc_4.9.3/mvapich2_2.2b/sse4.2/3.3.4   fftw3/intel_16.1/mvapich2_2.2b/avx/3.3.4     
+	fftw3/avx2/3.3.4                             fftw3/gcc_4.9.3/openmpi_1.10.2/avx/3.3.4     fftw3/intel_16.1/mvapich2_2.2b/avx2/3.3.4   
+	fftw3/gcc_4.9.3/mvapich2_2.2b/avx/3.3.4      fftw3/gcc_4.9.3/openmpi_1.10.2/avx2/3.3.4    fftw3/intel_16.1/mvapich2_2.2b/sse4.2/3.3.4 
+	fftw3/gcc_4.9.3/mvapich2_2.2b/avx2/3.3.4     fftw3/gcc_4.9.3/openmpi_1.10.2/sse4.2/3.3.4  fftw3/intel_16.1/openmpi_1.10.2/avx/3.3.4
+```
+
+### SELECTING MPI
+
+There are two MPI implementations available: OpenMPI, version 1.10.2 and MVAPICH2, version 2.2b 
+
+By default, both MPI implementations are available for the GCC compiler suite. So if you load the module **openmpi** or **mvapich2** outside 'all', the versions that will be loaded are linked to GCC. 
+
+```
+	[hpc@~]$ module load openmpi
+ 	Loading module 'openmpi/1.10.2'
+```
+
+the latter will load openmpi to be used with GCC compiler 
+
+In case you need the ones for INTEL compiler, then you will have to load 'all' and then select the correct module
+
+```
+	[hpc@~]$ module load all
+	Loading module 'all'
+	
+	[hpc@~]$ module avail openmpi
+	---------------------------------------------- /share/apps/NYUAD/modules/ALL ----------------------------------------------
+	openmpi/gcc_4.9.3/1.10.2  openmpi/intel_16.1/1.10.2
+
+	[hpc@~]$ module load openmpi/intel_16.1/1.10.2
+	Loading module 'openmpi/intel_16.1/1.10.2'
+```
+
+
+### RECOMMENDED COMPILER FLAGS
+
+The recommended compiler flags to use with the GCC compiler suite are
+
+** -O3 -mavx2 -mfma -march=haswell     -funroll-loops **
+
+For intel compiler, the flags become
+
+** -O3 -mieee-fp -xCORE-AVX2 **
+
+Those options are valid for the processor architecture used in 'Dalma'. For a different machine you will have to use a different set of flags.
+=======
+## DESCRIPTION  
+
+>>>>>>> 824a53307ce8109b15e7d89ef71703e785b64cbe
 
 
 ## AUTHORS 

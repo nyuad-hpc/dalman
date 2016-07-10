@@ -55,6 +55,7 @@
   <div class='man-navigation' style='display:none'>
     <a href="#SYNOPSIS">SYNOPSIS</a>
     <a href="#DESCRIPTION">DESCRIPTION</a>
+    <a href="#DESCRIPTION">DESCRIPTION</a>
     <a href="#AUTHORS">AUTHORS</a>
     <a href="#SEE-ALSO">SEE ALSO</a>
   </div>
@@ -68,7 +69,122 @@
   <h1>Dalma Man Pages (dalman) </h1>
 <h2 id="SYNOPSIS">SYNOPSIS</h2>
 
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+Here you will find a short guideline about how to compile in 'Dalma'</p>
+
 <h2 id="DESCRIPTION">DESCRIPTION</h2>
+
+<p>Before starting any compilation, user have to make some decisions first, like</p>
+
+<p>1.- decide the compiler to use</p>
+
+<p>2.- select the requiered dependencies</p>
+
+<p>3.- if it is a parallel application, decide which MPI implementation to use</p>
+
+<p>4.- choose the best compilation flags</p>
+
+<p>5.- compile the code</p>
+
+<h3 id="SELECTING-COMPILER">SELECTING COMPILER</h3>
+
+<p>For the compiler, we have available GCC compiler suite version 4.9.3 and INTEL compiler version 16.1
+Both are easily available through the modules system:</p>
+
+<pre><code>    [hpc@~]$ module load gcc
+    Loading module 'gcc/4.9.3'
+
+    [hpc@~]$ module load intel 
+    Loading module 'intel/16.1'
+</code></pre>
+
+<h3 id="SELECTING-DEPENDENCIES">SELECTING DEPENDENCIES</h3>
+
+<p>Dependencies are application specific and users should know what they need. They just could inquire the modules system to check if the required dependency is available either as 'default' or inside 'all'</p>
+
+<p>To see if a specific dependecy is available, users may need execute <code>module avail</code> command. For instance, to inquire the modules if your dependency (let's say fftw3) is available as default, you may need to</p>
+
+<pre><code>    [hpc@~]$ module purge
+    [hpc@~]$ module avail fftw3
+    ------------------------------------ /share/apps/NYUAD/modules/SOFTWARE -----------------------------------------
+    fftw3/3.3.4    
+
+    [hpc@~]$ module show fftw3
+    -------------------------------------------------------------------
+    /share/apps/NYUAD/modules/SOFTWARE/fftw3/3.3.4:
+
+    module-whatis    'fftw3'  HERE GOES THE DESCRIPTION  
+    setenv       FFTW3_ROOT /share/apps/NYUAD/fftw3/avx2/3.3.4 
+    setenv       FFTW3_INC /share/apps/NYUAD/fftw3/avx2/3.3.4/include 
+    setenv       FFTW3_LIB /share/apps/NYUAD/fftw3/avx2/3.3.4/lib 
+    setenv       FFTW3_BIN /share/apps/NYUAD/fftw3/avx2/3.3.4/bin 
+    setenv       FFTW3_MAN /share/apps/NYUAD/fftw3/avx2/3.3.4/share/man 
+    prepend-path     CPATH /share/apps/NYUAD/fftw3/avx2/3.3.4/include 
+    prepend-path     CPLUS_INCLUDE_PATH /share/apps/NYUAD/fftw3/avx2/3.3.4/include 
+    prepend-path     C_INCLUDE_PATH /share/apps/NYUAD/fftw3/avx2/3.3.4/include 
+    prepend-path     OBJC_INCLUDE_PATH /share/apps/NYUAD/fftw3/avx2/3.3.4/include 
+    prepend-path     LD_LIBRARY64_PATH /share/apps/NYUAD/fftw3/avx2/3.3.4/lib 
+    prepend-path     LD_LIBRARY_PATH /share/apps/NYUAD/fftw3/avx2/3.3.4/lib 
+    prepend-path     LIBRARY_PATH /share/apps/NYUAD/fftw3/avx2/3.3.4/lib 
+    prepend-path     PKG_CONFIG_PATH /share/apps/NYUAD/fftw3/avx2/3.3.4/lib/pkgconfig 
+    prepend-path     PATH /share/apps/NYUAD/fftw3/avx2/3.3.4/bin 
+    prepend-path     MANPATH /share/apps/NYUAD/fftw3/avx2/3.3.4/share/man 
+    -------------------------------------------------------------------
+</code></pre>
+
+<p>If the version that is offered as 'default' doesn't match your needs, you ay want to look into 'all' and load the specific need</p>
+
+<pre><code>    [hpc@~]$ module load all
+    Loading module 'all'
+
+    [hpc@~]$ module avail fftw3
+    --------------------------------------------- /share/apps/NYUAD/modules/ALL -----------------------------------------------
+    fftw3/avx/3.3.4                              fftw3/gcc_4.9.3/mvapich2_2.2b/sse4.2/3.3.4   fftw3/intel_16.1/mvapich2_2.2b/avx/3.3.4     
+    fftw3/avx2/3.3.4                             fftw3/gcc_4.9.3/openmpi_1.10.2/avx/3.3.4     fftw3/intel_16.1/mvapich2_2.2b/avx2/3.3.4   
+    fftw3/gcc_4.9.3/mvapich2_2.2b/avx/3.3.4      fftw3/gcc_4.9.3/openmpi_1.10.2/avx2/3.3.4    fftw3/intel_16.1/mvapich2_2.2b/sse4.2/3.3.4 
+    fftw3/gcc_4.9.3/mvapich2_2.2b/avx2/3.3.4     fftw3/gcc_4.9.3/openmpi_1.10.2/sse4.2/3.3.4  fftw3/intel_16.1/openmpi_1.10.2/avx/3.3.4
+</code></pre>
+
+<h3 id="SELECTING-MPI">SELECTING MPI</h3>
+
+<p>There are two MPI implementations available: OpenMPI, version 1.10.2 and MVAPICH2, version 2.2b</p>
+
+<p>By default, both MPI implementations are available for the GCC compiler suite. So if you load the module <strong>openmpi</strong> or <strong>mvapich2</strong> outside 'all', the versions that will be loaded are linked to GCC.</p>
+
+<pre><code>    [hpc@~]$ module load openmpi
+    Loading module 'openmpi/1.10.2'
+</code></pre>
+
+<p>the latter will load openmpi to be used with GCC compiler</p>
+
+<p>In case you need the ones for INTEL compiler, then you will have to load 'all' and then select the correct module</p>
+
+<pre><code>    [hpc@~]$ module load all
+    Loading module 'all'
+
+    [hpc@~]$ module avail openmpi
+    ---------------------------------------------- /share/apps/NYUAD/modules/ALL ----------------------------------------------
+    openmpi/gcc_4.9.3/1.10.2  openmpi/intel_16.1/1.10.2
+
+    [hpc@~]$ module load openmpi/intel_16.1/1.10.2
+    Loading module 'openmpi/intel_16.1/1.10.2'
+</code></pre>
+
+<h3 id="RECOMMENDED-COMPILER-FLAGS">RECOMMENDED COMPILER FLAGS</h3>
+
+<p>The recommended compiler flags to use with the GCC compiler suite are</p>
+
+<p><strong> -O3 -mavx2 -mfma -march=haswell     -funroll-loops </strong></p>
+
+<p>For intel compiler, the flags become</p>
+
+<p><strong> -O3 -mieee-fp -xCORE-AVX2 </strong></p>
+
+<h1>Those options are valid for the processor architecture used in 'Dalma'. For a different machine you will have to use a different set of flags.</h1>
+
+<h2 id="DESCRIPTION">DESCRIPTION</h2>
+
+<blockquote><blockquote><blockquote><blockquote><blockquote><blockquote><blockquote><p>824a53307ce8109b15e7d89ef71703e785b64cbe</p></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote>
 
 <h2 id="AUTHORS">AUTHORS</h2>
 
@@ -86,7 +202,7 @@
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'>NYUAD</li>
-    <li class='tc'>June 2016</li>
+    <li class='tc'>July 2016</li>
     <li class='tr'>dalma-compiling</li>
   </ol>
 

@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "DALMA\-MODULES" "" "June 2016" "NYUAD" "Dalma Manual"
+.TH "DALMA\-MODULES" "" "July 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
 Here you will find basic information about the software modules system users will find in \'Dalma\'
