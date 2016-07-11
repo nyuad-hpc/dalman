@@ -55,6 +55,7 @@
   <div class='man-navigation' style='display:none'>
     <a href="#SYNOPSIS">SYNOPSIS</a>
     <a href="#DESCRIPTION">DESCRIPTION</a>
+    <a href="#EXAMPLES">EXAMPLES</a>
     <a href="#AUTHORS">AUTHORS</a>
     <a href="#SEE-ALSO">SEE ALSO</a>
   </div>
@@ -68,7 +69,50 @@
   <h1>Dalma Man Pages (dalman) </h1>
 <h2 id="SYNOPSIS">SYNOPSIS</h2>
 
+<p>You want to submit several jobs that have dependencies, to create a workflow. E.g., Job B will only start after Job A is finished. Job C will only start after Job B is finished. And so on.</p>
+
 <h2 id="DESCRIPTION">DESCRIPTION</h2>
+
+<p>SLURM provide powerful mechanism to define job dependencies, by the job submission command <strong>sbatch -d <var>type</var>:<var>id</var></strong>. The keyword <strong><var>id</var></strong> could be job id or job array id. There are 4 available <strong><var>type</var></strong> :</p>
+
+<ul>
+<li><p><code>after</code>: clause is satisfied after the job, or all tasks in the job array start</p></li>
+<li><p><code>afterany</code>: clause is satisfied after the job, or all tasks in the job array complete</p></li>
+<li><p><code>afterok</code>: clause is satisfied after the job, or all tasks in the job array complete successfully</p></li>
+<li><p><code>afternotok</code>: clause is satisfied after the job, or all tasks in the job array complete with at least
+one tasks not completing successfully</p></li>
+</ul>
+
+
+<h2 id="EXAMPLES">EXAMPLES</h2>
+
+<p>----------------------------------------------------------</p>
+
+<p>Wait for specific job array elements</p>
+
+<p> <code>sbatch --depend=after:123_4 my.job</code></p>
+
+<p> <code>sbatch --depend=afterok:123_4:123_8 my.job2</code></p>
+
+<p>----------------------------------------------------------</p>
+
+<p>Wait for the job array to completed</p>
+
+<p>  <code>sbatch --depend=afterany:123 my.job</code></p>
+
+<p>----------------------------------------------------------</p>
+
+<p>Wait for entire job array to complete successfully</p>
+
+<p> <code>sbatch --depend=afterok:123 my.job</code></p>
+
+<p>----------------------------------------------------------</p>
+
+<p>Wait for entire job array to complete and at least one task fails</p>
+
+<p> <code>sbatch --depend=afternotok:123 my.job</code></p>
+
+<p>----------------------------------------------------------</p>
 
 <h2 id="AUTHORS">AUTHORS</h2>
 

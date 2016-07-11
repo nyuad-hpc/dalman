@@ -4,8 +4,66 @@
 .TH "DALMA\-RUN_JOB_DEPENDENCIES" "" "July 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
+You want to submit several jobs that have dependencies, to create a workflow\. E\.g\., Job B will only start after Job A is finished\. Job C will only start after Job B is finished\. And so on\.
 .
 .SH "DESCRIPTION"
+SLURM provide powerful mechanism to define job dependencies, by the job submission command \fBsbatch \-d \fItype\fR:\fIid\fR\fR\. The keyword \fB\fIid\fR\fR could be job id or job array id\. There are 4 available \fB\fItype\fR\fR :
+.
+.IP "\(bu" 4
+\fBafter\fR: clause is satisfied after the job, or all tasks in the job array start
+.
+.IP "\(bu" 4
+\fBafterany\fR: clause is satisfied after the job, or all tasks in the job array complete
+.
+.IP "\(bu" 4
+\fBafterok\fR: clause is satisfied after the job, or all tasks in the job array complete successfully
+.
+.IP "\(bu" 4
+\fBafternotok\fR: clause is satisfied after the job, or all tasks in the job array complete with at least one tasks not completing successfully
+.
+.IP "" 0
+.
+.SH "EXAMPLES"
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.P
+Wait for specific job array elements
+.
+.P
+\fBsbatch \-\-depend=after:123_4 my\.job\fR
+.
+.P
+\fBsbatch \-\-depend=afterok:123_4:123_8 my\.job2\fR
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.P
+Wait for the job array to completed
+.
+.P
+\fBsbatch \-\-depend=afterany:123 my\.job\fR
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.P
+Wait for entire job array to complete successfully
+.
+.P
+\fBsbatch \-\-depend=afterok:123 my\.job\fR
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.P
+Wait for entire job array to complete and at least one task fails
+.
+.P
+\fBsbatch \-\-depend=afternotok:123 my\.job\fR
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
 .
 .SH "AUTHORS"
 .
