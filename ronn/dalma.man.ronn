@@ -1,0 +1,81 @@
+Dalma Man Pages (dalman) 
+
+ Shows help about different topics related to Dalma
+=============================================================================
+
+## SYNOPSIS  
+
+Here you will find a list of all the available topics for help related to __Dalma__ and how to call for help
+
+## DESCRIPTION  
+
+Users can request help on any specific topic using the following command:
+
+`man dalma-<topic>`
+
+## MAIN TOPICS
+
+### where 'topic' can be one of:
+
+- **storage**        	: Display information about the different filesystems and how to use them
+- **queues**         	: Display the different login information and when to use them
+- **modules**        	: NYUME login description. How to access to the available software in the system 
+- **visualisation**  	: Do you have any login needs ?
+- **software**       	: List of the available login
+- **hardware**       	: Hardware description
+- **login**          	: How to log into the system, from inside and outside NYUAD
+- **compiling**      	: Compilation best practices and guidelines
+- **policies**       	: Want to know the limits that affect you according to NYU policies ? 
+- **debugging**      	: How to debug your code
+- **get_account**    	: Requesting/renewing an account in Dalma
+- **data_movement**  	: How to move data efficiently in/out Dalma
+- **job_monitoring** 	: How to monitor your job
+- **slurm_environment** : Environment variables set by SLURM during the job lifetime
+- **slurm_commands** 	: Commands most commonly used by users 
+- **slurm_sbatch** 	: sbatch options to be used inside the submission script or  invoking 'sbatch' from the command line
+ 
+## RECIPE TOPICS
+
+### with the following options users can have access to recipes:
+ 
+- **run_job_interactive**  	: How to run jobs interactively	
+- **run_job_serial**	   	: How to run serial jobs
+- **run_job_mpi** 	   	: How to run parallel (mpi) jobs
+- **run_job_threads**	   	: How to run parallel (threaded/openmp) jobs
+- **run_job_array**	   	: What is a job array and how to use it
+- **run_job_bigmem**	   	: What should you do when you have a memory bound job
+- **run_parallel_job_array** 	: What is a parallel job array and how to use it
+- **run_job_dependencies**   	: How to run jobs with dependencies
+- **run_gaussian_tcplinda**  	: How to run Gaussian using TCP-Linda
+- **run_wien2k**		: How to run Wien2K
+- **run_python**		: How to run Python, personalized environments and Anaconda
+- **run_perl**		 	: How to run perl jobs
+- **run_r**		   	: How to run R,  personalized environments and Anaconda
+- **run_matlab**		: How to run Matlab, serial and parallel toolbox
+
+## EXAMPLES 
+
+`man dalma-storage`
+
+`man dalma-queues`
+
+`man dalma-modules`
+
+`man dalma-hardware`
+
+`man dalma-run_jobs_mpi`
+
+`man dalma-run_bigmem`
+
+`man dalma-run_matlab`
+
+## AUTHORS 
+	NYUAD HPC Apps Team:
+	--------------------
+		- Benoit Marchand
+		- Guowei He
+		- Jorge Naranjo
+
+## SEE ALSO
+
+**Please refer to the online documentation available at:](https://sites.google.com/a/nyu.edu/hpcad/howtos "Documentation")

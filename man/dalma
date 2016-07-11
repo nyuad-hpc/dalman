@@ -17,52 +17,52 @@ Users can request help on any specific topic using the following command:
 .SS "where \'topic\' can be one of:"
 .
 .IP "\(bu" 4
-storage \fI\.\./html/dalma\-storage\.html\fR : Display information about the different filesystems and how to use them
+\fBstorage\fR : Display information about the different filesystems and how to use them
 .
 .IP "\(bu" 4
-queues \fI\.\./html/dalma\-queues\.html\fR : Display the different login information and when to use them
+\fBqueues\fR : Display the different login information and when to use them
 .
 .IP "\(bu" 4
-modules \fI\.\./html/dalma\-modules\.html\fR : NYUME login description\. How to access to the available software in the system
+\fBmodules\fR : NYUME login description\. How to access to the available software in the system
 .
 .IP "\(bu" 4
-visualisation \fI\.\./html/dalma\-visualisation\.html\fR : Do you have any login needs ?
+\fBvisualisation\fR : Do you have any login needs ?
 .
 .IP "\(bu" 4
-software \fI\.\./html/dalma\-software\.html\fR : List of the available login
+\fBsoftware\fR : List of the available login
 .
 .IP "\(bu" 4
-hardware \fI\.\./html/dalma\-hardware\.html\fR : Hardware description
+\fBhardware\fR : Hardware description
 .
 .IP "\(bu" 4
-login \fI\.\./html/dalma\-login\.html\fR : How to log into the system, from inside and outside NYUAD
+\fBlogin\fR : How to log into the system, from inside and outside NYUAD
 .
 .IP "\(bu" 4
-compiling \fI\.\./html/dalma\-compiling\.html\fR : Compilation best practices and guidelines
+\fBcompiling\fR : Compilation best practices and guidelines
 .
 .IP "\(bu" 4
-policies \fI\.\./html/dalma\-policies\.html\fR : Want to know the limits that affect you according to NYU policies ?
+\fBpolicies\fR : Want to know the limits that affect you according to NYU policies ?
 .
 .IP "\(bu" 4
-debugging \fI\.\./html/dalma\-debugging\.html\fR : How to debug your code
+\fBdebugging\fR : How to debug your code
 .
 .IP "\(bu" 4
-get_account \fI\.\./html/dalma\-get_account\.html\fR : Requesting/renewing an account in Dalma
+\fBget_account\fR : Requesting/renewing an account in Dalma
 .
 .IP "\(bu" 4
-data_movement \fI\.\./html/dalma\-data_movement\.html\fR : How to move data efficiently in/out Dalma
+\fBdata_movement\fR : How to move data efficiently in/out Dalma
 .
 .IP "\(bu" 4
-job_monitoring \fI\.\./html/dalma\-job_monitoring\.html\fR : How to monitor your job
+\fBjob_monitoring\fR : How to monitor your job
 .
 .IP "\(bu" 4
-slurm_environment \fI\.\./html/dalma\-slurm_environment\.html\fR : Environment variables set by SLURM during the job lifetime
+\fBslurm_environment\fR : Environment variables set by SLURM during the job lifetime
 .
 .IP "\(bu" 4
-slurm_commands \fI\.\./html/dalma\-slurm_commands\.html\fR : Commands most commonly used by users
+\fBslurm_commands\fR : Commands most commonly used by users
 .
 .IP "\(bu" 4
-slurm_sbatch \fI\.\./html/dalma\-slurm_sbatch\.html\fR : sbatch options to be used inside the submission script or invoking \'sbatch\' from the command line
+\fBslurm_sbatch\fR : sbatch options to be used inside the submission script or invoking \'sbatch\' from the command line
 .
 .IP "" 0
 .
@@ -71,46 +71,46 @@ slurm_sbatch \fI\.\./html/dalma\-slurm_sbatch\.html\fR : sbatch options to be us
 .SS "with the following options users can have access to recipes:"
 .
 .IP "\(bu" 4
-run_job_interactive \fI\.\./html/dalma\-run_job_interactive\.html\fR : How to run jobs interactively
+\fBrun_job_interactive\fR : How to run jobs interactively
 .
 .IP "\(bu" 4
-run_job_serial \fI\.\./html/dalma\-run_job_serial\.html\fR : How to run serial jobs
+\fBrun_job_serial\fR : How to run serial jobs
 .
 .IP "\(bu" 4
-run_job_mpi \fI\.\./html/dalma\-run_job_mpi\.html\fR : How to run parallel (mpi) jobs
+\fBrun_job_mpi\fR : How to run parallel (mpi) jobs
 .
 .IP "\(bu" 4
-run_job_threads \fI\.\./html/dalma\-run_job_threads\.html\fR : How to run parallel (threaded/openmp) jobs
+\fBrun_job_threads\fR : How to run parallel (threaded/openmp) jobs
 .
 .IP "\(bu" 4
-run_job_array \fI\.\./html/dalma\-run_job_array\.html\fR : What is a job array and how to use it
+\fBrun_job_array\fR : What is a job array and how to use it
 .
 .IP "\(bu" 4
-run_job_bigmem \fI\.\./html/dalma\-run_job_bigmem\.html\fR : What should you do when you have a memory bound job
+\fBrun_job_bigmem\fR : What should you do when you have a memory bound job
 .
 .IP "\(bu" 4
-run_parallel_job_array \fI\.\./html/dalma\-run_parallel_job_array\.html\fR : What is a parallel job array and how to use it
+\fBrun_parallel_job_array\fR : What is a parallel job array and how to use it
 .
 .IP "\(bu" 4
-run_job_dependencies \fI\.\./html/dalma\-run_job_dependencies\.html\fR : How to run jobs with dependencies
+\fBrun_job_dependencies\fR : How to run jobs with dependencies
 .
 .IP "\(bu" 4
-run_gaussian_tcplinda \fI\.\./html/dalma\-run_gaussian_tcplinda\.html\fR : How to run Gaussian using TCP\-Linda
+\fBrun_gaussian_tcplinda\fR : How to run Gaussian using TCP\-Linda
 .
 .IP "\(bu" 4
-run_wien2k \fI\.\./html/dalma\-run_wien2k\.html\fR : How to run Wien2K
+\fBrun_wien2k\fR : How to run Wien2K
 .
 .IP "\(bu" 4
-run_python \fI\.\./html/dalma\-run_python\.html\fR : How to run Python, personalized environments and Anaconda
+\fBrun_python\fR : How to run Python, personalized environments and Anaconda
 .
 .IP "\(bu" 4
-run_perl \fI\.\./html/dalma\-run_perl\.html\fR : How to run perl jobs
+\fBrun_perl\fR : How to run perl jobs
 .
 .IP "\(bu" 4
-run_r \fI\.\./html/dalma\-run_r\.html\fR : How to run R, personalized environments and Anaconda
+\fBrun_r\fR : How to run R, personalized environments and Anaconda
 .
 .IP "\(bu" 4
-run_matlab \fI\.\./html/dalma\-run_matlab\.html\fR : How to run Matlab, serial and parallel toolbox
+\fBrun_matlab\fR : How to run Matlab, serial and parallel toolbox
 .
 .IP "" 0
 .
@@ -148,4 +148,4 @@ NYUAD HPC Apps Team:
 .fi
 .
 .SH "SEE ALSO"
-Please refer to the online documentation available at: \fIhttps://sites\.google\.com/a/nyu\.edu/hpcad/howtos\fR
+**Please refer to the online documentation available at:](https://sites\.google\.com/a/nyu\.edu/hpcad/howtos "Documentation")
