@@ -16,7 +16,7 @@ Ths page explains how to load our highly cusomized R environments on Dalma\.
 .
 .nf
 
-  module load NYUAD
+  `module load NYUAD`
   module load anaconda
 .
 .fi
