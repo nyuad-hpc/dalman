@@ -11,7 +11,7 @@ Ths page explains how to load our highly cusomized R environments on Dalma.
 2.- Run this in terminal to load Anaconda module:
 
 ```
-  module load NYUAD
+  `module load NYUAD`
   module load anaconda
 ```
 
