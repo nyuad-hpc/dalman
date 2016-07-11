@@ -4,8 +4,137 @@
 .TH "DALMA\-RUN_R" "" "July 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
+Ths page explains how to load our highly cusomized R environments on Dalma\.
 .
 .SH "DESCRIPTION"
+1\.\- Login Dalma\.
+.
+.P
+2\.\- Run this in terminal to load Anaconda module:
+.
+.IP "" 4
+.
+.nf
+
+  module load NYUAD
+  module load anaconda
+.
+.fi
+.
+.IP "" 0
+.
+.P
+3\.\- Run this in terminal to inspect available environment:
+.
+.IP "" 4
+.
+.nf
+
+  conda env list
+.
+.fi
+.
+.IP "" 0
+.
+.IP "" 4
+.
+.nf
+
+Example screen output from previous command:
+.
+.fi
+.
+.IP "" 0
+.
+.IP "" 4
+.
+.nf
+
+  [hpc@login\-0\-1 ~]$ conda env list
+  # conda environments:
+  # #
+  # p27\-NLP                  /share/apps/NYUAD3/anaconda/2\.4\.1/envs/p27\-NLP
+  # p27\-astro                /share/apps/NYUAD3/anaconda/2\.4\.1/envs/p27\-astro
+  # p27\-cpd                  /share/apps/NYUAD3/anaconda/2\.4\.1/envs/p27\-cpd
+  # p27\-scient               /share/apps/NYUAD3/anaconda/2\.4\.1/envs/p27\-scient
+  # pyferret                 /share/apps/NYUAD3/anaconda/2\.4\.1/envs/pyferret
+  # python\-27                /share/apps/NYUAD3/anaconda/2\.4\.1/envs/python\-27
+  # python\-3                 /share/apps/NYUAD3/anaconda/2\.4\.1/envs/python\-3
+  # r\-322                    /share/apps/NYUAD3/anaconda/2\.4\.1/envs/r\-322
+  # test                     /share/apps/NYUAD3/anaconda/2\.4\.1/envs/test
+  # root                  *  /share/apps/NYUAD3/anaconda/2\.4\.1
+.
+.fi
+.
+.IP "" 0
+.
+.IP "" 4
+.
+.nf
+
+The symbol "*" means the current loaded environment\. In this case, "root" is loaded\.
+.
+.fi
+.
+.IP "" 0
+.
+.P
+4\.\- Load specific R environment\. This example loads the environment r\-322, R version 3\.2\.2 (2015\-08\-14) \-\- "Fire Safety"\. Run this in terminal:
+.
+.IP "" 4
+.
+.nf
+
+  source activate r\-322
+.
+.fi
+.
+.IP "" 0
+.
+.IP "" 4
+.
+.nf
+
+Example screen output from previous command:
+.
+.fi
+.
+.IP "" 0
+.
+.IP "" 4
+.
+.nf
+
+  [gh50@login\-0\-3 ~]$ source activate r\-322
+  discarding /share/apps/NYUAD3/anaconda/2\.4\.1/bin from PATH
+  prepending /share/apps/NYUAD3/anaconda/2\.4\.1/envs/r\-322/bin to PATH
+.
+.fi
+.
+.IP "" 0
+.
+.IP "" 4
+.
+.nf
+
+Notice the (r\-322) prefix\. It indicates the current loaded environment\.
+.
+.fi
+.
+.IP "" 0
+.
+.P
+5\.\- (Optional) In case you want to load another R environment, or you simply don\'t want this R environment anymore, run this in terminal to unload the environment:
+.
+.IP "" 4
+.
+.nf
+
+  source deactivate
+.
+.fi
+.
+.IP "" 0
 .
 .SH "AUTHORS"
 .

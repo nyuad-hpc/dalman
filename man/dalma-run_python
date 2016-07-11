@@ -125,7 +125,7 @@ Notice the (p27\-cpd) prefix\. It indicates the current loaded environment\.
 .IP "" 0
 .
 .P
-4\.\- Run this in terminal to unload the environment:
+5\.\- (Optional) In case you want to load another Python environment, or you simply don\'t want this Python environment anymore, run this in terminal to unload the environment:
 .
 .IP "" 4
 .
