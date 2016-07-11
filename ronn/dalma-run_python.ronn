@@ -46,7 +46,7 @@ Ths page explains how to load our highly cusomized Python environments on Dalma.
 
   The symbol "*" means the current loaded environment. In this case, "root" is loaded.
 
-4.- Load specific Python / R environment. This example loads the environment p27-cpd, the Python 2.7 environment for Center of Particle Detection. Run this in terminal:
+4.- Load specific Python environment. This example loads the environment p27-cpd, the Python 2.7 environment for Center of Particle Detection. Run this in terminal:
 
 \----------------------------------------------------------
  

@@ -65,7 +65,7 @@ Example screen output from previous command:
 The symbol "*" means the current loaded environment\. In this case, "root" is loaded\.
 .
 .P
-4\.\- Load specific R / R environment\. This example loads the environment r\-322, R version 3\.2\.2 (2015\-08\-14) \-\- "Fire Safety"\. Run this in terminal:
+4\.\- Load specific R environment\. This example loads the environment r\-322, R version 3\.2\.2 (2015\-08\-14) \-\- "Fire Safety"\. Run this in terminal:
 .
 .P
 \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
