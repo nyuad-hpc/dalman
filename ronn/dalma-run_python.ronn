@@ -12,7 +12,7 @@ Ths page explains how to load our highly cusomized Python environments on Dalma.
 
 ```
   module load NYUAD
-  module load Anaconda
+  module load anaconda
 ```
 
 3.- Run this in terminal to inspect available environment:

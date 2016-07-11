@@ -17,7 +17,7 @@ Ths page explains how to load our highly cusomized Python environments on Dalma\
 .nf
 
   module load NYUAD
-  module load Anaconda
+  module load anaconda
 .
 .fi
 .
