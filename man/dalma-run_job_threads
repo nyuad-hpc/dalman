@@ -10,7 +10,7 @@ You want to run a job with multi\-threading (OpenMP, Pthreads and etc) applicati
 To accomplish this, follow the steps:
 .
 .P
-1\.\- Specify the resouces required in Slurm directives in job script\. Most importantly, \fB\-\-cpus\-per\-task\fR for cpus per tasks\.
+1\.\- Specify the resouces required in Slurm directives in job script\. Most importantly, \fB\-\-cpus\-per\-task\fR for cpus per tasks\. This should equal to the number of OpenMP threads (\fBOMP_NUM_THREADS\fR) to fully ultilized the allocated resources\.
 .
 .P
 2\.\- Submit the job\.
@@ -39,7 +39,8 @@ To accomplish this, follow the steps:
     #SBATCH \-o job\.%J\.out
     #SBATCH \-e job\.%J\.err
 
-    # Set number of OMP threads
+    # Set number of OMP threads, directly from SLURM,
+    #   ultilizting all the cpus allocated\.
     export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK}
 
     # Load modules here (safety measure)
