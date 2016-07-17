@@ -4,8 +4,104 @@
 .TH "DALMA\-RUN_PARALLEL_JOB_ARRAY" "" "July 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
+Ths page explains how to Running a series of jobs with one command\.
 .
 .SH "DESCRIPTION"
+1\.\- Login Dalma\.
+.
+.P
+2\.\- Always create a new folder for each job array to prevent cross contamination\. Use /fastscratch unless you are going to read / write very large sequential files in parallel\.
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.P
+\fBmkdir my\-job\-arry\-workspace\fR
+.
+.P
+\fBcd my\-job\-array\-workspace\fR
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.P
+3\.\- Prepare a text file contains all the commands to be run by the job array\. One command per line:
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.P
+\fBExample, in commands\.txt:\fR
+.
+.IP "" 4
+.
+.nf
+
+  \./lapack_example 1
+  \./lapack_example 2
+  \./helloworld 3
+  \./lapack_example 4
+  \./lapack_example 5
+.
+.fi
+.
+.IP "" 0
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.P
+4\.\- Run our job array tool, slurm_lck_ja_submit\.sh, with command text file as argument\. E\.g\., \fB$TOOLDIR/slurm_parallel_ja_submit\.sh commands\.txt\fR\. The legacy \fBpbs_parallel_ja_submit\.sh\fR will work as well\. The job script will be automatically created and submitted\. A job ID will pop up on screen\. Mark it down for future reference:
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.P
+Example:
+.
+.P
+\fB$TOOLDIR/slurm_parallel_ja_submit\.sh commands\.txt\fR
+.
+.P
+or
+.
+.P
+(not recommened) \fB$TOOLDIR/pbs_parallel_ja_submit\.sh commands\.txt\fR
+.
+.P
+Screen output:
+.
+.P
+\fBSubmitted batch job 6298\fR # 6298 is the job id
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.P
+5\.\- Output will be continuously appended to “output\.log” in the working folder\. Use squeue to check job status\. Notice that the tasks might not be completed sequentially, as the CPUs are competing for jobs for best performance:
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.P
+\fBExample output in out\.log:\fR
+.
+.IP "" 4
+.
+.nf
+
+  For n = 1 the approx\. condition number is 0\.100E+01
+  For n = 2 the approx\. condition number is 0\.169E+02
+  helloworld
+  For n = 4 the approx\. condition number is 0\.645E+03
+  For n = 5 the approx\. condition number is 0\.287E+02
+.
+.fi
+.
+.IP "" 0
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
 .
 .SH "AUTHORS"
 .

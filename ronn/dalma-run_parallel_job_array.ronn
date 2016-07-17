@@ -2,18 +2,81 @@ Dalma Man Pages (dalman)
 ====
 
 ## SYNOPSIS  
+Ths page explains how to Running a series of jobs with one command.
 
-## DESCRIPTION  
+## DESCRIPTION
+
+1.- Login Dalma.
+
+2.- Always create a new folder for each job array to prevent cross contamination. Use /fastscratch unless you are going to read / write very large sequential files in parallel.
+
+  \----------------------------------------------------------
+
+  `mkdir my-job-arry-workspace`
+  
+  `cd my-job-array-workspace`
+
+  \----------------------------------------------------------
+
+3.- Prepare a text file contains all the commands to be run by the job array. One command per line:
+
+\----------------------------------------------------------
+
+  `Example, in commands.txt:`
+ 
+  ```
+  ./lapack_example 1
+  ./lapack_example 2
+  ./helloworld 3
+  ./lapack_example 4
+  ./lapack_example 5
+  ```
+
+\----------------------------------------------------------
+ 
+4.- Run our job array tool, slurm_lck_ja_submit.sh, with command text file as argument. E.g., `$TOOLDIR/slurm_parallel_ja_submit.sh commands.txt`. The legacy `pbs_parallel_ja_submit.sh` will work as well. The job script will be automatically created and submitted. A job ID will pop up on screen. Mark it down for future reference:
+
+\----------------------------------------------------------
+ 
+  Example:
+
+  `$TOOLDIR/slurm_parallel_ja_submit.sh commands.txt`
+  
+  or
+  
+  (not recommened) `$TOOLDIR/pbs_parallel_ja_submit.sh commands.txt`
+
+  Screen output:
+  
+  `Submitted batch job 6298` # 6298 is the job id
+
+\----------------------------------------------------------
+
+5.- Output will be continuously appended to “output.log” in the working folder. Use squeue to check job status. Notice that the tasks might not be completed sequentially, as the CPUs are competing for jobs for best performance:
+
+\----------------------------------------------------------
+ 
+  `Example output in out.log:`
 
 
+  ```
+  For n = 1 the approx. condition number is 0.100E+01
+  For n = 2 the approx. condition number is 0.169E+02
+  helloworld
+  For n = 4 the approx. condition number is 0.645E+03
+  For n = 5 the approx. condition number is 0.287E+02
+  ```
+  
+\----------------------------------------------------------
 
 ## AUTHORS 
-	NYUAD HPC Apps Team:
-	--------------------
-		- Benoit Marchand
-		- Guowei He
-		- Jorge Naranjo
+    NYUAD HPC Apps Team:
+    --------------------
+        - Benoit Marchand
+        - Guowei He
+        - Jorge Naranjo
 
 ## SEE ALSO
 
 [Please refer to the online documentation available at:](https://sites.google.com/a/nyu.edu/hpcad/howtos "Documentation")
+
