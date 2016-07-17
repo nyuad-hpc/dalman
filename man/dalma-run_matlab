@@ -4,8 +4,52 @@
 .TH "DALMA\-RUN_MATLAB" "" "July 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
+Ths page explains how to load and run Matlab jobs on Dalma\.
+.
+.SH "WARNING"
+Use \fBmatlab \-nodesktop \-nosplash \-nodisplay \-nojvm\fR instead of \fBmatlab\fR to invoke Matlab on compute nodes\. Otherwise it will hang\.
 .
 .SH "DESCRIPTION"
+1\.\- Login Dalma\.
+.
+.P
+2\.\- Run this in terminal to load Matlab module:
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.P
+\fBmodule load NYUAD\fR
+.
+.P
+\fBmodule load matlab/R2015b\fR
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.P
+3\.\- Run this in terminal to start Matlab:
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.P
+\fBmatlab \-nodesktop \-nosplash \-nodisplay \-nojvm\fR
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.P
+4\.\- Alternatively, run this to execute a Matlab script :
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.P
+\fBmatlab \-nodesktop \-nosplash \-nodisplay \-nojvm \-r "run(\'<path\-to\-mfile>/<your\-mfile>\.m\');"\fR
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
 .
 .SH "AUTHORS"
 .

@@ -2,18 +2,48 @@ Dalma Man Pages (dalman)
 ====
 
 ## SYNOPSIS  
+Ths page explains how to load and run Matlab jobs on Dalma.
 
-## DESCRIPTION  
+## WARNING
+Use `matlab -nodesktop -nosplash -nodisplay -nojvm` instead of `matlab` to invoke Matlab on compute nodes. Otherwise it will hang.
+## DESCRIPTION
 
+1.- Login Dalma.
 
+2.- Run this in terminal to load Matlab module:
+
+  \----------------------------------------------------------
+
+   `module load NYUAD`
+ 
+   `module load matlab/R2015b`
+
+  \----------------------------------------------------------
+
+3.- Run this in terminal to start Matlab:
+
+\----------------------------------------------------------
+
+  `matlab -nodesktop -nosplash -nodisplay -nojvm`
+
+\----------------------------------------------------------
+ 
+4.- Alternatively, run this to execute a Matlab script :
+
+\----------------------------------------------------------
+ 
+  `matlab -nodesktop -nosplash -nodisplay -nojvm -r "run('<path-to-mfile>/<your-mfile>.m');"`
+
+\----------------------------------------------------------
 
 ## AUTHORS 
-	NYUAD HPC Apps Team:
-	--------------------
-		- Benoit Marchand
-		- Guowei He
-		- Jorge Naranjo
+    NYUAD HPC Apps Team:
+    --------------------
+        - Benoit Marchand
+        - Guowei He
+        - Jorge Naranjo
 
 ## SEE ALSO
 
 [Please refer to the online documentation available at:](https://sites.google.com/a/nyu.edu/hpcad/howtos "Documentation")
+

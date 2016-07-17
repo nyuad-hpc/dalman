@@ -54,6 +54,7 @@
 
   <div class='man-navigation' style='display:none'>
     <a href="#SYNOPSIS">SYNOPSIS</a>
+    <a href="#WARNING">WARNING</a>
     <a href="#DESCRIPTION">DESCRIPTION</a>
     <a href="#AUTHORS">AUTHORS</a>
     <a href="#SEE-ALSO">SEE ALSO</a>
@@ -68,7 +69,41 @@
   <h1>Dalma Man Pages (dalman) </h1>
 <h2 id="SYNOPSIS">SYNOPSIS</h2>
 
+<p>Ths page explains how to load and run Matlab jobs on Dalma.</p>
+
+<h2 id="WARNING">WARNING</h2>
+
+<p>Use <code>matlab -nodesktop -nosplash -nodisplay -nojvm</code> instead of <code>matlab</code> to invoke Matlab on compute nodes. Otherwise it will hang.</p>
+
 <h2 id="DESCRIPTION">DESCRIPTION</h2>
+
+<p>1.- Login Dalma.</p>
+
+<p>2.- Run this in terminal to load Matlab module:</p>
+
+<p>  ----------------------------------------------------------</p>
+
+<p>   <code>module load NYUAD</code></p>
+
+<p>   <code>module load matlab/R2015b</code></p>
+
+<p>  ----------------------------------------------------------</p>
+
+<p>3.- Run this in terminal to start Matlab:</p>
+
+<p>----------------------------------------------------------</p>
+
+<p>  <code>matlab -nodesktop -nosplash -nodisplay -nojvm</code></p>
+
+<p>----------------------------------------------------------</p>
+
+<p>4.- Alternatively, run this to execute a Matlab script :</p>
+
+<p>----------------------------------------------------------</p>
+
+<p>  <code>matlab -nodesktop -nosplash -nodisplay -nojvm -r "run('&lt;path-to-mfile>/&lt;your-mfile>.m');"</code></p>
+
+<p>----------------------------------------------------------</p>
 
 <h2 id="AUTHORS">AUTHORS</h2>
 
