@@ -4,8 +4,49 @@
 .TH "DALMA\-RUN_JOB_SERIAL" "" "July 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
+You want to run a job with serial application\.
 .
 .SH "DESCRIPTION"
+To accomplish this, follow the steps:
+.
+.P
+1\.\- Specify the resouces required in Slurm directives in job script\. Use 1 node, 1 core, serial queue\.
+.
+.P
+2\.\- Submit the job\.
+.
+.SH "EXAMPLE"
+\fBJob script for a serial job\.\fR
+.
+.IP "" 4
+.
+.nf
+
+    #!/bin/bash
+    # Set number of tasks to run
+    #SBATCH \-n 1
+    # Set number of cores per task (default is 1)
+    #SBATCH \-\-cpus\-per\-task=1
+    # Use serial partition
+    #SBATCH \-p serial
+    # Walltime format hh:mm:ss
+    #SBATCH \-\-time=00:30:00
+    # Output and error files
+    #SBATCH \-o job\.%J\.out
+    #SBATCH \-e job\.%J\.err
+
+    # **** Actual commands start here ****
+    # Load modules here (safety measure)
+    module purge
+
+    # You may need to load gcc here \.\. This is application specific
+    # module load gcc
+
+    \./serial\-hello
+.
+.fi
+.
+.IP "" 0
 .
 .SH "AUTHORS"
 .
