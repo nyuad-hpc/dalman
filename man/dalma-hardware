@@ -4,8 +4,71 @@
 .TH "DALMA\-HARDWARE" "" "July 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
+You want to know the system configuration of Dalma, in order to make the most out of it\.
 .
 .SH "DESCRIPTION"
+The most important specification is the number of cpus per node: 28, and memory available per node: 128GB\. Detailed configuration:
+.
+.IP "\(bu" 4
+234 compute nodes
+.
+.IP "\(bu" 4
+Two Intel Xeon E5\-2680 v4 Broadwell CPUs per node
+.
+.IP "\(bu" 4
+2 x 14 cores, 2\.4 GHz
+.
+.IP "\(bu" 4
+No Hyperthreading
+.
+.IP "\(bu" 4
+AVX 2\.0 ISA extension
+.
+.IP "\(bu" 4
+128 GB Memory Per Node
+.
+.IP "\(bu" 4
+6,552 CPU cores
+.
+.IP "\(bu" 4
+Mellanox EDR InfiniBand with non\-blocking fat tree topology
+.
+.IP "\(bu" 4
+CentOS 7 Linux distribution
+.
+.IP "\(bu" 4
+Slurm batch system
+.
+.IP "\(bu" 4
+Support for OpenMP programming model for intra\-node parallelization
+.
+.IP "\(bu" 4
+OpenMPI (Message Passing Interface) Implementation
+.
+.IP "\(bu" 4
+BeeGFS Parallel Filesystem for regular files
+.
+.IP "\(bu" 4
+Lustre Parallel Filesystem for large files
+.
+.IP "" 0
+.
+.SH "EXPLANATION"
+A long list\. So what does it mean?
+.
+.IP "\(bu" 4
+For parallel jobs, utilize the whole node (28 cores) to maximize the performance\. E\.g\., set \fBOMP_NUM_THREADS\fR for hybrid or OpenMP jobs, or set the number of MPI ranks equals the number of nodes times 28 for pure MPI jobs\.
+.
+.IP "\(bu" 4
+Use maximum 128GB of memory per node\. If you need more, use fat node\.
+.
+.IP "\(bu" 4
+For pre\-compiled binaries, try \fBCentos\fR or \fBRHEL\fR version\.
+.
+.IP "\(bu" 4
+Before generating tons of data, evaluate your storage requirements and select the most suitable file system\.
+.
+.IP "" 0
 .
 .SH "AUTHORS"
 .
