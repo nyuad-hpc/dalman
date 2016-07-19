@@ -21,20 +21,17 @@ To accomplish this, follow the steps:
     #!/bin/bash 
     # Set number of tasks to run
     #SBATCH -n 1
-
     # Set number of cores per task (default is 1)
     #SBATCH --cpus-per-task=28
-    
     # You may want to be exclusive on the compute node
     ##SBATCH --exclusive
-
     # Use serial partition
     #SBATCH -p serial  
-
     # Output and error files
     #SBATCH -o job.%J.out
     #SBATCH -e job.%J.err
 
+    # **** Actual commands start here ****
     # Set number of OMP threads, directly from SLURM,
     #   ultilizting all the cpus allocated.
     export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK}
