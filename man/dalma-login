@@ -9,6 +9,9 @@ Here you will find information on how to login \'Dalma\'\.
 .SH "DESCRIPTION"
 If you are outside NYU campus, connect to NYU VPN as instructed here \fIhttp://www\.nyu\.edu/life/resources\-and\-services/information\-technology/getting\-started/network\-and\-connectivity/vpn\.html\fR first\.
 .
+.SS "FROM BUTINAH?"
+All you need is changing the hostname from \fBbutinah\.abudhabi\.nyu\.edu\fR to \fBdalma\.abudhabi\.nyu\.edu\fR
+.
 .SS "MAC / LINUX"
 For Linux / Mac, execute the following command\. Change username to your actual username\.
 .
@@ -56,7 +59,7 @@ We recommend Putty as your ssh client\. It is available for download here \fIhtt
 5\.\- Type your NetID and password to login\.
 .
 .P
-To know more about Putty, watch this movie here \fIhttps://goo\.gl/Kq2900\fR\.
+To know more about Putty, watch the movie here \fIhttps://goo\.gl/Kq2900\fR\.
 .
 .SH "AUTHORS"
 .
@@ -71,4 +74,4 @@ To know more about Putty, watch this movie here \fIhttps://goo\.gl/Kq2900\fR\.
 .fi
 .
 .SH "SEE ALSO"
-Please refer to the online documentation available at: \fIhttps://sites\.google\.com/a/nyu\.edu/hpcad/howtos\fR
+Please refer to the online documentation available here \fIhttps://nyuad\-hpc\.github\.io/dalman/html/dalma\.html\fR
