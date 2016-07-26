@@ -61,7 +61,6 @@ Users can request help on any specific topic using the following command:
 - [run_job_mpi][] 	   	: How to run parallel (mpi) jobs
 - [run_job_threads][]	   	: How to run parallel (threaded/openmp) jobs
 - [run_job_array][]	   	: What is a job array and how to use it
-- [run_parallel_job_array][] 	: What is a parallel job array and how to use it
 - [run_job_dependencies][]   	: How to run jobs with dependencies
 - [run_python][]		: How to run Python, personalized environments and Anaconda
 - [run_r][]		   	: How to run R,  personalized environments and Anaconda
