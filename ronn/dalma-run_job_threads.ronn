@@ -46,8 +46,10 @@ module purge
 # module load gcc 
 
 # Replace it with your actual command.
-./omp-hello
-    
+omp-hello
+
+
+
 ```
 
 `Submit the job`
