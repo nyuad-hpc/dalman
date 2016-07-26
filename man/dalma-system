@@ -6,11 +6,14 @@
 .SH "SYNOPSIS"
 You want to know the system configuration of Dalma, in order to make the most out of it\.
 .
+.SH "NOTICE"
+Bigmem, GPU and Visualization nodes will be updated\.
+.
 .SH "DESCRIPTION"
-The most important specification is the number of cpus per node: 28, and memory available per node: 128GB\. Detailed configuration:
+The most important specification is the number of cpus per normal compute node: 28, and memory available per node: 128GB\. Detailed configuration for normal compute nodes:
 .
 .IP "\(bu" 4
-234 compute nodes
+236 compute nodes
 .
 .IP "\(bu" 4
 Two Intel Xeon E5\-2680 v4 Broadwell CPUs per node
@@ -28,10 +31,10 @@ AVX 2\.0 ISA extension
 128 GB Memory Per Node
 .
 .IP "\(bu" 4
-6,552 CPU cores
+6,608 CPU cores
 .
 .IP "\(bu" 4
-Mellanox EDR InfiniBand with non\-blocking fat tree topology
+Mellanox EDR InfiniBand
 .
 .IP "\(bu" 4
 CentOS 7 Linux distribution
@@ -55,6 +58,9 @@ Lustre Parallel Filesystem for large files
 .
 .SH "EXPLANATION"
 A long list\. So what does it mean?
+.
+.IP "\(bu" 4
+Job script should be written in SLURM\.
 .
 .IP "\(bu" 4
 For parallel jobs, utilize the whole node (28 cores) to maximize the performance\. E\.g\., set \fBOMP_NUM_THREADS\fR for hybrid or OpenMP jobs, or set the number of MPI ranks equals the number of nodes times 28 for pure MPI jobs\.
@@ -83,4 +89,4 @@ NYUAD HPC Apps Team:
 .fi
 .
 .SH "SEE ALSO"
-Please refer to the online documentation available at: \fIhttps://sites\.google\.com/a/nyu\.edu/hpcad/howtos\fR
+Please refer to the online documentation available here \fIhttps://nyuad\-hpc\.github\.io/dalman/html/dalma\.html\fR

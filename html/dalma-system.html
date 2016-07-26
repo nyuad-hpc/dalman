@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv='content-type' value='text/html;charset=utf8'>
   <meta name='generator' value='Ronn/v0.7.3 (http://github.com/rtomayko/ronn/tree/0.7.3)'>
-  <title>Dalma Man Pages (dalman) </title>
+  <title>Dalma System Configuration</title>
   <style type='text/css' media='all'>
   /* style: man */
   body#manpage {margin:0}
@@ -54,6 +54,7 @@
 
   <div class='man-navigation' style='display:none'>
     <a href="#SYNOPSIS">SYNOPSIS</a>
+    <a href="#NOTICE">NOTICE</a>
     <a href="#DESCRIPTION">DESCRIPTION</a>
     <a href="#EXPLANATION">EXPLANATION</a>
     <a href="#AUTHORS">AUTHORS</a>
@@ -66,24 +67,28 @@
     <li class='tr'>dalma-system</li>
   </ol>
 
-  <h1>Dalma Man Pages (dalman) </h1>
+  <h1>Dalma System Configuration</h1>
 <h2 id="SYNOPSIS">SYNOPSIS</h2>
 
 <p>You want to know the system configuration of Dalma, in order to make the most out of it.</p>
 
+<h2 id="NOTICE">NOTICE</h2>
+
+<p>Bigmem, GPU and Visualization nodes will be updated.</p>
+
 <h2 id="DESCRIPTION">DESCRIPTION</h2>
 
-<p>The most important specification is the number of cpus per node: 28, and memory available per node: 128GB. Detailed configuration:</p>
+<p>The most important specification is the number of cpus per normal compute node: 28, and memory available per node: 128GB. Detailed configuration for normal compute nodes:</p>
 
 <ul>
-<li>234 compute nodes</li>
+<li>236 compute nodes</li>
 <li>Two Intel Xeon E5-2680 v4 Broadwell CPUs per node</li>
 <li>2 x 14 cores, 2.4 GHz</li>
 <li>No Hyperthreading</li>
 <li>AVX 2.0 ISA extension</li>
 <li>128 GB Memory Per Node</li>
-<li>6,552 CPU cores</li>
-<li>Mellanox EDR InfiniBand with non-blocking fat tree topology</li>
+<li>6,608 CPU cores</li>
+<li>Mellanox EDR InfiniBand</li>
 <li>CentOS 7 Linux distribution</li>
 <li>Slurm batch system</li>
 <li>Support for OpenMP programming model for intra-node parallelization</li>
@@ -98,6 +103,7 @@
 <p>A long list. So what does it mean?</p>
 
 <ul>
+<li>Job script should be written in SLURM.</li>
 <li>For parallel jobs, utilize the whole node (28 cores) to maximize the performance. E.g., set <code>OMP_NUM_THREADS</code> for hybrid or OpenMP jobs, or set the number of MPI ranks equals the number of nodes times 28 for pure MPI jobs.</li>
 <li>Use maximum 128GB of memory per node. If you need more, use fat node.</li>
 <li>For pre-compiled binaries, try <code>Centos</code> or <code>RHEL</code> version.</li>
@@ -116,7 +122,7 @@
 
 <h2 id="SEE-ALSO">SEE ALSO</h2>
 
-<p><a href="https://sites.google.com/a/nyu.edu/hpcad/howtos" title="Documentation">Please refer to the online documentation available at:</a></p>
+<p>Please refer to the online documentation available <a href="https://nyuad-hpc.github.io/dalman/html/dalma.html">here</a></p>
 
 
   <ol class='man-decor man-foot man foot'>
