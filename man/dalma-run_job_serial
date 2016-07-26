@@ -23,12 +23,12 @@ To accomplish this, follow the steps:
 .nf
 
 #!/bin/bash
+# Set number of nodes to run
+#SBATCH \-\-nodes=1
 # Set number of tasks to run
-#SBATCH \-n 1
+#SBATCH \-\-ntasks=1
 # Set number of cores per task (default is 1)
 #SBATCH \-\-cpus\-per\-task=1
-# Use serial partition
-#SBATCH \-p serial
 # Walltime format hh:mm:ss
 #SBATCH \-\-time=00:30:00
 # Output and error files
@@ -42,7 +42,8 @@ module purge
 # You may need to load gcc here \.\. This is application specific
 # module load gcc
 
-\./serial\-hello
+# Replace this with your actual command\. \'serial\-hello\-world\' for example
+hostname
 .
 .fi
 .
@@ -74,4 +75,4 @@ NYUAD HPC Apps Team:
 .fi
 .
 .SH "SEE ALSO"
-Please refer to the online documentation available at: \fIhttps://sites\.google\.com/a/nyu\.edu/hpcad/howtos\fR
+Please refer to the online documentation available here \fIhttps://nyuad\-hpc\.github\.io/dalman/html/dalma\.html\fR

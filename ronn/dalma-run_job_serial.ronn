@@ -1,4 +1,4 @@
-Dalma Man Pages (dalman) 
+Running a Serial Job on Dalma
 ====
 
 ## SYNOPSIS  
@@ -19,12 +19,12 @@ To accomplish this, follow the steps:
 
 ```
 #!/bin/bash 
+# Set number of nodes to run
+#SBATCH --nodes=1
 # Set number of tasks to run
-#SBATCH -n 1
+#SBATCH --ntasks=1
 # Set number of cores per task (default is 1)
 #SBATCH --cpus-per-task=1
-# Use serial partition
-#SBATCH -p serial
 # Walltime format hh:mm:ss
 #SBATCH --time=00:30:00
 # Output and error files
@@ -38,8 +38,9 @@ module purge
 # You may need to load gcc here .. This is application specific
 # module load gcc 
 
-./serial-hello
-   
+# Replace this with your actual command. 'serial-hello-world' for example
+hostname
+
 ```
 
 `Submit the job`
@@ -57,6 +58,4 @@ sbatch serial_job.sh
         - Jorge Naranjo
 
 ## SEE ALSO
-
-[Please refer to the online documentation available at:](https://sites.google.com/a/nyu.edu/hpcad/howtos "Documentation")
-
+Please refer to the online documentation available [here](https://nyuad-hpc.github.io/dalman/html/dalma.html)

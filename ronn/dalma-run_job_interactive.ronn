@@ -37,4 +37,4 @@ Start an interactive bash on 2 compute nodes. Nodes are **NOT available** to any
 
 ## SEE ALSO
 
-[Please refer to the online documentation available [here](https://nyuad-hpc.github.io/dalman/html/dalma.html)
+Please refer to the online documentation available [here](https://nyuad-hpc.github.io/dalman/html/dalma.html)
