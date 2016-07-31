@@ -35,7 +35,7 @@ We recommend Putty as your ssh client\. It is available for download here \fIhtt
 .
 .nf
 
-* Open Putty\. Go to "Category \-> Session"\.
+\- Open Putty\. Go to "Category \-> Session"\.
 \- Type "dalma\.abudhabi\.nyu\.edu" in "Host Name" (or IP address)\.
 \- Make sure "Port" is "22"\.
 \- Make sure "Connection Type" is "SSH"

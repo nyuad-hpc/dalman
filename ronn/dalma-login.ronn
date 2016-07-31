@@ -22,7 +22,7 @@ We recommend Putty as your ssh client. It is available for download [here](http:
  
 1.- (First-time login only) Setup Butinah session in your Putty. Do NOT enter the double quote ""!
 
-	* Open Putty. Go to "Category -> Session". 
+	- Open Putty. Go to "Category -> Session". 
 	- Type "dalma.abudhabi.nyu.edu" in "Host Name" (or IP address).
     - Make sure "Port" is "22".
     - Make sure "Connection Type" is "SSH"
