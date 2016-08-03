@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "DALMA\-LOGIN" "" "July 2016" "NYUAD" "Dalma Manual"
+.TH "DALMA\-LOGIN" "" "August 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
 Here you will find information on how to login \'Dalma\'\.
@@ -20,6 +20,19 @@ For Linux / Mac, execute the following command\. Change username to your actual 
 .nf
 
 ssh username@dalma\.abudhabi\.nyu\.edu
+.
+.fi
+.
+.IP "" 0
+.
+.P
+For X11\-based graphical tools, add \fB\-X\fR to your ssh command\. Change username to your actual username\. E\.g\.,
+.
+.IP "" 4
+.
+.nf
+
+ssh username@dalma\.abudhabi\.nyu\.edu \-X
 .
 .fi
 .

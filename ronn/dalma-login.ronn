@@ -17,6 +17,14 @@ For Linux / Mac, execute the following command. Change username to your actual u
 ssh username@dalma.abudhabi.nyu.edu
 ```
 
+#### X11 GRAPHICAL TOOLS
+For X11-based graphical tools, add `-X` to your ssh command. Change username to your actual username. E.g.,
+
+```shell
+ssh username@dalma.abudhabi.nyu.edu -X
+```
+
+
 ### WINDOWS 
 We recommend Putty as your ssh client. It is available for download [here](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
  
