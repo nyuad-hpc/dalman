@@ -1,16 +1,22 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "DALMA\-RUN_MATLAB" "" "July 2016" "NYUAD" "Dalma Manual"
+.TH "DALMA\-RUN_MATLAB" "" "August 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
-Ths page explains how to load and run Matlab jobs on Dalma\.
+Ths page explains how to use Matlab on Dalma\.
 .
 .SH "WARNING"
-Use \fBmatlab \-nodesktop \-nosplash \-nodisplay \-nojvm\fR instead of \fBmatlab\fR to invoke Matlab on compute nodes\. Otherwise it will hang\.
+Use \fBmatlab \-nodesktop \-nosplash \-nodisplay \-nojvm\fR instead of \fBmatlab\fR to invoke Matlab on compute nodes\. Otherwise it will hang, as no X11 is allowed on compute node\. Use visualization node to plot huge dataset\. For the moment, visualization is yet to be migrated\. This page will be updated as soon as it is available\.
 .
 .SH "DESCRIPTION"
+There are 2 ways to use Matlab\. The first one is to run it interactively\. The second one is to submit it as a job\. Follow the instructions below\.
+.
+.SS "RUN MATLAB INTERACTIVELY"
 1\.\- Login Dalma\.
+.
+.P
+2\- (Optional) Start an interactive session, by following the \fBrun_job_interactive\fR section in the Documentation\.
 .
 .P
 2\.\- Run this in terminal to load Matlab module:
@@ -19,7 +25,7 @@ Use \fBmatlab \-nodesktop \-nosplash \-nodisplay \-nojvm\fR instead of \fBmatlab
 \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
 .
 .P
-\fBmodule load NYUAD\fR
+\fBmodule load NYUAD/3\.0\fR
 .
 .P
 \fBmodule load matlab/R2015b\fR
@@ -50,6 +56,61 @@ Use \fBmatlab \-nodesktop \-nosplash \-nodisplay \-nojvm\fR instead of \fBmatlab
 .
 .P
 \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.SS "SUBMIT A MATLAB JOB"
+To accomplish this, follow the steps:
+.
+.P
+1\.\- Prepare a SLURM job script following the example below\.
+.
+.P
+2\.\- Submit the job\.
+.
+.P
+\fBJob script for a serial Matlab job\. Save it using a meaningful filename\. E\.g\., "matlab\.sh"\fR
+.
+.IP "" 4
+.
+.nf
+
+#!/bin/bash
+# Set number of nodes to run
+#SBATCH \-\-nodes=1
+# Set number of tasks to run
+#SBATCH \-\-ntasks=1
+# Set number of cores per task (default is 1)
+#SBATCH \-\-cpus\-per\-task=1
+# Walltime format hh:mm:ss
+#SBATCH \-\-time=00:30:00
+# Output and error files
+#SBATCH \-o job\.%J\.out
+#SBATCH \-e job\.%J\.err
+
+# **** Actual commands start here ****
+# Load modules here (safety measure)
+module purge
+module load NYUAD/3\.0
+module load matlab/R2015b
+
+# Replace this with your actual command\.
+`matlab \-nodesktop \-nosplash \-nodisplay \-nojvm \-r "run(\'<path\-to\-mfile>/<your\-mfile>\.m\');"`
+.
+.fi
+.
+.IP "" 0
+.
+.P
+\fBSubmit the job\fR
+.
+.IP "" 4
+.
+.nf
+
+sbatch matlab\.sh
+.
+.fi
+.
+.IP "" 0
 .
 .SH "AUTHORS"
 .
