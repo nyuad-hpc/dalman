@@ -88,6 +88,9 @@ Users can request help on any specific topic using the following command:
 .IP "\(bu" 4
 \fBrun_matlab\fR : How to run Matlab, serial and parallel toolbox
 .
+.IP "\(bu" 4
+\fBrun_gaussian_tcplinda\fR : How to run Gaussian in parallel using TcpLinda
+.
 .IP "" 0
 .
 .SH "EXAMPLES"

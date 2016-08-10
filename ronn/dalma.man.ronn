@@ -44,6 +44,7 @@ Users can request help on any specific topic using the following command:
 - **run_python**		: How to run Python, personalized environments and Anaconda
 - **run_r**		   	: How to run R,  personalized environments and Anaconda
 - **run_matlab**		: How to run Matlab, serial and parallel toolbox
+- **run_gaussian_tcplinda**     : How to run Gaussian in parallel using TcpLinda
 
 ## EXAMPLES 
 

@@ -35,6 +35,7 @@ Users can request help on any specific topic using the following command:
 [run_python]: ../html/dalma-run_python.html  "run_python"
 [run_r]: ../html/dalma-run_r.html  "run_r"
 [run_matlab]: ../html/dalma-run_matlab.html  "run_matlab"
+[run_gaussian_tcplinda]: ../html/dalma-run_gaussian_tcplinda "run_gaussian_tcplinda"
 
 ## MAIN TOPICS
 
