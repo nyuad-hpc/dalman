@@ -15,10 +15,12 @@ To accomplish this, follow the steps:
 
 ## EXAMPLE
 
+
 `Job script for a serial job. Save it using a meaningful filename. E.g., "serial_job.sh"`
 
 ```
-#!/bin/bash 
+#!/bin/bash
+#SBATCH -p serial
 # Set number of nodes to run
 #SBATCH --nodes=1
 # Set number of tasks to run
@@ -31,6 +33,9 @@ To accomplish this, follow the steps:
 #SBATCH -o job.%J.out
 #SBATCH -e job.%J.err
 
+# **** Put all #SBATCH directives above this line! ****
+# **** Otherwise they will not be in effective! ****
+#
 # **** Actual commands start here ****
 # Load modules here (safety measure)
 module purge
@@ -43,12 +48,49 @@ hostname
 
 ```
 
-`Submit the job`
+`Submit the job, run the following command in terminal`
 
 ```
 sbatch serial_job.sh
 ```
 
+At this point, a job is submitted. A job ID will appears on the screen. Mark it down for future reference.
+
+### MORE ON SLURM DIRECTIVES
+
+Normally, all lines begin with `#` is commented out in bash script. However, all SLURM directives start with `#SBATCH`. To comment out a SLURM directive, use `##SBATCH` to begin the line. E.g.,
+
+```
+# The line below is effective
+#SBATCH --nodes=1
+# The line below is commented out, ineffective
+##SBATCH --nodes=1
+# The line below is also commented out, as it starts with # but not with #SBATCH
+# SBATCH --nodes=1
+```
+
+`Receive email notification:`
+
+```
+# This line specifies the email address.
+# Change it to your actual email address.
+#SBATCH --mail-user=first.last@nyu.edu
+#
+# This line specifies when you want to be alerted.
+# If you set it to ALL, you will receive email notifications
+# when the job starts, ends, aborts, resubmits.
+# Another useful option is END. In this case you will only
+# receive notification when the job ends.
+#SBATCH --mail-type=ALL
+```
+
+`Specify memory for the job`
+
+```
+# This directive set the memory required by the job per node
+# This example set the memory to 10GB per node
+#SBATCH --mem=10G
+```
 
 ## AUTHORS 
     NYUAD HPC Apps Team:
