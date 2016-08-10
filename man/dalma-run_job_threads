@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "DALMA\-RUN_JOB_THREADS" "" "July 2016" "NYUAD" "Dalma Manual"
+.TH "DALMA\-RUN_JOB_THREADS" "" "August 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
 You want to run a job with multi\-threading (OpenMP, Pthreads and etc) application, but without multi\-processing (e\.g\., MPI)\.
@@ -57,13 +57,71 @@ omp\-hello
 .IP "" 0
 .
 .P
-\fBSubmit the job\fR
+\fBSubmit the job, run this command in the terminal\fR
 .
 .IP "" 4
 .
 .nf
 
 sbatch openmp_job\.sh
+.
+.fi
+.
+.IP "" 0
+.
+.P
+At this point, a job is submitted\. A job ID will appears on the screen\. Mark it down for future reference\.
+.
+.SS "MORE ON SLURM DIRECTIVES"
+Normally, all lines begin with \fB#\fR is commented out in bash script\. However, all SLURM directives start with \fB#SBATCH\fR\. To comment out a SLURM directive, use \fB##SBATCH\fR to begin the line\. E\.g\.,
+.
+.IP "" 4
+.
+.nf
+
+# The line below is effective
+#SBATCH \-\-nodes=1
+# The line below is commented out, ineffective
+##SBATCH \-\-nodes=1
+# The line below is also commented out, as it starts with # but not with #SBATCH
+# SBATCH \-\-nodes=1
+.
+.fi
+.
+.IP "" 0
+.
+.P
+\fBReceive email notification\fR
+.
+.IP "" 4
+.
+.nf
+
+# This line specifies the email address\.
+# Change it to your actual email address\.
+#SBATCH \-\-mail\-user=first\.last@nyu\.edu
+#
+# This line specifies when you want to be alerted\.
+# If you set it to ALL, you will receive email notifications
+# when the job starts, ends, aborts, resubmits\.
+# Another useful option is END\. In this case you will only
+# receive notification when the job ends\.
+#SBATCH \-\-mail\-type=ALL
+.
+.fi
+.
+.IP "" 0
+.
+.P
+\fBSpecify memory for the job\fR
+.
+.IP "" 4
+.
+.nf
+
+# This directive set the memory required by the job per node
+# This example set the memory to 10GB per node
+#SBATCH \-\-mem=10G
 .
 .fi
 .

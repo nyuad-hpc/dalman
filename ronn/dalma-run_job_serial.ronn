@@ -69,7 +69,7 @@ Normally, all lines begin with `#` is commented out in bash script. However, all
 # SBATCH --nodes=1
 ```
 
-`Receive email notification:`
+`Receive email notification`
 
 ```
 # This line specifies the email address.

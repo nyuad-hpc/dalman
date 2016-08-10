@@ -115,9 +115,44 @@ module purge
 omp-hello
 </code></pre>
 
-<p><code>Submit the job</code></p>
+<p><code>Submit the job, run this command in the terminal</code></p>
 
 <pre><code>sbatch openmp_job.sh
+</code></pre>
+
+<p>At this point, a job is submitted. A job ID will appears on the screen. Mark it down for future reference.</p>
+
+<h3 id="MORE-ON-SLURM-DIRECTIVES">MORE ON SLURM DIRECTIVES</h3>
+
+<p>Normally, all lines begin with <code>#</code> is commented out in bash script. However, all SLURM directives start with <code>#SBATCH</code>. To comment out a SLURM directive, use <code>##SBATCH</code> to begin the line. E.g.,</p>
+
+<pre><code># The line below is effective
+#SBATCH --nodes=1
+# The line below is commented out, ineffective
+##SBATCH --nodes=1
+# The line below is also commented out, as it starts with # but not with #SBATCH
+# SBATCH --nodes=1
+</code></pre>
+
+<p><code>Receive email notification</code></p>
+
+<pre><code># This line specifies the email address.
+# Change it to your actual email address.
+#SBATCH --mail-user=first.last@nyu.edu
+#
+# This line specifies when you want to be alerted.
+# If you set it to ALL, you will receive email notifications
+# when the job starts, ends, aborts, resubmits.
+# Another useful option is END. In this case you will only
+# receive notification when the job ends.
+#SBATCH --mail-type=ALL
+</code></pre>
+
+<p><code>Specify memory for the job</code></p>
+
+<pre><code># This directive set the memory required by the job per node
+# This example set the memory to 10GB per node
+#SBATCH --mem=10G
 </code></pre>
 
 <h2 id="AUTHORS">AUTHORS</h2>
@@ -136,7 +171,7 @@ omp-hello
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'>NYUAD</li>
-    <li class='tc'>July 2016</li>
+    <li class='tc'>August 2016</li>
     <li class='tr'>dalma-run_job_threads</li>
   </ol>
 

@@ -88,7 +88,7 @@ Normally, all lines begin with \fB#\fR is commented out in bash script\. However
 .IP "" 0
 .
 .P
-\fBReceive email notification:\fR
+\fBReceive email notification\fR
 .
 .IP "" 4
 .

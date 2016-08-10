@@ -54,10 +54,48 @@ omp-hello
 
 ```
 
-`Submit the job`
+`Submit the job, run this command in the terminal`
 
 ```
 sbatch openmp_job.sh
+```
+
+At this point, a job is submitted. A job ID will appears on the screen. Mark it down for future reference.
+
+### MORE ON SLURM DIRECTIVES
+
+Normally, all lines begin with `#` is commented out in bash script. However, all SLURM directives start with `#SBATCH`. To comment out a SLURM directive, use `##SBATCH` to begin the line. E.g.,
+
+```
+# The line below is effective
+#SBATCH --nodes=1
+# The line below is commented out, ineffective
+##SBATCH --nodes=1
+# The line below is also commented out, as it starts with # but not with #SBATCH
+# SBATCH --nodes=1
+```
+
+`Receive email notification`
+
+```
+# This line specifies the email address.
+# Change it to your actual email address.
+#SBATCH --mail-user=first.last@nyu.edu
+#
+# This line specifies when you want to be alerted.
+# If you set it to ALL, you will receive email notifications
+# when the job starts, ends, aborts, resubmits.
+# Another useful option is END. In this case you will only
+# receive notification when the job ends.
+#SBATCH --mail-type=ALL
+```
+
+`Specify memory for the job`
+
+```
+# This directive set the memory required by the job per node
+# This example set the memory to 10GB per node
+#SBATCH --mem=10G
 ```
 
 
