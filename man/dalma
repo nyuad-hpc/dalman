@@ -86,10 +86,19 @@ Users can request help on any specific topic using the following command:
 \fBrun_r\fR : How to run R, personalized environments and Anaconda
 .
 .IP "\(bu" 4
+\fBrun_perl\fR : How to run Perl in Dalma
+.
+.IP "\(bu" 4
+\fBrun_wien2k\fR : How to run WIEN2K in Dalma
+.
+.IP "\(bu" 4
 \fBrun_matlab\fR : How to run Matlab, serial and parallel toolbox
 .
 .IP "\(bu" 4
 \fBrun_gaussian_tcplinda\fR : How to run Gaussian in parallel using TcpLinda
+.
+.IP "\(bu" 4
+\fBrun_job_bigmem\fR : How to run memory bond jobs
 .
 .IP "" 0
 .

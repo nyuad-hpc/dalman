@@ -43,8 +43,11 @@ Users can request help on any specific topic using the following command:
 - **run_job_dependencies**   	: How to run jobs with dependencies
 - **run_python**		: How to run Python, personalized environments and Anaconda
 - **run_r**		   	: How to run R,  personalized environments and Anaconda
+- **run_perl**			: How to run Perl in Dalma
+- **run_wien2k**		: How to run WIEN2K in Dalma	
 - **run_matlab**		: How to run Matlab, serial and parallel toolbox
 - **run_gaussian_tcplinda**     : How to run Gaussian in parallel using TcpLinda
+- **run_job_bigmem**	   	: How to run memory bond jobs
 
 ## EXAMPLES 
 
