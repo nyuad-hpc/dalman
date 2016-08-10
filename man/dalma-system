@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "DALMA\-SYSTEM" "" "July 2016" "NYUAD" "Dalma Manual"
+.TH "DALMA\-SYSTEM" "" "August 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
 You want to know the system configuration of Dalma, in order to make the most out of it\.

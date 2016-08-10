@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "DALMA\-DATA_MOVEMENT" "" "July 2016" "NYUAD" "Dalma Manual"
+.TH "DALMA\-DATA_MOVEMENT" "" "August 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
 For replicating datasets between the HPC clusters and your workstation, or between two filesystems on an HPC cluster, rsync offers powerful functionality beyond that of cp or scp\. With rsync you can copy directories between your workstation and the HPC clusters \- or between different filesystems \- in such a way that permission and file modification timestamps are preserved, and that only files which have changed are transferred\.
