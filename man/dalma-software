@@ -4,8 +4,10 @@
 .TH "DALMA\-SOFTWARE" "" "July 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
+You want to know which software is available on Dalma\.
 .
 .SH "DESCRIPTION"
+All software availabel is listed here \fIhttps://goo\.gl/SNfuB5\fR\. A valid NYU NetID is required to view this page\. Our default software environment is NYUAD/3\.0\. The software under NYUAD/2\.0 will not be updated nor supported\.
 .
 .SH "AUTHORS"
 .

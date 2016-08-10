@@ -54,6 +54,7 @@
 
   <div class='man-navigation' style='display:none'>
     <a href="#SYNOPSIS">SYNOPSIS</a>
+    <a href="#WARNING">WARNING</a>
     <a href="#DESCRIPTION">DESCRIPTION</a>
     <a href="#AUTHORS">AUTHORS</a>
     <a href="#SEE-ALSO">SEE ALSO</a>
@@ -68,7 +69,85 @@
   <h1>Dalma Man Pages (dalman) </h1>
 <h2 id="SYNOPSIS">SYNOPSIS</h2>
 
+<p>Ths page explains how to use Matlab on Dalma.</p>
+
+<h2 id="WARNING">WARNING</h2>
+
+<p>Use <code>matlab -nodesktop -nosplash -nodisplay -nojvm</code> instead of <code>matlab</code> to invoke Matlab on compute nodes. Otherwise it will hang, as no X11 is allowed on compute node. Use visualization node to plot huge dataset. For the moment, visualization is yet to be migrated. This page will be updated as soon as it is available.</p>
+
 <h2 id="DESCRIPTION">DESCRIPTION</h2>
+
+<p>There are 2 ways to use Matlab. The first one is to run it interactively. The second one is to submit it as a job. Follow the instructions below.</p>
+
+<h3 id="RUN-MATLAB-INTERACTIVELY">RUN MATLAB INTERACTIVELY</h3>
+
+<p>1.- Login Dalma.</p>
+
+<p>2- (Optional) Start an interactive session, by following the <code>run_job_interactive</code> section in the Documentation.</p>
+
+<p>2.- Run this in terminal to load Matlab module:</p>
+
+<p>  ----------------------------------------------------------</p>
+
+<p>   <code>module load NYUAD/3.0</code></p>
+
+<p>   <code>module load matlab/R2015b</code></p>
+
+<p>  ----------------------------------------------------------</p>
+
+<p>3.- Run this in terminal to start Matlab:</p>
+
+<p>----------------------------------------------------------</p>
+
+<p>  <code>matlab -nodesktop -nosplash -nodisplay -nojvm</code></p>
+
+<p>----------------------------------------------------------</p>
+
+<p>4.- Alternatively, run this to execute a Matlab script :</p>
+
+<p>----------------------------------------------------------</p>
+
+<p>  <code>matlab -nodesktop -nosplash -nodisplay -nojvm -r "run('&lt;path-to-mfile>/&lt;your-mfile>.m');"</code></p>
+
+<p>----------------------------------------------------------</p>
+
+<h3 id="SUBMIT-A-MATLAB-JOB">SUBMIT A MATLAB JOB</h3>
+
+<p>To accomplish this, follow the steps:</p>
+
+<p>1.- Prepare a SLURM job script following the example below.</p>
+
+<p>2.- Submit the job.</p>
+
+<p><code>Job script for a serial Matlab job. Save it using a meaningful filename. E.g., "matlab.sh"</code></p>
+
+<pre><code>#!/bin/bash 
+# Set number of nodes to run
+#SBATCH --nodes=1
+# Set number of tasks to run
+#SBATCH --ntasks=1
+# Set number of cores per task (default is 1)
+#SBATCH --cpus-per-task=1
+# Walltime format hh:mm:ss
+#SBATCH --time=00:30:00
+# Output and error files
+#SBATCH -o job.%J.out
+#SBATCH -e job.%J.err
+
+# **** Actual commands start here ****
+# Load modules here (safety measure)
+module purge
+module load NYUAD/3.0
+module load matlab/R2015b
+
+# Replace this with your actual command. 
+`matlab -nodesktop -nosplash -nodisplay -nojvm -r "run('&lt;path-to-mfile>/&lt;your-mfile>.m');"`
+</code></pre>
+
+<p><code>Submit the job</code></p>
+
+<pre><code>sbatch matlab.sh
+</code></pre>
 
 <h2 id="AUTHORS">AUTHORS</h2>
 
@@ -86,7 +165,7 @@
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'>NYUAD</li>
-    <li class='tc'>July 2016</li>
+    <li class='tc'>August 2016</li>
     <li class='tr'>dalma-run_matlab</li>
   </ol>
 

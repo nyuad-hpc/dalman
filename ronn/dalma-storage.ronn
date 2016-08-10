@@ -1,4 +1,4 @@
-Dalma Man Pages (dalman) 
+Dalma Storage
 ====
 
 ## SYNOPSIS  
@@ -25,17 +25,8 @@ Here are the features of each filesystem
 	- Designed for storing programs, libraries, scripts and etc.
 	- No CLEANUP
 	- No back up
-	- User's quota: 5GB and 100.000 files 
+	- User's quota: 5GB and 100,000 files 
 
-**/fastscratch**
-
-	- 216 TB total size
-	- BeeGFS file system
-	- Very fast - 500,000 file operations per second
-	- Optimised for small files (eg < 10MB)
-	- Designed for use with serial apps (non-MPI)
-	- CLEANUP policy applies (90 days guaranteed)
-	- User's quota: 2TB and 500.000 files 
 
 **/archive**
 
@@ -45,7 +36,7 @@ Here are the features of each filesystem
 	- Accessible only from "login" nodes
 	- Use of TAR / ZIP will be highly recommended
 	- Designed for long term storage
-	- User's quota: 2TB and 500.000 files 
+	- User's quota: 2TB and 500,000 files 
 
 **/scratch**
 
@@ -55,10 +46,19 @@ Here are the features of each filesystem
 	- Optimised for large files (eg > 100MB)
 	- Designed for use with large MPI apps
 	- 50 GB/s bandwidth
-	- CLEANUP policy applies (90 days guaranteed)
-	- Access controlled -> must request and demonstrate need
-	- User's quota: 5TB and 500.000 files 
+    - CLEANUP policy applies (90 days guaranteed)
+	- User's quota: 5TB and 500,000 files
 
+**/fastscratch**
+
+	- 216 TB total size
+	- BeeGFS file system
+	- Very fast - 500,000 file operations per second
+	- Optimised for small files (eg < 10MB)
+	- Designed for use with serial apps (non-MPI)
+	- CLEANUP policy applies (90 days guaranteed)
+	- User's quota: 2TB and 500,000 files 
+	- Access controlled -> must request and demonstrate need
 
 ## ENVIRONMENT VARIABLES 
 
@@ -66,9 +66,10 @@ $HOME => /home/$USER
 
 $ARCHIVE => /archive/$USER
 
-$FASTSCRATCH => /fastscratch/$USER
-
 $SCRATCH => /scratch/$USER    
+
+(If applicable) $FASTSCRATCH => /fastscratch/$USER
+
 
 ## AUTHORS 
 	NYUAD HPC Apps Team:
@@ -79,4 +80,4 @@ $SCRATCH => /scratch/$USER
 
 ## SEE ALSO
 
-[Please refer to the online documentation available at:](https://sites.google.com/a/nyu.edu/hpcad/howtos "Documentation")
+Please refer to the online documentation available [here](https://nyuad-hpc.github.io/dalman/html/dalma.html)

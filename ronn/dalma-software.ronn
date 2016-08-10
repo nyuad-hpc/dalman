@@ -3,8 +3,11 @@ Dalma Man Pages (dalman)
 
 ## SYNOPSIS  
 
+You want to know which software is available on Dalma.
+
 ## DESCRIPTION  
 
+All software availabel is listed [here](https://goo.gl/SNfuB5). A valid NYU NetID is required to view this page. Our default software environment is NYUAD/3.0. The software under NYUAD/2.0 will not be updated nor supported. 
 
 
 ## AUTHORS 

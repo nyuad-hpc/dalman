@@ -68,7 +68,69 @@
   <h1>Dalma Man Pages (dalman) </h1>
 <h2 id="SYNOPSIS">SYNOPSIS</h2>
 
+<p>Ths page explains how to Running a series of jobs with one command.</p>
+
 <h2 id="DESCRIPTION">DESCRIPTION</h2>
+
+<p>1.- Login Dalma.</p>
+
+<p>2.- Always create a new folder for each job array to prevent cross contamination. Use /fastscratch unless you are going to read / write very large sequential files in parallel.</p>
+
+<p>  ----------------------------------------------------------</p>
+
+<p>  <code>mkdir my-job-arry-workspace</code></p>
+
+<p>  <code>cd my-job-array-workspace</code></p>
+
+<p>  ----------------------------------------------------------</p>
+
+<p>3.- Prepare a text file contains all the commands to be run by the job array. One command per line:</p>
+
+<p>----------------------------------------------------------</p>
+
+<p>  <code>Example, in commands.txt:</code></p>
+
+<pre><code class="``">  ./lapack_example 1
+  ./lapack_example 2
+  ./helloworld 3
+  ./lapack_example 4
+  ./lapack_example 5
+</code></pre>
+
+<p>----------------------------------------------------------</p>
+
+<p>4.- Run our job array tool, slurm_lck_ja_submit.sh, with command text file as argument. E.g., <code>$TOOLDIR/slurm_parallel_ja_submit.sh commands.txt</code>. The legacy <code>pbs_parallel_ja_submit.sh</code> will work as well. The job script will be automatically created and submitted. A job ID will pop up on screen. Mark it down for future reference:</p>
+
+<p>----------------------------------------------------------</p>
+
+<p>  Example:</p>
+
+<p>  <code>$TOOLDIR/slurm_parallel_ja_submit.sh commands.txt</code></p>
+
+<p>  or</p>
+
+<p>  (not recommened) <code>$TOOLDIR/pbs_parallel_ja_submit.sh commands.txt</code></p>
+
+<p>  Screen output:</p>
+
+<p>  <code>Submitted batch job 6298</code> # 6298 is the job id</p>
+
+<p>----------------------------------------------------------</p>
+
+<p>5.- Output will be continuously appended to “output.log” in the working folder. Use squeue to check job status. Notice that the tasks might not be completed sequentially, as the CPUs are competing for jobs for best performance:</p>
+
+<p>----------------------------------------------------------</p>
+
+<p>  <code>Example output in out.log:</code></p>
+
+<pre><code class="``">  For n = 1 the approx. condition number is 0.100E+01
+  For n = 2 the approx. condition number is 0.169E+02
+  helloworld
+  For n = 4 the approx. condition number is 0.645E+03
+  For n = 5 the approx. condition number is 0.287E+02
+</code></pre>
+
+<p>----------------------------------------------------------</p>
 
 <h2 id="AUTHORS">AUTHORS</h2>
 

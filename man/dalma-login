@@ -1,13 +1,16 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "DALMA\-LOGIN" "" "July 2016" "NYUAD" "Dalma Manual"
+.TH "DALMA\-LOGIN" "" "August 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
 Here you will find information on how to login \'Dalma\'\.
 .
 .SH "DESCRIPTION"
 If you are outside NYU campus, connect to NYU VPN as instructed here \fIhttp://www\.nyu\.edu/life/resources\-and\-services/information\-technology/getting\-started/network\-and\-connectivity/vpn\.html\fR first\.
+.
+.SS "FROM BUTINAH?"
+All you need is changing the hostname from \fBbutinah\.abudhabi\.nyu\.edu\fR to \fBdalma\.abudhabi\.nyu\.edu\fR
 .
 .SS "MAC / LINUX"
 For Linux / Mac, execute the following command\. Change username to your actual username\.
@@ -22,20 +25,35 @@ ssh username@dalma\.abudhabi\.nyu\.edu
 .
 .IP "" 0
 .
-.SS "WINDOWS"
-We recommend Putty as your ssh client\. It is available for download here \fIhttp://www\.chiark\.greenend\.org\.uk/~sgtatham/putty/download\.html\fR\.
-.
 .P
-1\.\- (First\-time login only) Setup Butinah session in your putty\.
+For X11\-based graphical tools, add \fB\-X\fR to your ssh command\. Change username to your actual username\. E\.g\.,
 .
 .IP "" 4
 .
 .nf
 
-\- Open Putty\. Go to Category \-> Session\.
-\- Type dalma\.abudhabi\.nyu\.edu in Host Name (or IP address)\.
-\- Type Dalma under Saved Sessions\.
-\- Click Save button\. A new session called Dalma will appear in Saved Sessions\.
+ssh username@dalma\.abudhabi\.nyu\.edu \-X
+.
+.fi
+.
+.IP "" 0
+.
+.SS "WINDOWS"
+We recommend Putty as your ssh client\. It is available for download here \fIhttp://www\.chiark\.greenend\.org\.uk/~sgtatham/putty/download\.html\fR\.
+.
+.P
+1\.\- (First\-time login only) Setup Butinah session in your Putty\. Do NOT enter the double quote ""!
+.
+.IP "" 4
+.
+.nf
+
+\- Open Putty\. Go to "Category \-> Session"\.
+\- Type "dalma\.abudhabi\.nyu\.edu" in "Host Name" (or IP address)\.
+\- Make sure "Port" is "22"\.
+\- Make sure "Connection Type" is "SSH"
+\- Type Dalma under "Saved Sessions"\.
+\- Click "Save" button\. A new session called Dalma will appear in Saved Sessions\.
 .
 .fi
 .
@@ -46,6 +64,15 @@ We recommend Putty as your ssh client\. It is available for download here \fIhtt
 .
 .P
 3\.\- Click Open button\.
+.
+.P
+4\.\- (First\-time login only) Click \'yes\' if there is warning about "The authenticity of host \'xxx\.xxx\.xxx\.xxx\' can\'t be established"
+.
+.P
+5\.\- Type your NetID and password to login\.
+.
+.P
+To know more about Putty, watch the movie here \fIhttps://goo\.gl/Kq2900\fR\.
 .
 .SH "AUTHORS"
 .
@@ -60,4 +87,4 @@ We recommend Putty as your ssh client\. It is available for download here \fIhtt
 .fi
 .
 .SH "SEE ALSO"
-Please refer to the online documentation available at: \fIhttps://sites\.google\.com/a/nyu\.edu/hpcad/howtos\fR
+Please refer to the online documentation available here \fIhttps://nyuad\-hpc\.github\.io/dalman/html/dalma\.html\fR

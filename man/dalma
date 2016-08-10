@@ -26,13 +26,10 @@ Users can request help on any specific topic using the following command:
 \fBmodules\fR : NYUME login description\. How to access to the available software in the system
 .
 .IP "\(bu" 4
-\fBvisualisation\fR : Do you have any login needs ?
-.
-.IP "\(bu" 4
 \fBsoftware\fR : List of the available login
 .
 .IP "\(bu" 4
-\fBhardware\fR : Hardware description
+\fBsystem\fR : System description
 .
 .IP "\(bu" 4
 \fBlogin\fR : How to log into the system, from inside and outside NYUAD
@@ -41,19 +38,10 @@ Users can request help on any specific topic using the following command:
 \fBcompiling\fR : Compilation best practices and guidelines
 .
 .IP "\(bu" 4
-\fBpolicies\fR : Want to know the limits that affect you according to NYU policies ?
-.
-.IP "\(bu" 4
-\fBdebugging\fR : How to debug your code
-.
-.IP "\(bu" 4
 \fBget_account\fR : Requesting/renewing an account in Dalma
 .
 .IP "\(bu" 4
 \fBdata_movement\fR : How to move data efficiently in/out Dalma
-.
-.IP "\(bu" 4
-\fBjob_monitoring\fR : How to monitor your job
 .
 .IP "\(bu" 4
 \fBslurm_environment\fR : Environment variables set by SLURM during the job lifetime
@@ -89,22 +77,10 @@ Users can request help on any specific topic using the following command:
 \fBrun_job_bigmem\fR : What should you do when you have a memory bound job
 .
 .IP "\(bu" 4
-\fBrun_parallel_job_array\fR : What is a parallel job array and how to use it
-.
-.IP "\(bu" 4
 \fBrun_job_dependencies\fR : How to run jobs with dependencies
 .
 .IP "\(bu" 4
-\fBrun_gaussian_tcplinda\fR : How to run Gaussian using TCP\-Linda
-.
-.IP "\(bu" 4
-\fBrun_wien2k\fR : How to run Wien2K
-.
-.IP "\(bu" 4
 \fBrun_python\fR : How to run Python, personalized environments and Anaconda
-.
-.IP "\(bu" 4
-\fBrun_perl\fR : How to run perl jobs
 .
 .IP "\(bu" 4
 \fBrun_r\fR : How to run R, personalized environments and Anaconda
@@ -124,13 +100,7 @@ Users can request help on any specific topic using the following command:
 \fBman dalma\-modules\fR
 .
 .P
-\fBman dalma\-hardware\fR
-.
-.P
 \fBman dalma\-run_jobs_mpi\fR
-.
-.P
-\fBman dalma\-run_bigmem\fR
 .
 .P
 \fBman dalma\-run_matlab\fR
@@ -148,4 +118,4 @@ NYUAD HPC Apps Team:
 .fi
 .
 .SH "SEE ALSO"
-**Please refer to the online documentation available at:](https://sites\.google\.com/a/nyu\.edu/hpcad/howtos "Documentation")
+Please refer to the online documentation available here \fIhttps://nyuad\-hpc\.github\.io/dalman/html/dalma\.html\fR

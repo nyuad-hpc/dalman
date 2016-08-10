@@ -2,18 +2,97 @@ Dalma Man Pages (dalman)
 ====
 
 ## SYNOPSIS  
+Ths page explains how to use Matlab on Dalma.
 
-## DESCRIPTION  
+## WARNING
+Use `matlab -nodesktop -nosplash -nodisplay -nojvm` instead of `matlab` to invoke Matlab on compute nodes. Otherwise it will hang, as no X11 is allowed on compute node. Use visualization node to plot huge dataset. For the moment, visualization is yet to be migrated. This page will be updated as soon as it is available.
 
+## DESCRIPTION
+
+There are 2 ways to use Matlab. The first one is to run it interactively. The second one is to submit it as a job. Follow the instructions below.
+
+### RUN MATLAB INTERACTIVELY
+
+1.- Login Dalma.
+
+2- (Optional) Start an interactive session, by following the `run_job_interactive` section in the Documentation.
+
+2.- Run this in terminal to load Matlab module:
+
+  \----------------------------------------------------------
+
+   `module load NYUAD/3.0`
+ 
+   `module load matlab/R2015b`
+
+  \----------------------------------------------------------
+
+3.- Run this in terminal to start Matlab:
+
+\----------------------------------------------------------
+
+  `matlab -nodesktop -nosplash -nodisplay -nojvm`
+
+\----------------------------------------------------------
+ 
+4.- Alternatively, run this to execute a Matlab script :
+
+\----------------------------------------------------------
+ 
+  `matlab -nodesktop -nosplash -nodisplay -nojvm -r "run('<path-to-mfile>/<your-mfile>.m');"`
+
+\----------------------------------------------------------
+
+### SUBMIT A MATLAB JOB
+
+To accomplish this, follow the steps:
+
+1.- Prepare a SLURM job script following the example below.
+
+2.- Submit the job.
+
+`Job script for a serial Matlab job. Save it using a meaningful filename. E.g., "matlab.sh"`
+
+```
+#!/bin/bash 
+# Set number of nodes to run
+#SBATCH --nodes=1
+# Set number of tasks to run
+#SBATCH --ntasks=1
+# Set number of cores per task (default is 1)
+#SBATCH --cpus-per-task=1
+# Walltime format hh:mm:ss
+#SBATCH --time=00:30:00
+# Output and error files
+#SBATCH -o job.%J.out
+#SBATCH -e job.%J.err
+
+# **** Actual commands start here ****
+# Load modules here (safety measure)
+module purge
+module load NYUAD/3.0
+module load matlab/R2015b
+
+# Replace this with your actual command. 
+`matlab -nodesktop -nosplash -nodisplay -nojvm -r "run('<path-to-mfile>/<your-mfile>.m');"`
+
+```
+
+`Submit the job`
+
+```
+sbatch matlab.sh
+```
 
 
 ## AUTHORS 
-	NYUAD HPC Apps Team:
-	--------------------
-		- Benoit Marchand
-		- Guowei He
-		- Jorge Naranjo
+    NYUAD HPC Apps Team:
+    --------------------
+        - Benoit Marchand
+        - Guowei He
+        - Jorge Naranjo
 
 ## SEE ALSO
 
 [Please refer to the online documentation available at:](https://sites.google.com/a/nyu.edu/hpcad/howtos "Documentation")
+
