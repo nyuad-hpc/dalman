@@ -74,9 +74,6 @@ Users can request help on any specific topic using the following command:
 \fBrun_job_array\fR : What is a job array and how to use it
 .
 .IP "\(bu" 4
-\fBrun_job_bigmem\fR : What should you do when you have a memory bound job
-.
-.IP "\(bu" 4
 \fBrun_job_dependencies\fR : How to run jobs with dependencies
 .
 .IP "\(bu" 4
