@@ -7,18 +7,69 @@
 Here you will find information on how to get an account on \'Dalma\'
 .
 .SH "DESCRIPTION"
-This is a two\-step process:
+Account generation and renewal are done in the NYU High Performance Computing (HPC) account management site, IdentityIQ (IIQ) : \fIhttps://iiq\.home\.nyu\.edu/identityiq\fR\. Use your NetID to log in\.
+.
+.P
+After you log in the IIQ, follow the two\-step process:
 .
 .IP "1." 4
-Request an account as instructed here \fIhttps://wikis\.nyu\.edu/display/ADRC/Account+Management+on+Dalma\fR\. You need a valid NetID \fIhttp://www\.nyu\.edu/life/resources\-and\-services/information\-technology/getting\-started/netid\-and\-password\.html\fR to apply\.
+Request an account as instructed here \fIhttps://wikis\.nyu\.edu/display/NYUHPC/Requesting+an+HPC+account+with+IIQ\fR\. You need a valid NetID \fIhttp://www\.nyu\.edu/life/resources\-and\-services/information\-technology/getting\-started/netid\-and\-password\.html\fR to apply\.
 .
 .IP "2." 4
-Ask your sponser \fIhttps://wikis\.nyu\.edu/display/NYUHPC/Account+Eligibility\fR to follow this link \fIhttps://wikis\.nyu\.edu/display/NYUHPC/How+to+approve+an+HPC+account+request\fR to approve your request\.
+Ask your sponser \fIhttps://wikis\.nyu\.edu/display/NYUHPC/Account+Eligibility\fR to log in IIQ, and follow this link \fIhttps://wikis\.nyu\.edu/display/NYUHPC/How+to+approve+an+HPC+account+request\fR to approve your request\.
 .
 .IP "" 0
 .
 .P
-The IIQ, NYU Identity Management service in NY will generate the account on Dalma in 2 business days\. You can then use your NetID and password to login\.
+The IIQ will generate the account on Dalma in 2 business days\. You can then use your NetID and password to login\.
+.
+.SS "Eligibility"
+NYUAD HPC resources are available at no charge to full\-time NYUAD faculty, NYUAD Institute funded researchers, other NYU Faculty and to all other staff and students with full\-time NYUAD faculty sponsorship\.
+.
+.IP "\(bu" 4
+Researchers outside the NYU community will need an NYUAD faculty sponsor to get an account\.
+.
+.IP "\(bu" 4
+All sponsored accounts will be created for a period of 12 months, at which point a renewal process is required to continue to use the clusters\.
+.
+.IP "" 0
+.
+.SS "Sponsorship Guidelines"
+All full\-time NYUAD faculty members are eligible to become sponsors, and in turn can sponsor:
+.
+.IP "\(bu" 4
+Degree program students
+.
+.IP "\(bu" 4
+Visiting scholars
+.
+.IP "\(bu" 4
+Research staff
+.
+.IP "\(bu" 4
+Other NYU staff/affiliates with a NetID
+.
+.IP "\(bu" 4
+Non\-NYU researchers with whom they are actively collaborating
+.
+.IP "" 0
+.
+.SS "Sponsorship Responsibility"
+HPC faculty sponsors are expected to:
+.
+.IP "\(bu" 4
+Approve/disapprove sponsored users\' association with you
+.
+.IP "\(bu" 4
+Approve/disapprove the purpose for which user is requesting an account on NYUAD HPC resources
+.
+.IP "\(bu" 4
+Agree to supervise the sponsored individual, to the extent necessary, to ensure proper use of the NYUAD HPC resources and compliance with all applicable policies\.
+.
+.IP "\(bu" 4
+Respond promptly to account\-related requests from HPC staff
+.
+.IP "" 0
 .
 .SH "AUTHORS"
 .

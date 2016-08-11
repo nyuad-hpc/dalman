@@ -118,6 +118,18 @@ hostname
 
 <p>At this point, a job is submitted. A job ID will appears on the screen. Mark it down for future reference.</p>
 
+<p><code>Check your jobs</code></p>
+
+<p>If you forgot your job id, this command shows you all your present jobs.</p>
+
+<pre><code>squeue -u &lt;your-account-name>
+</code></pre>
+
+<p>This command shows more verbose information on your jobs, even the completed ones.</p>
+
+<pre><code>sacct -u &lt;your-account-name>
+</code></pre>
+
 <h3 id="MORE-ON-SLURM-DIRECTIVES">MORE ON SLURM DIRECTIVES</h3>
 
 <p>Normally, all lines begin with <code>#</code> is commented out in bash script. However, all SLURM directives start with <code>#SBATCH</code>. To comment out a SLURM directive, use <code>##SBATCH</code> to begin the line. E.g.,</p>

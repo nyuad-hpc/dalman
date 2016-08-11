@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "DALMA\-SLURM_COMMANDS" "" "July 2016" "NYUAD" "Dalma Manual"
+.TH "DALMA\-SLURM_COMMANDS" "" "August 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
 Here is a list of the commands most commonly used by users
@@ -100,4 +100,4 @@ NYUAD HPC Apps Team:
 .fi
 .
 .SH "SEE ALSO"
-Please refer to the online documentation available at: \fIhttps://sites\.google\.com/a/nyu\.edu/hpcad/howtos\fR
+Please refer to the online documentation available here \fIhttps://nyuad\-hpc\.github\.io/dalman/html/dalma\.html\fR

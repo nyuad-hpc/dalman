@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "DALMA\-SLURM_SBATCH" "" "July 2016" "NYUAD" "Dalma Manual"
+.TH "DALMA\-SLURM_SBATCH" "" "August 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
 Here you will find information about the options allowed in the submission script or invoking \fBsbatch\fR from the command line
@@ -42,20 +42,20 @@ The following options are used to request for resources in the submission script
 
 #!/bin/bash
 # Set number of tasks to run
-#SBATCH \-n 1
+SBATCH \-n 1
 
 # Set number of cores per task (default is 1)
-#SBATCH \-\-cpus\-per\-task=6
+SBATCH \-\-cpus\-per\-task=6
 
 # You may want to be exclusive on the compute node
 ##SBATCH \-\-exclusive
 
 # Use serial partition
-#SBATCH \-p serial
+SBATCH \-p serial
 
 # Output and error files
-#SBATCH \-o job\.%J\.out
-#SBATCH \-e job\.%J\.err
+SBATCH \-o job\.%J\.out
+SBATCH \-e job\.%J\.err
 
 # Set number of OMP threads
 export OMP_NUM_THREADS 6
@@ -85,4 +85,4 @@ NYUAD HPC Apps Team:
 .fi
 .
 .SH "SEE ALSO"
-Please refer to the online documentation available at: \fIhttps://sites\.google\.com/a/nyu\.edu/hpcad/howtos\fR
+Please refer to the online documentation available here \fIhttps://nyuad\-hpc\.github\.io/dalman/html/dalma\.html\fR

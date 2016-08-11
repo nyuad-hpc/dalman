@@ -99,20 +99,20 @@ If they are used in the submission script the line should always start with <str
 
 <pre><code>#!/bin/bash 
 # Set number of tasks to run
-#SBATCH -n 1
+SBATCH -n 1
 
 # Set number of cores per task (default is 1)
-#SBATCH --cpus-per-task=6
+SBATCH --cpus-per-task=6
 
 # You may want to be exclusive on the compute node
 ##SBATCH --exclusive
 
 # Use serial partition
-#SBATCH -p serial  
+SBATCH -p serial  
 
 # Output and error files
-#SBATCH -o job.%J.out
-#SBATCH -e job.%J.err
+SBATCH -o job.%J.out
+SBATCH -e job.%J.err
 
 # Set number of OMP threads
 export OMP_NUM_THREADS 6
@@ -137,12 +137,12 @@ module purge
 
 <h2 id="SEE-ALSO">SEE ALSO</h2>
 
-<p><a href="https://sites.google.com/a/nyu.edu/hpcad/howtos" title="Documentation">Please refer to the online documentation available at:</a></p>
+<p>Please refer to the online documentation available <a href="https://nyuad-hpc.github.io/dalman/html/dalma.html">here</a></p>
 
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'>NYUAD</li>
-    <li class='tc'>July 2016</li>
+    <li class='tc'>August 2016</li>
     <li class='tr'>dalma-slurm_sbatch</li>
   </ol>
 
