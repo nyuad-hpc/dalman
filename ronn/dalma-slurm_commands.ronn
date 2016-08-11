@@ -61,4 +61,4 @@ Here is a list of the commands most commonly used by users
 
 ## SEE ALSO
 
-[Please refer to the online documentation available at:](https://sites.google.com/a/nyu.edu/hpcad/howtos "Documentation")
+Please refer to the online documentation available [here](https://nyuad-hpc.github.io/dalman/html/dalma.html)

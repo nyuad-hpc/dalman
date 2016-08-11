@@ -51,4 +51,4 @@ Here is the list of some of the environment variables set by SLURM when a job st
 
 ## SEE ALSO
 
-[Please refer to the online documentation available at:](https://sites.google.com/a/nyu.edu/hpcad/howtos "Documentation")
+Please refer to the online documentation available [here](https://nyuad-hpc.github.io/dalman/html/dalma.html)

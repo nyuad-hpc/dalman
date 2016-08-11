@@ -87,5 +87,5 @@ Notice that 6318 is the job array id, while the number after `_`, `1-18` is the 
 
 ## SEE ALSO
 
-[Please refer to the online documentation available at:](https://sites.google.com/a/nyu.edu/hpcad/howtos "Documentation")
+Please refer to the online documentation available [here](https://nyuad-hpc.github.io/dalman/html/dalma.html)
 
