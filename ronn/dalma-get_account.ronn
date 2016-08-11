@@ -12,7 +12,7 @@ Account generation and renewal are done in the NYU High Performance Computing (H
 After you log in the IIQ, follow the two-step process:
  
 1. Request an account as instructed [here](https://wikis.nyu.edu/display/NYUHPC/Requesting+an+HPC+account+with+IIQ). You need a valid NetID to apply.
-2. Ask your [sponser](https://wikis.nyu.edu/display/NYUHPC/Account+Eligibility) to log in IIQ, and follow [this link](https://wikis.nyu.edu/display/NYUHPC/How+to+approve+an+HPC+account+request) to approve your request.
+2. Ask your [sponsor](https://wikis.nyu.edu/display/NYUHPC/Account+Eligibility) to log in IIQ, and follow [this link](https://wikis.nyu.edu/display/NYUHPC/How+to+approve+an+HPC+account+request) to approve your request.
  
 The IIQ will generate the account on Dalma in 2 business days. You can then use your NetID and password to login.
 
