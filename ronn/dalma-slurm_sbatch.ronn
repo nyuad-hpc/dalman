@@ -32,20 +32,20 @@ If they are used in the submission script the line should always start with **#S
 
 	#!/bin/bash 
 	# Set number of tasks to run
-	SBATCH -n 1
+	#SBATCH -n 1
 
 	# Set number of cores per task (default is 1)
-	SBATCH --cpus-per-task=6
+	#SBATCH --cpus-per-task=6
 	
 	# You may want to be exclusive on the compute node
 	##SBATCH --exclusive
 
 	# Use serial partition
-	SBATCH -p serial  
+	#SBATCH -p serial  
 
 	# Output and error files
-	SBATCH -o job.%J.out
-	SBATCH -e job.%J.err
+	#SBATCH -o job.%J.out
+	#SBATCH -e job.%J.err
 
 	# Set number of OMP threads
 	export OMP_NUM_THREADS 6
