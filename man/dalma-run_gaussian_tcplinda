@@ -1,11 +1,54 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "DALMA\-RUN_GAUSSIAN_TCPLINDA" "" "July 2016" "NYUAD" "Dalma Manual"
+.TH "DALMA\-RUN_GAUSSIAN_TCPLINDA" "" "August 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
+How to run G09 with tcplinda in \fBdalma\fR
 .
 .SH "DESCRIPTION"
+The production gaussian version in Butinah is G09 D\.01\. To use it you just need to load the module:
+.
+.IP "" 4
+.
+.nf
+
+$> module load gaussian
+.
+.fi
+.
+.IP "" 0
+.
+.P
+There are two files in \fB/share/apps/NYUAD/gaussian/09\.D\.01/templates_linda\fR
+.
+.P
+\fItcp\-linda\.in\fR
+.
+.P
+\fIrun_tcp\-linda\.bash\.slurm\fR
+.
+.P
+\fItcp\-linda\.in\fR is just a template file that will be used to patch the original input file with the right resources according to the batch system allocation\. This file must be copied to the working dir\.
+.
+.P
+\fIrun_tcp\-linda\.bash\.slurm\fR is the batch script you need to submit using \fBsbatch\fR\. Edit this file and modify the allocation parameters as needed\. Also complete the input and output file fields\.
+.
+.P
+then submit it:
+.
+.IP "" 4
+.
+.nf
+
+$> sbatch run_tcp\-linda\.bash\.slurm
+.
+.fi
+.
+.IP "" 0
+.
+.P
+That should be enough\.
 .
 .SH "AUTHORS"
 .
@@ -20,4 +63,4 @@ NYUAD HPC Apps Team:
 .fi
 .
 .SH "SEE ALSO"
-Please refer to the online documentation available at: \fIhttps://sites\.google\.com/a/nyu\.edu/hpcad/howtos\fR
+Please refer to the online documentation available here: \fIhttps://nyuad\-hpc\.github\.io/dalman/html/dalma\.html\fR

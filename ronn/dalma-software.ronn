@@ -19,4 +19,4 @@ All software availabel is listed [here](https://goo.gl/SNfuB5). A valid NYU NetI
 
 ## SEE ALSO
 
-[Please refer to the online documentation available at:](https://sites.google.com/a/nyu.edu/hpcad/howtos "Documentation")
+Please refer to the online documentation available [here](https://nyuad-hpc.github.io/dalman/html/dalma.html)

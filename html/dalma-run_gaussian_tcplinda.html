@@ -68,7 +68,32 @@
   <h1>Dalma Man Pages (dalman) </h1>
 <h2 id="SYNOPSIS">SYNOPSIS</h2>
 
+<p>How to run G09 with tcplinda in  <strong>dalma</strong></p>
+
 <h2 id="DESCRIPTION">DESCRIPTION</h2>
+
+<p>The production gaussian version in Butinah is G09 D.01.
+To use it you just need to load the module:</p>
+
+<pre><code>$&gt; module load gaussian
+</code></pre>
+
+<p>There are two files in <strong>/share/apps/NYUAD/gaussian/09.D.01/templates_linda</strong></p>
+
+<p><em>tcp-linda.in</em></p>
+
+<p><em>run_tcp-linda.bash.slurm</em></p>
+
+<p><em>tcp-linda.in</em> is just a template file that will be used to patch the original input file with the right resources according to the batch system allocation. This file must be copied to the working dir.</p>
+
+<p><em>run_tcp-linda.bash.slurm</em> is the batch script you need to submit using <strong>sbatch</strong>. Edit this file and modify the allocation parameters as needed. Also complete the input and output file fields.</p>
+
+<p>then submit it:</p>
+
+<pre><code>$&gt; sbatch run_tcp-linda.bash.slurm 
+</code></pre>
+
+<p>That should be enough.</p>
 
 <h2 id="AUTHORS">AUTHORS</h2>
 
@@ -81,12 +106,12 @@
 
 <h2 id="SEE-ALSO">SEE ALSO</h2>
 
-<p><a href="https://sites.google.com/a/nyu.edu/hpcad/howtos" title="Documentation">Please refer to the online documentation available at:</a></p>
+<p><a href="https://nyuad-hpc.github.io/dalman/html/dalma.html">Please refer to the online documentation available here:</a></p>
 
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'>NYUAD</li>
-    <li class='tc'>July 2016</li>
+    <li class='tc'>August 2016</li>
     <li class='tr'>dalma-run_gaussian_tcplinda</li>
   </ol>
 
