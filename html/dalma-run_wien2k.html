@@ -68,7 +68,60 @@
   <h1>Dalma Man Pages (dalman) </h1>
 <h2 id="SYNOPSIS">SYNOPSIS</h2>
 
+<p>In case you are running WIEN2K in parallel using MPI or k-point, you will need to add the following code to your submission script. This will create the .machines file in the correct format needed for execution.</p>
+
 <h2 id="DESCRIPTION">DESCRIPTION</h2>
+
+<p>Note this is just an excerpt, don't use it as is but use it as a template and fill it according to your needs:</p>
+
+<pre><code>#!/bin/csh 
+#SBATCH -N 2 
+#SBATCH -n 56
+#SBATCH -t 24:00:00 
+#SBATCH -J my_wien2k_job 
+
+limit vmemoryuse unlimited 
+
+#
+# Load the module
+#
+module load wien2k
+#
+#start creating .machines
+# 
+#+++++++++++++++++++++ 
+cat $PBS_NODEFILE &gt;.machines_current 
+set aa=`wc .machines_current` 
+echo '#' &gt; .machines 
+
+# example for an MPI parallel lapw0 
+echo -n 'lapw0:' &gt;&gt; .machines 
+set i=1 
+while ($i &lt; $aa[1] ) 
+ echo -n `cat $PBS_NODEFILE |head -$i | tail -1` ' ' >&gt; .machines 
+ @ i ++ 
+end 
+
+echo `cat $PBS_NODEFILE |head -$i|tail -1` ' ' &gt;&gt; .machines 
+
+#example for k-point parallel lapw1/2 
+set i=1 
+while ($i &lt;= $aa[1] ) 
+  echo -n '1:' &gt;&gt;.machines 
+  head -$i .machines_current |tail -1 &gt;&gt; .machines 
+  @ i ++ 
+end 
+
+echo 'granularity:1' &gt;&gt; .machines 
+echo 'extrafine:1' &gt;&gt; .machines 
+#+++++++++++++++++++++
+
+#define here your Wien2k command
+run_lapw -p -i 80 -ec .0001 -cc 0.0003 -NI
+
+#remove the .machines file after the run
+rm -f .machines
+</code></pre>
 
 <h2 id="AUTHORS">AUTHORS</h2>
 
