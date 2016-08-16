@@ -69,6 +69,35 @@ sbatch serial_job\.sh
 .P
 At this point, a job is submitted\. A job ID will appears on the screen\. Mark it down for future reference\.
 .
+.P
+\fBCheck your jobs\fR
+.
+.P
+If you forgot your job id, this command shows you all your present jobs\.
+.
+.IP "" 4
+.
+.nf
+
+squeue \-u <your\-account\-name>
+.
+.fi
+.
+.IP "" 0
+.
+.P
+This command shows more verbose information on your jobs, even the completed ones\.
+.
+.IP "" 4
+.
+.nf
+
+sacct \-u <your\-account\-name>
+.
+.fi
+.
+.IP "" 0
+.
 .SS "MORE ON SLURM DIRECTIVES"
 Normally, all lines begin with \fB#\fR is commented out in bash script\. However, all SLURM directives start with \fB#SBATCH\fR\. To comment out a SLURM directive, use \fB##SBATCH\fR to begin the line\. E\.g\.,
 .

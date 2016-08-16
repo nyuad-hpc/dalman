@@ -56,6 +56,21 @@ sbatch serial_job.sh
 
 At this point, a job is submitted. A job ID will appears on the screen. Mark it down for future reference.
 
+`Check your jobs`
+
+If you forgot your job id, this command shows you all your present jobs.
+
+```
+squeue -u <your-account-name>
+
+```
+
+This command shows more verbose information on your jobs, even the completed ones.
+
+```
+sacct -u <your-account-name>
+```
+
 ### MORE ON SLURM DIRECTIVES
 
 Normally, all lines begin with `#` is commented out in bash script. However, all SLURM directives start with `#SBATCH`. To comment out a SLURM directive, use `##SBATCH` to begin the line. E.g.,
