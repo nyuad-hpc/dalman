@@ -31,7 +31,7 @@ There are 2 ways to use Matlab. The first one is to run it interactively. The se
 
 \----------------------------------------------------------
 
-  `matlab -nodesktop -nosplash -nodisplay -nojvm`
+  `matlab -nodesktop -nosplash -nodisplay`
 
 \----------------------------------------------------------
  
@@ -39,7 +39,7 @@ There are 2 ways to use Matlab. The first one is to run it interactively. The se
 
 \----------------------------------------------------------
  
-  `matlab -nodesktop -nosplash -nodisplay -nojvm -r "run('<path-to-mfile>/<your-mfile>.m');"`
+  `matlab -nodesktop -nosplash -nodisplay -r "run('<path-to-mfile>/<your-mfile>.m');"`
 
 \----------------------------------------------------------
 
@@ -74,7 +74,7 @@ module load NYUAD/3.0
 module load matlab/R2015b
 
 # Replace this with your actual command. 
-`matlab -nodesktop -nosplash -nodisplay -nojvm -r "run('<path-to-mfile>/<your-mfile>.m');"`
+matlab -nodesktop -nosplash -nodisplay -r "run('<path-to-mfile>/<your-mfile>.m'); exit;"
 
 ```
 
