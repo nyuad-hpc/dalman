@@ -1,4 +1,4 @@
-Dalma Man Pages (dalman) 
+Data Transfer From / To Dalma
 ====
 
 ## SYNOPSIS  
@@ -6,8 +6,26 @@ Dalma Man Pages (dalman)
 For replicating datasets between the HPC clusters and your workstation, or between two filesystems on an HPC cluster, rsync offers powerful functionality beyond that of cp or scp. With rsync you can copy directories between your workstation and the HPC clusters - or between different filesystems - in such a way that permission and file modification timestamps are preserved, and that only files which have changed are transferred.
 
 ## DESCRIPTION
+Depending on what operation system you use, we recommend the following 2 ways to transfer data from / to Dalma.
 
-### Basic Usage of rsync
+* Filezilla: This is an easy to use, open-source SFTP client with a nice GUI, available under Windows, Mac and Linux.
+* rsync: This is probably the most common command for synchronizing data between file systems, available under Mac and Linux.
+
+If you have trouble understanding the text above, we kindly suggest you have a look at the links below for the basic understanding of SFTP, SSH and etc.
+
+https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server
+
+### Windows / Mac : Filezilla
+
+Please follow the following link with detailed instructions and screenshots, if you want to use Filezilla to transfer data.
+
+
+
+### Linux / Mac : rysnc
+
+This is probably the most common command for synchronizing data between file systems, available under Mac and Linux. Follow the instructions below to use `rysnc`.
+
+#### Basic Usage of rsync
 
 `rsync [options] source [source] destination`
 
