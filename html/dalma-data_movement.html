@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv='content-type' value='text/html;charset=utf8'>
   <meta name='generator' value='Ronn/v0.7.3 (http://github.com/rtomayko/ronn/tree/0.7.3)'>
-  <title>Dalma Man Pages (dalman) </title>
+  <title>Data Transfer From / To Dalma</title>
   <style type='text/css' media='all'>
   /* style: man */
   body#manpage {margin:0}
@@ -66,14 +66,34 @@
     <li class='tr'>dalma-data_movement</li>
   </ol>
 
-  <h1>Dalma Man Pages (dalman) </h1>
+  <h1>Data Transfer From / To Dalma</h1>
 <h2 id="SYNOPSIS">SYNOPSIS</h2>
 
 <p>For replicating datasets between the HPC clusters and your workstation, or between two filesystems on an HPC cluster, rsync offers powerful functionality beyond that of cp or scp. With rsync you can copy directories between your workstation and the HPC clusters - or between different filesystems - in such a way that permission and file modification timestamps are preserved, and that only files which have changed are transferred.</p>
 
 <h2 id="DESCRIPTION">DESCRIPTION</h2>
 
-<h3 id="Basic-Usage-of-rsync">Basic Usage of rsync</h3>
+<p>Depending on what operation system you use, we recommend the following 2 ways to transfer data from / to Dalma.</p>
+
+<ul>
+<li>Filezilla: This is an easy to use, open-source SFTP client with a nice GUI, available under Windows, Mac and Linux.</li>
+<li>rsync: This is probably the most common command for synchronizing data between file systems, available under Mac and Linux.</li>
+</ul>
+
+
+<p>If you have trouble understanding the text above, we kindly suggest you have a look at the links below for the basic understanding of SFTP, SSH and etc.</p>
+
+<p>https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server</p>
+
+<h3 id="Windows-Mac-Filezilla">Windows / Mac : Filezilla</h3>
+
+<p>Please follow the following link with detailed instructions and screenshots, if you want to use Filezilla to transfer data.</p>
+
+<h3 id="Linux-Mac-rysnc">Linux / Mac : rysnc</h3>
+
+<p>This is probably the most common command for synchronizing data between file systems, available under Mac and Linux. Follow the instructions below to use <code>rysnc</code>.</p>
+
+<h4 id="Basic-Usage-of-rsync">Basic Usage of rsync</h4>
 
 <p><code>rsync [options] source [source] destination</code></p>
 
