@@ -23,10 +23,13 @@ If you have trouble understanding the text above, we kindly suggest you have a l
 .P
 https://www\.digitalocean\.com/community/tutorials/how\-to\-use\-sftp\-to\-securely\-transfer\-files\-with\-a\-remote\-server
 .
-.SS "Windows / Mac : Filezilla"
+.SS "Windows / Mac / Linux : Filezilla"
 Please follow the following link with detailed instructions and screenshots, if you want to use Filezilla to transfer data\.
 .
-.SS "Linux / Mac : rysnc"
+.P
+\fIhttps://wikis\.nyu\.edu/display/ADRC/File+Transfer+using+FileZilla\fR
+.
+.SS "Mac / Linux : rysnc"
 This is probably the most common command for synchronizing data between file systems, available under Mac and Linux\. Follow the instructions below to use \fBrysnc\fR\.
 .
 .P

@@ -15,13 +15,14 @@ If you have trouble understanding the text above, we kindly suggest you have a l
 
 https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server
 
-### Windows / Mac : Filezilla
+### Windows / Mac / Linux : Filezilla
 
 Please follow the following link with detailed instructions and screenshots, if you want to use Filezilla to transfer data.
 
+[https://wikis.nyu.edu/display/ADRC/File+Transfer+using+FileZilla](https://wikis.nyu.edu/display/ADRC/File+Transfer+using+FileZilla)
 
 
-### Linux / Mac : rysnc
+### Mac / Linux : rysnc
 
 This is probably the most common command for synchronizing data between file systems, available under Mac and Linux. Follow the instructions below to use `rysnc`.
 
