@@ -7,7 +7,7 @@
 Here you will find information on how to login \'Dalma\'\.
 .
 .SH "DESCRIPTION"
-If you are outside NYU campus, connect to NYU VPN as instructed here \fIhttp://www\.nyu\.edu/life/information\-technology/getting\-started/network\-and\-connectivity/vpn\.html\fR first\.
+If you are outside NYU campus, connect to NYU VPN as instructed here first\. http://www\.nyu\.edu/life/information\-technology/getting\-started/network\-and\-connectivity/vpn\.html
 .
 .SS "FROM BUTINAH?"
 All you need is changing the hostname from \fBbutinah\.abudhabi\.nyu\.edu\fR to \fBdalma\.abudhabi\.nyu\.edu\fR
