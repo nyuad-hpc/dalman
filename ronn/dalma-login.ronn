@@ -5,7 +5,7 @@ Dalma Login
 Here you will find information on how to login 'Dalma'. 
   
 ## DESCRIPTION
-If you are outside NYU campus, connect to NYU VPN as instructed [here](http://www.nyu.edu/life/resources-and-services/information-technology/getting-started/network-and-connectivity/vpn.html) first.
+If you are outside NYU campus, connect to NYU VPN as instructed here first. http://www.nyu.edu/life/information-technology/getting-started/network-and-connectivity/vpn.html
 
 ### FROM BUTINAH?
 All you need is changing the hostname from `butinah.abudhabi.nyu.edu` to `dalma.abudhabi.nyu.edu`
