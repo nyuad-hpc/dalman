@@ -9,7 +9,7 @@ Here you will find a list of all the available topics for help related to __Dalm
 
 This place will contain most of the documentation/recipes needed to get you to work in Dalma or to solve your most common problems or questions.
 
-However, If there is any information that can not be found here please visit the [How To's section](https://wikis.nyu.edu/pages/viewpage.action?pageId=69765337 "How to's"){:target="_blank"}
+However, If there is any information that can not be found here please visit the <a href="https://wikis.nyu.edu/pages/viewpage.action?pageId=69765337" target="_blank">How To's section</a> 
 
 ## DESCRIPTION  
 
