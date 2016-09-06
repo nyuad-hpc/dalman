@@ -7,7 +7,7 @@
 This page explains how to load our highly cusomized Python environments on Dalma\.
 .
 .P
-There are basically two methods: either the you use Python through \fIAnaconda\fR or the user install its modules in its own personalised environment\.
+There are basically two methods: either to use Python through \fIAnaconda\fR or the user install the modules in its own personalised environment\.
 .
 .P
 This section describes the use of python with \fIAnaconda\fR\. For more info about this, please visit: Python \- Using Anaconda \fIhttps://wikis\.nyu\.edu/display/ADRC/Python+\-+Using+Anaconda\fR
