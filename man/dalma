@@ -1,10 +1,16 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "DALMA" "" "August 2016" "NYUAD" "Dalma Manual"
+.TH "DALMA" "" "September 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
 Here you will find a list of all the available topics for help related to \fBDalma\fR and how to call for help
+.
+.P
+This place will contain most of the documentation/recipes needed to get you to work in Dalma or to solve your most common problems or questions\.
+.
+.P
+However, If there is any information that can not be found here please visit the How To\'s section \fIhttps://wikis\.nyu\.edu/pages/viewpage\.action?pageId=69765337\fR
 .
 .SH "DESCRIPTION"
 Users can request help on any specific topic using the following command:
