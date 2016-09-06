@@ -1,10 +1,19 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "DALMA\-RUN_PYTHON" "" "August 2016" "NYUAD" "Dalma Manual"
+.TH "DALMA\-RUN_PYTHON" "" "September 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
-Ths page explains how to load our highly cusomized Python environments on Dalma\.
+This page explains how to load our highly cusomized Python environments on Dalma\.
+.
+.P
+There are basically two methods: either the you use Python through \fIAnaconda\fR or the user install its modules in its own personalised environment\.
+.
+.P
+This section describes the use of python with \fIAnaconda\fR\. For more info about this, please visit: Python \- Using Anaconda \fIhttps://wikis\.nyu\.edu/display/ADRC/Python+\-+Using+Anaconda\fR
+.
+.P
+To know how to use a personalised Python environment, visit Python \- Using python in Dalma \- Installing Modules \fIhttps://wikis\.nyu\.edu/display/ADRC/Python+\-+Using+python+in+Dalma+\-+Installing+Modules\fR
 .
 .SH "DESCRIPTION"
 1\.\- Login Dalma\.

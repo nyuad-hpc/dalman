@@ -2,7 +2,13 @@ Dalma Man Pages (dalman)
 ====
 
 ## SYNOPSIS  
-Ths page explains how to load our highly cusomized Python environments on Dalma.
+This page explains how to load our highly cusomized Python environments on Dalma.
+
+There are basically two methods: either the you use Python through  _Anaconda_ or the user install its modules in its own personalised environment.
+
+This section describes the use of python with _Anaconda_. For more info about this, please visit: <a href="https://wikis.nyu.edu/display/ADRC/Python+-+Using+Anaconda" target="_blank">Python - Using Anaconda</a>
+
+To know how to use a personalised Python environment, visit <a href="https://wikis.nyu.edu/display/ADRC/Python+-+Using+python+in+Dalma+-+Installing+Modules" target="_blank">Python - Using python in Dalma - Installing Modules</a>
 
 ## DESCRIPTION
 
