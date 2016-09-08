@@ -115,11 +115,9 @@
 
 <p>To accomplish this, follow the steps:</p>
 
-<p>1.- Prepare a SLURM job script following the example below.</p>
+<p>1.- <code>Prepare a SLURM job script following the example below.</code></p>
 
-<p>2.- Submit the job.</p>
-
-<p><code>Job script for a serial Matlab job. Save it using a meaningful filename. E.g., "matlab.sh"</code></p>
+<p>Job script for a serial Matlab job. Save it using a meaningful filename. E.g., "matlab.sh"</p>
 
 <pre><code>#!/bin/bash 
 # Set number of nodes to run
@@ -144,7 +142,32 @@ module load matlab/R2015b
 matlab -nodesktop -nosplash -nodisplay -r "run('&lt;path-to-mfile>/&lt;your-mfile>.m'); exit;"
 </code></pre>
 
-<p><code>Submit the job</code></p>
+<p>(If you are use multi-threading, e.g., parfor). Job script for a multi-threading Matlab job. Save it using a meaningful filename. E.g., "matlab-par.sh"</p>
+
+<pre><code>#!/bin/bash 
+# Set number of nodes to run
+#SBATCH --nodes=1
+# Set number of tasks to run
+#SBATCH --ntasks=1
+# Set number of cores per task (default is 1, we select 7 here)
+#SBATCH --cpus-per-task=7
+# Walltime format hh:mm:ss
+#SBATCH --time=00:30:00
+# Output and error files
+#SBATCH -o job.%J.out
+#SBATCH -e job.%J.err
+
+# **** Actual commands start here ****
+# Load modules here (safety measure)
+module purge
+module load NYUAD/3.0
+module load matlab/R2015b
+
+# Replace this with your actual command. 
+matlab -nodesktop -nosplash -nodisplay -r "run('&lt;path-to-mfile>/&lt;your-mfile>.m'); exit;"
+</code></pre>
+
+<p>2.- <code>Submit the job</code></p>
 
 <pre><code>sbatch matlab.sh
 </code></pre>
@@ -165,7 +188,7 @@ matlab -nodesktop -nosplash -nodisplay -r "run('&lt;path-to-mfile>/&lt;your-mfil
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'>NYUAD</li>
-    <li class='tc'>August 2016</li>
+    <li class='tc'>September 2016</li>
     <li class='tr'>dalma-run_matlab</li>
   </ol>
 
