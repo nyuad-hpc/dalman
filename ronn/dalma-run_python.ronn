@@ -10,6 +10,9 @@ This section describes the use of python with _Anaconda_. For more info about th
 
 To know how to use a personalised Python environment, visit <a href="https://wikis.nyu.edu/display/ADRC/Python+-+Using+python+in+Dalma+-+Installing+Modules" target="_blank">Python - Using python in Dalma - Installing Modules</a>
 
+To create your own Conda environment, visit <a href="https://wikis.nyu.edu/display/ADRC/Python+-+Create+Your+Own+Environment+using+Anaconda" target="_blank">Python - Create Your Own Environment using Anaconda</a>
+
+
 ## DESCRIPTION
 
 1.- Login Dalma.
@@ -18,8 +21,6 @@ To know how to use a personalised Python environment, visit <a href="https://wik
 
   \----------------------------------------------------------
 
-   `module load NYUAD`
- 
    `module load anaconda`
 
   \----------------------------------------------------------
@@ -35,41 +36,38 @@ To know how to use a personalised Python environment, visit <a href="https://wik
   Example screen output from previous command:
 
 ```
-  [hpc@login-0-1 ~]$ conda env list
+  [wei@login-0-1 ~]$ conda env list
   # conda environments:
-  # #
-  # p27-NLP                  /share/apps/NYUAD3/anaconda/2.4.1/envs/p27-NLP
-  # p27-astro                /share/apps/NYUAD3/anaconda/2.4.1/envs/p27-astro
-  # p27-cpd                  /share/apps/NYUAD3/anaconda/2.4.1/envs/p27-cpd
-  # p27-scient               /share/apps/NYUAD3/anaconda/2.4.1/envs/p27-scient
-  # pyferret                 /share/apps/NYUAD3/anaconda/2.4.1/envs/pyferret
-  # python-27                /share/apps/NYUAD3/anaconda/2.4.1/envs/python-27
-  # python-3                 /share/apps/NYUAD3/anaconda/2.4.1/envs/python-3
-  # r-322                    /share/apps/NYUAD3/anaconda/2.4.1/envs/r-322
-  # test                     /share/apps/NYUAD3/anaconda/2.4.1/envs/test
-  # root                  *  /share/apps/NYUAD3/anaconda/2.4.1
+  #
+  p27-astro                /share/apps/NYUAD3/anaconda/2-4.1.1/envs/p27-astro
+  p27-scient               /share/apps/NYUAD3/anaconda/2-4.1.1/envs/p27-scient
+  pyferret                 /share/apps/NYUAD3/anaconda/2-4.1.1/envs/pyferret
+  python-27                /share/apps/NYUAD3/anaconda/2-4.1.1/envs/python-27
+  python-3                 /share/apps/NYUAD3/anaconda/2-4.1.1/envs/python-3
+  r-322                    /share/apps/NYUAD3/anaconda/2-4.1.1/envs/r-322
+  r-essentials             /share/apps/NYUAD3/anaconda/2-4.1.1/envs/r-essentials
+  root                  *  /share/apps/NYUAD3/anaconda/2-4.1.1
+
 ```
 
   The symbol "*" means the current loaded environment. In this case, "root" is loaded.
 
-4.- Load specific Python environment. This example loads the environment p27-cpd, the Python 2.7 environment for Center of Particle Detection. Run this in terminal:
+4.- Load specific Python environment. This example loads the environment p27-astro, the Python 2.7 environment for Center of Particle Detection. Run this in terminal:
 
 \----------------------------------------------------------
  
-  `source activate p27-cpd`
+  `source activate p27-astro`
 
 \----------------------------------------------------------
 
   Example screen output from previous command:
 
 ```
-  [hpc@login-0-1 ~]$ source activate p27-cpd
-  discarding /share/apps/NYUAD3/anaconda/2.4.1/bin from PATH
-  prepending /share/apps/NYUAD3/anaconda/2.4.1/envs/p27-cpd/bin to PATH
-  (p27-cpd)[hpc@login-0-1 ~]$
+  [wei@login-0-1 ~]$ source activate p27-astro
+  (p27-astro) [wei@login-0-1 ~]$ 
 ```
 
-  Notice the (p27-cpd) prefix. It indicates the current loaded environment.
+  Notice the (p27-astro) prefix. It indicates the current loaded environment.
 
 5.- **(Optional)** In case you want to load another Python environment, or you simply don't want this Python environment anymore, run this in terminal to unload the environment:
 
