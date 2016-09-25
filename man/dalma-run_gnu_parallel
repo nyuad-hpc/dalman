@@ -1,0 +1,69 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "DALMA\-RUN_GNU_PARALLEL" "" "September 2016" "NYUAD" "Dalma Manual"
+.
+.SH "SYNOPSIS"
+This page explains how to use GNU Parallel to run large batch of small jobs\.
+.
+.SH "DESCRIPTION"
+1\.\- Login Dalma\.
+.
+.P
+2\.\- Examine the example job script\. /share/apps/dalma/tools/gnuparallel\-job\.sh
+.
+.IP "" 4
+.
+.nf
+
+#!/bin/bash
+# Set number of nodes to run
+#SBATCH \-\-nodes=2
+# Set number of tasks to run
+#SBATCH \-\-ntasks\-per\-node=7
+# Set number of cores per task (default is 1)
+#SBATCH \-\-cpus\-per\-task=4
+# Walltime format hh:mm:ss
+#SBATCH \-\-time=00:30:00
+# Output and error files
+#SBATCH \-o job\.%J\.out
+#SBATCH \-e job\.%J\.err
+
+# **** Put all #SBATCH directives above this line! ****
+# **** Otherwise they will not be in effective! ****
+#
+# **** Actual commands start here ****
+# Load GNU Parallel
+module purge
+module load parallel
+
+# Actual commands with GNU Parallel
+# Notice: The argument \-\-jobs is number of jobs per node\. This should be identical to \-\-ntasks\-per\-node in #SBATCH header
+#   This setup a case using 2 nodes, 7 jobs per node, each task using 4 cores (multi\-threading)\.
+# Replace the following example with your actual command\. This example line put every task to sleep for 1 minute\.
+parallel \-\-jobs 7 \-\-sshloginfile $PBS_NODEFILE \-\-joblog progress\.log \-k sleep ::: 1m 1m 1m 1m 1m 1m 1m 1m 1m 1m 1m 1m 1m 1m 1m 1m 1m 1m 1m 1m 1m 1m 1m 1m 1m 1m 1m 1m 1m 1m
+.
+.fi
+.
+.IP "" 0
+.
+.P
+3\.\- Modify the commands accordingly to your actual computation\. Check this link for more information: https://www\.gnu\.org/software/parallel/parallel_tutorial\.html
+.
+.P
+4\.\- Submit the job using \fBsbatch\fR
+.
+.SH "AUTHORS"
+.
+.nf
+
+NYUAD HPC Apps Team:
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+    \- Benoit Marchand
+    \- Guowei He
+    \- Jorge Naranjo
+.
+.fi
+.
+.SH "SEE ALSO"
+Please refer to the online documentation available here \fIhttps://nyuad\-hpc\.github\.io/dalman/html/dalma\.html\fR
