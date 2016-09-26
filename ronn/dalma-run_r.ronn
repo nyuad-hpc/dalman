@@ -12,8 +12,6 @@ Ths page explains how to load our highly cusomized R environments on Dalma.
 
   \----------------------------------------------------------
 
-   `module load NYUAD`
- 
    `module load anaconda`
 
   \----------------------------------------------------------
@@ -29,19 +27,18 @@ Ths page explains how to load our highly cusomized R environments on Dalma.
   Example screen output from previous command:
 
 ```
-  [hpc@login-0-1 ~]$ conda env list
+  [wei@login-0-1 ~]$ conda env list
   # conda environments:
-  # #
-  # p27-NLP                  /share/apps/NYUAD3/anaconda/2.4.1/envs/p27-NLP
-  # p27-astro                /share/apps/NYUAD3/anaconda/2.4.1/envs/p27-astro
-  # p27-cpd                  /share/apps/NYUAD3/anaconda/2.4.1/envs/p27-cpd
-  # p27-scient               /share/apps/NYUAD3/anaconda/2.4.1/envs/p27-scient
-  # pyferret                 /share/apps/NYUAD3/anaconda/2.4.1/envs/pyferret
-  # python-27                /share/apps/NYUAD3/anaconda/2.4.1/envs/python-27
-  # python-3                 /share/apps/NYUAD3/anaconda/2.4.1/envs/python-3
-  # r-322                    /share/apps/NYUAD3/anaconda/2.4.1/envs/r-322
-  # test                     /share/apps/NYUAD3/anaconda/2.4.1/envs/test
-  # root                  *  /share/apps/NYUAD3/anaconda/2.4.1
+  #
+  p27-astro                /share/apps/NYUAD3/anaconda/2-4.1.1/envs/p27-astro
+  p27-scient               /share/apps/NYUAD3/anaconda/2-4.1.1/envs/p27-scient
+  pyferret                 /share/apps/NYUAD3/anaconda/2-4.1.1/envs/pyferret
+  python-27                /share/apps/NYUAD3/anaconda/2-4.1.1/envs/python-27
+  python-3                 /share/apps/NYUAD3/anaconda/2-4.1.1/envs/python-3
+  r-322                    /share/apps/NYUAD3/anaconda/2-4.1.1/envs/r-322
+  r-essentials             /share/apps/NYUAD3/anaconda/2-4.1.1/envs/r-essentials
+  root                  *  /share/apps/NYUAD3/anaconda/2-4.1.1
+
 ```
 
   The symbol "*" means the current loaded environment. In this case, "root" is loaded.
