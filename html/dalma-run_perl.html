@@ -68,7 +68,94 @@
   <h1>Dalma Man Pages (dalman) </h1>
 <h2 id="SYNOPSIS">SYNOPSIS</h2>
 
+<p>NYUAD HPC team provides a global Perl software environment which can be used through "Linux environment modules".  We do not install additional Perl modules to the global environment.  So if you need, say the LWP Perl module, you will need to "localise" the global Perl environment to your home directory and install the LWP component yourself.  Here is how to do it...</p>
+
+<p>NOTE: The localisation is based on Perl's local::lib</p>
+
 <h2 id="DESCRIPTION">DESCRIPTION</h2>
+
+<p>1.- Login Dalma.</p>
+
+<p>2.- Run this in terminal to load Perl module:</p>
+
+<p>  ----------------------------------------------------------</p>
+
+<p>   <code>module load perl</code></p>
+
+<p>  ----------------------------------------------------------</p>
+
+<p>3.- At this point, perl is available for use. If you want to install localized packages, follow the steps below.</p>
+
+<p>4.- (One time setup only) Run cpan to config. Run this in terminal</p>
+
+<p>  ----------------------------------------------------------</p>
+
+<p>   <code>cpan</code></p>
+
+<p>  ----------------------------------------------------------</p>
+
+<p>  Say yes when it try to automate the process:</p>
+
+<p>  ----------------------------------------------------------</p>
+
+<p>  <code>Would you like to configure as much as possible automatically? [yes]</code></p>
+
+<p>  ----------------------------------------------------------</p>
+
+<p>  And use local::lib:</p>
+
+<p>  ----------------------------------------------------------</p>
+
+<p>  <code>What approach do you want?  (Choose 'local::lib', 'sudo' or 'manual')</code>
+   <code>[local::lib]</code></p>
+
+<p>  ----------------------------------------------------------</p>
+
+<p>  In the end, it is easier to save the localized commands to your bashrc. Then everytime you login, the localization is done. Example terminal output:</p>
+
+<p>  ----------------------------------------------------------</p>
+
+<p>  <code>Would you like me to append that to /home/gh50/.bashrc now? [yes]</code></p>
+
+<p>  ----------------------------------------------------------</p>
+
+<p>  Finally, fix BeeGFS for CPAN: In file '~/.cpan/CPAN/MyConfig.pm', change 'build_dir' => q[/home/YOUR-NET-ID/.cpan/build], to 'build_dir' => q[/scratch/YOUR-NET-ID/.cpan/build].</p>
+
+<p>  Now cpan should be working.</p>
+
+<p>4.- (One time only setup only) Now go ahead and install cpanm, run this in terminal:
+  ----------------------------------------------------------</p>
+
+<p>  <code>cpan App::cpanminus</code></p>
+
+<p>  ----------------------------------------------------------</p>
+
+<p>  Then run this in terminal, or put it in your ~/.bashrc and re-login:</p>
+
+<p>  ----------------------------------------------------------</p>
+
+<p>  <code>export PERL_CPANM_HOME=$SCRATCH/.cpanm</code></p>
+
+<p>  ----------------------------------------------------------</p>
+
+<p>5.- Now you could use cpanm to install your Perl package. Example installing "Test::More":</p>
+
+<p>  ----------------------------------------------------------</p>
+
+<p>  <code>cpanm Test::More</code></p>
+
+<p>  ----------------------------------------------------------</p>
+
+<p>  Example screen output:</p>
+
+<pre><code>  [gh50@login-0-1 ~]$ cpanm Test::More
+  --&gt; Working on Test::More
+  Fetching http://www.cpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302059.tar.gz ... OK
+  Configuring Test-Simple-1.302059 ... OK
+  Building and testing Test-Simple-1.302059 ... OK
+  Successfully installed Test-Simple-1.302059 (upgraded from 1.001014)
+  1 distribution installed
+</code></pre>
 
 <h2 id="AUTHORS">AUTHORS</h2>
 
@@ -86,7 +173,7 @@
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'>NYUAD</li>
-    <li class='tc'>August 2016</li>
+    <li class='tc'>September 2016</li>
     <li class='tr'>dalma-run_perl</li>
   </ol>
 
