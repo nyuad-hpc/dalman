@@ -57,7 +57,21 @@ NOTE: The localisation is based on Perl's local::lib
   
   \----------------------------------------------------------
 
-  Finally, fix BeeGFS for CPAN: In file '~/.cpan/CPAN/MyConfig.pm', change 'build_dir' => q[/home/YOUR-NET-ID/.cpan/build], to 'build_dir' => q[/scratch/YOUR-NET-ID/.cpan/build].
+  Finally, fix BeeGFS for CPAN: In file '~/.cpan/CPAN/MyConfig.pm', change 
+  
+  \----------------------------------------------------------
+
+  `'build_dir' => q[/home/YOUR-NET-ID/.cpan/build]`
+  
+  \----------------------------------------------------------
+
+  to 
+ 
+  \----------------------------------------------------------
+
+  `'build_dir' => q[/scratch/YOUR-NET-ID/.cpan/build]`
+
+  \----------------------------------------------------------
 
   Now cpan should be working.
 

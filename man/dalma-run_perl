@@ -76,7 +76,28 @@ In the end, it is easier to save the localized commands to your bashrc\. Then ev
 \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
 .
 .P
-Finally, fix BeeGFS for CPAN: In file \'~/\.cpan/CPAN/MyConfig\.pm\', change \'build_dir\' => q[/home/YOUR\-NET\-ID/\.cpan/build], to \'build_dir\' => q[/scratch/YOUR\-NET\-ID/\.cpan/build]\.
+Finally, fix BeeGFS for CPAN: In file \'~/\.cpan/CPAN/MyConfig\.pm\', change
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.P
+\fB\'build_dir\' => q[/home/YOUR\-NET\-ID/\.cpan/build]\fR
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.P
+to
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.P
+\fB\'build_dir\' => q[/scratch/YOUR\-NET\-ID/\.cpan/build]\fR
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
 .
 .P
 Now cpan should be working\.
