@@ -6,6 +6,9 @@
 .SH "SYNOPSIS"
 Ths page explains how to load our highly cusomized R environments on Dalma\.
 .
+.P
+To install your own R packages, visit R \- Install Packages in Your Environment Using Anaconda \fIhttps://wikis\.nyu\.edu/display/ADRC/R+\-+Install+Packages+in+Your+Environment+Using+Anaconda\fR
+.
 .SH "DESCRIPTION"
 1\.\- Login Dalma\.
 .
