@@ -11,6 +11,8 @@ Account generation ,renewal and approval are done in the NYU High Performance Co
 
 Please follow the instructions with detailed screenshots in this web page. [https://wikis.nyu.edu/display/ADRC/Account+Management+on+Dalma](https://wikis.nyu.edu/display/ADRC/Account+Management+on+Dalma)
 
+Meanwhile, please join or proceed to iLearn (NYU Home web site) and select course "TEC 300". After finishing this course, job submission will be enabled for you on Dalma in 2 business days. See here for detailed instructions: [https://wikis.nyu.edu/display/ADRC/Joining+Dalma+Online+Training+on+iLearn](https://wikis.nyu.edu/display/ADRC/Joining+Dalma+Online+Training+on+iLearn)
+
 
 ## AUTHORS 
      NYUAD HPC Apps Team:
