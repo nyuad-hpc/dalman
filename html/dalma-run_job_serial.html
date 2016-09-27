@@ -127,8 +127,17 @@ hostname
 
 <p>This command shows more verbose information on your jobs, even the completed ones.</p>
 
-<pre><code>sacct -u &lt;your-account-name>
+<pre><code>sacct --format="JobID,CPUTime,MaxRSS" -j &lt;your-job-id>
 </code></pre>
+
+<p><code>Cancel your jobs</code></p>
+
+<p>At some point, if you need to cancel your job</p>
+
+<pre><code>scancel &lt;your-job-id>
+</code></pre>
+
+<p>see <code>slurm_commands</code> page in the index for more info.</p>
 
 <h3 id="MORE-ON-SLURM-DIRECTIVES">MORE ON SLURM DIRECTIVES</h3>
 
@@ -179,7 +188,7 @@ hostname
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'>NYUAD</li>
-    <li class='tc'>August 2016</li>
+    <li class='tc'>September 2016</li>
     <li class='tr'>dalma-run_job_serial</li>
   </ol>
 

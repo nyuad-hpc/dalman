@@ -68,8 +68,18 @@ squeue -u <your-account-name>
 This command shows more verbose information on your jobs, even the completed ones.
 
 ```
-sacct -u <your-account-name>
+sacct --format="JobID,CPUTime,MaxRSS" -j <your-job-id>
 ```
+
+`Cancel your jobs`
+
+At some point, if you need to cancel your job
+
+```
+scancel <your-job-id>
+```
+
+see `slurm_commands` page in the index for more info.
 
 ### MORE ON SLURM DIRECTIVES
 
