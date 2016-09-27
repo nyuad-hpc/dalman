@@ -1,4 +1,4 @@
-Dalma Man Pages (dalman) 
+Useful SLURM commands (checking, canceling jobs, etc..)
 ====
 
 ## SYNOPSIS  
