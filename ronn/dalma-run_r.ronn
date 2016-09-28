@@ -7,6 +7,8 @@ If you are from CGSB, please refer to the documentation by NYU Gencore: https://
 
 NYUAD HPC team provides a global R software environment which can be used through "Linux environment modules". However, we do not install additional R modules to the global environment.  So if you need, say the "coda" module, you will need to install it in your own environment.  
 
+## DESCRIPTION  
+
 ### Install R Modules
 
 1.- Login Dalma.
