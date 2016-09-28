@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv='content-type' value='text/html;charset=utf8'>
   <meta name='generator' value='Ronn/v0.7.3 (http://github.com/rtomayko/ronn/tree/0.7.3)'>
-  <title>Dalma Man Pages (dalman) </title>
+  <title>dalma-run_r</title>
   <style type='text/css' media='all'>
   /* style: man */
   body#manpage {margin:0}
@@ -53,8 +53,8 @@
   <div class='mp' id='man'>
 
   <div class='man-navigation' style='display:none'>
+    <a href="#NAME">NAME</a>
     <a href="#SYNOPSIS">SYNOPSIS</a>
-    <a href="#DESCRIPTION">DESCRIPTION</a>
     <a href="#AUTHORS">AUTHORS</a>
     <a href="#SEE-ALSO">SEE ALSO</a>
   </div>
@@ -65,74 +65,55 @@
     <li class='tr'>dalma-run_r</li>
   </ol>
 
-  <h1>Dalma Man Pages (dalman) </h1>
+  <h2 id="NAME">NAME</h2>
+<p class="man-name">
+  <code>dalma-run_r</code>
+</p>
+<p>Create a Personalized R Environment</p>
+
+<hr />
+
 <h2 id="SYNOPSIS">SYNOPSIS</h2>
 
-<p>Ths page explains how to load our highly cusomized R environments on Dalma.</p>
+<p>NYUAD HPC team provides a global R software environment which can be used through "Linux environment modules". However, we do not install additional R modules to the global environment.  So if you need, say the "coda" module, you will need to install it in your own environment.</p>
 
-<p>To install your own R packages, visit <a href="https://wikis.nyu.edu/display/ADRC/R+-+Install+Packages+in+Your+Environment+Using+Anaconda" target="_blank">R - Install Packages in Your Environment Using Anaconda</a></p>
-
-<h2 id="DESCRIPTION">DESCRIPTION</h2>
+<h3 id="Install-R-Modules">Install R Modules</h3>
 
 <p>1.- Login Dalma.</p>
 
-<p>2.- Run this in terminal to load Anaconda module:</p>
+<p>2.- (One time setup) Run this in terminal:</p>
 
-<p>  ----------------------------------------------------------</p>
+<p><code>$RECIPESDIR/localize-R.sh</code></p>
 
-<p>   <code>module load anaconda</code></p>
+<p>3.- Logout Dalma and login again.</p>
 
-<p>  ----------------------------------------------------------</p>
+<p>4.- Now you should be able to install R packages locally. First you enter R. Run this in terminal:</p>
 
-<p>3.- Run this in terminal to inspect available environment:</p>
+<p><code>R</code></p>
 
-<p>----------------------------------------------------------</p>
+<p>Then, inside R:</p>
 
-<p>  <code>conda env list</code></p>
+<p><code>install.packages('coda',lib='~/R.local')</code></p>
 
-<p>----------------------------------------------------------</p>
+<p>The command above will install package <code>coda</code> to your local folder <code>~/R.local</code>, which is in the R search path. The general formula is:</p>
 
-<p>  Example screen output from previous command:</p>
+<p><code>install.packages('&lt;package-name>',lib='~/R.local')</code></p>
 
-<pre><code>  [wei@login-0-1 ~]$ conda env list
-  # conda environments:
-  #
-  p27-astro                /share/apps/NYUAD3/anaconda/2-4.1.1/envs/p27-astro
-  p27-scient               /share/apps/NYUAD3/anaconda/2-4.1.1/envs/p27-scient
-  pyferret                 /share/apps/NYUAD3/anaconda/2-4.1.1/envs/pyferret
-  python-27                /share/apps/NYUAD3/anaconda/2-4.1.1/envs/python-27
-  python-3                 /share/apps/NYUAD3/anaconda/2-4.1.1/envs/python-3
-  r-322                    /share/apps/NYUAD3/anaconda/2-4.1.1/envs/r-322
-  r-essentials             /share/apps/NYUAD3/anaconda/2-4.1.1/envs/r-essentials
-  root                  *  /share/apps/NYUAD3/anaconda/2-4.1.1
-</code></pre>
+<h3 id="Remove-R-Modules">Remove R Modules</h3>
 
-<p>  The symbol "*" means the current loaded environment. In this case, "root" is loaded.</p>
+<p>In R, if you want to remove a package called coda:</p>
 
-<p>4.- Load specific R environment. This example loads the environment r-322, R version 3.2.2 (2015-08-14) -- "Fire Safety". Run this in terminal:</p>
+<p><code>remove.packages('coda',lib='~/R.local')</code></p>
 
-<p>----------------------------------------------------------</p>
+<h3 id="Update-R-Modules">Update R Modules</h3>
 
-<p>  <code>source activate r-322</code></p>
+<p>In R, if you want to update a package called coda:</p>
 
-<p>----------------------------------------------------------</p>
+<p><code>update.packages('coda',lib='~/R.local')</code></p>
 
-<p>  Example screen output from previous command:</p>
+<h3 id="List-R-Modules">List R Modules</h3>
 
-<pre><code>  [gh50@login-0-3 ~]$ source activate r-322
-  discarding /share/apps/NYUAD3/anaconda/2.4.1/bin from PATH
-  prepending /share/apps/NYUAD3/anaconda/2.4.1/envs/r-322/bin to PATH
-</code></pre>
-
-<p>  Notice the (r-322) prefix. It indicates the current loaded environment.</p>
-
-<p>5.- <strong>(Optional)</strong> In case you want to load another R environment, or you simply don't want this R environment anymore, run this in terminal to unload the environment:</p>
-
-<p>----------------------------------------------------------</p>
-
-<p>  <code>source deactivate</code></p>
-
-<p>----------------------------------------------------------</p>
+<p><code>installed.packages()</code></p>
 
 <h2 id="AUTHORS">AUTHORS</h2>
 

@@ -1,75 +1,48 @@
-Dalma Man Pages (dalman) 
+Create a Personalized R Environment
+
 ====
 
 ## SYNOPSIS  
-Ths page explains how to load our highly cusomized R environments on Dalma.
 
-To install your own R packages, visit <a href="https://wikis.nyu.edu/display/ADRC/R+-+Install+Packages+in+Your+Environment+Using+Anaconda" target="_blank">R - Install Packages in Your Environment Using Anaconda</a>
+NYUAD HPC team provides a global R software environment which can be used through "Linux environment modules". However, we do not install additional R modules to the global environment.  So if you need, say the "coda" module, you will need to install it in your own environment.  
 
-## DESCRIPTION
+### Install R Modules
 
 1.- Login Dalma.
 
-2.- Run this in terminal to load Anaconda module:
+2.- (One time setup) Run this in terminal:
 
-  \----------------------------------------------------------
+`$RECIPESDIR/localize-R.sh`
 
-   `module load anaconda`
+3.- Logout Dalma and login again.
 
-  \----------------------------------------------------------
+4.- Now you should be able to install R packages locally. First you enter R. Run this in terminal:
 
-3.- Run this in terminal to inspect available environment:
+`R`
 
-\----------------------------------------------------------
+Then, inside R:
 
-  `conda env list`
+`install.packages('coda',lib='~/R.local')`
 
-\----------------------------------------------------------
- 
-  Example screen output from previous command:
+The command above will install package `coda` to your local folder `~/R.local`, which is in the R search path. The general formula is:
 
-```
-  [wei@login-0-1 ~]$ conda env list
-  # conda environments:
-  #
-  p27-astro                /share/apps/NYUAD3/anaconda/2-4.1.1/envs/p27-astro
-  p27-scient               /share/apps/NYUAD3/anaconda/2-4.1.1/envs/p27-scient
-  pyferret                 /share/apps/NYUAD3/anaconda/2-4.1.1/envs/pyferret
-  python-27                /share/apps/NYUAD3/anaconda/2-4.1.1/envs/python-27
-  python-3                 /share/apps/NYUAD3/anaconda/2-4.1.1/envs/python-3
-  r-322                    /share/apps/NYUAD3/anaconda/2-4.1.1/envs/r-322
-  r-essentials             /share/apps/NYUAD3/anaconda/2-4.1.1/envs/r-essentials
-  root                  *  /share/apps/NYUAD3/anaconda/2-4.1.1
+`install.packages('<package-name>',lib='~/R.local')`
 
-```
+### Remove R Modules
 
-  The symbol "*" means the current loaded environment. In this case, "root" is loaded.
+In R, if you want to remove a package called coda:
 
-4.- Load specific R environment. This example loads the environment r-322, R version 3.2.2 (2015-08-14) -- "Fire Safety". Run this in terminal:
+`remove.packages('coda',lib='~/R.local')`
 
-\----------------------------------------------------------
- 
-  `source activate r-322`
+### Update R Modules
 
-\----------------------------------------------------------
+In R, if you want to update a package called coda:
 
-  Example screen output from previous command:
+`update.packages('coda',lib='~/R.local')`
 
-```
-  [gh50@login-0-3 ~]$ source activate r-322
-  discarding /share/apps/NYUAD3/anaconda/2.4.1/bin from PATH
-  prepending /share/apps/NYUAD3/anaconda/2.4.1/envs/r-322/bin to PATH
-```
+### List R Modules
 
-  Notice the (r-322) prefix. It indicates the current loaded environment.
-
-5.- **(Optional)** In case you want to load another R environment, or you simply don't want this R environment anymore, run this in terminal to unload the environment:
-
-\----------------------------------------------------------
-
-  `source deactivate`
-
-\----------------------------------------------------------
+`installed.packages()`
 
 ## AUTHORS 
 	NYUAD HPC Apps Team:

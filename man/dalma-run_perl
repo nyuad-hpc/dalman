@@ -13,7 +13,7 @@ NOTE: The localisation is based on Perl\'s local::lib
 1\.\- Login Dalma\.
 .
 .P
-2\.\- Run this in terminal:
+2\.\- (One time setup) Run this in terminal:
 .
 .P
 \fB$RECIPESDIR/localize\-perl\.sh\fR
