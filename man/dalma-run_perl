@@ -2,6 +2,7 @@
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
 .TH "DALMA\-RUN_PERL" "" "September 2016" "NYUAD" "Dalma Manual"
+If you are from CGSB, please refer to the documentation by NYU Gencore: https://docs\.google\.com/document/d/1f7NBLrtwiopCu4AMf97WbQRkemw5qHtEXrzP9dVS\-RQ/edit
 .
 .SH "SYNOPSIS"
 NYUAD HPC team provides a global Perl software environment which can be used through "Linux environment modules"\. We do not install additional Perl modules to the global environment\. So if you need, say the LWP Perl module, you will need to "localise" the global Perl environment to your home directory and install the LWP module yourself\. Here are the instructions:

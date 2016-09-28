@@ -2,12 +2,7 @@
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
 .TH "DALMA\-RUN_R" "" "September 2016" "NYUAD" "Dalma Manual"
-.
-.SH "NAME"
-\fBdalma\-run_r\fR
-.
-.P
-Create a Personalized R Environment
+If you are from CGSB, please refer to the documentation by NYU Gencore: https://docs\.google\.com/document/d/1f7NBLrtwiopCu4AMf97WbQRkemw5qHtEXrzP9dVS\-RQ/edit
 .
 .SH "SYNOPSIS"
 NYUAD HPC team provides a global R software environment which can be used through "Linux environment modules"\. However, we do not install additional R modules to the global environment\. So if you need, say the "coda" module, you will need to install it in your own environment\.

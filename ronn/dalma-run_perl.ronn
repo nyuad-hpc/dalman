@@ -1,6 +1,8 @@
 Create and Manage Your own Perl Environment
 ====
 
+If you are from CGSB, please refer to the documentation by NYU Gencore: https://docs.google.com/document/d/1f7NBLrtwiopCu4AMf97WbQRkemw5qHtEXrzP9dVS-RQ/edit
+
 ## SYNOPSIS  
 
 
