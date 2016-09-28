@@ -15,7 +15,7 @@ NOTE: The localisation is based on Perl's local::lib
 
 2.- Run this in terminal:
 
-`/share/apps/dalma/tools/localize-perl.sh`
+`$RECIPESDIR/localize-perl.sh`
 
 If the localization is successful, in the end the screen output will be similar to this:
 
