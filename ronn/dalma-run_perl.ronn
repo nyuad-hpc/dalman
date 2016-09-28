@@ -1,4 +1,4 @@
-Dalma Man Pages (dalman) 
+Create and manage your own Perl environment
 ====
 
 ## SYNOPSIS  
