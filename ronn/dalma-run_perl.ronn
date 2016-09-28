@@ -1,4 +1,4 @@
-Create and manage your own Perl environment
+Create and Manage Your own Perl Environment
 ====
 
 ## SYNOPSIS  
