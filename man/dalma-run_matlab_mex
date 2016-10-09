@@ -1,0 +1,67 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "DALMA\-RUN_MATLAB_MEX" "" "October 2016" "NYUAD" "Dalma Manual"
+.
+.SH "SYNOPSIS"
+This page explains how to compile MEX function in Matlab\.
+.
+.SH "DESCRIPTION"
+1\.\- Login Dalma\.
+.
+.P
+2\.\- Run this in terminal to load Matlab and GCC modules:
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.P
+\fBmodule load gcc\fR
+.
+.P
+\fBmodule load matlab\fR
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.P
+3\.\- Run this in terminal to start Matlab:
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.P
+\fBmatlab \-nodesktop \-nosplash \-nodisplay\fR
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.P
+4\.\- Compile your MEX function:
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.P
+\fBmex your\-mex\-file\fR
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.P
+Notice: The current default version of Matlab is 2015b, which recommends GCC 4\.7\. Hence a warning message will show up\. Though our test with GCC 4\.9 works just fine\.
+.
+.SH "AUTHORS"
+.
+.nf
+
+NYUAD HPC Apps Team:
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+    \- Benoit Marchand
+    \- Guowei He
+    \- Jorge Naranjo
+.
+.fi
+.
+.SH "SEE ALSO"
+Please refer to the online documentation available here \fIhttps://nyuad\-hpc\.github\.io/dalman/html/dalma\.html\fR

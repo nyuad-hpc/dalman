@@ -1,0 +1,49 @@
+Dalma Man Pages (dalman) 
+====
+
+## SYNOPSIS  
+This page explains how to compile MEX function in Matlab.
+
+## DESCRIPTION
+
+1.- Login Dalma.
+
+2.- Run this in terminal to load Matlab and GCC modules:
+
+  \----------------------------------------------------------
+ 
+  `module load gcc`
+
+  `module load matlab`
+
+  \----------------------------------------------------------
+
+3.- Run this in terminal to start Matlab:
+
+\----------------------------------------------------------
+
+  `matlab -nodesktop -nosplash -nodisplay`
+
+\----------------------------------------------------------
+ 
+4.- Compile your MEX function:
+
+\----------------------------------------------------------
+ 
+  `mex your-mex-file`
+
+\----------------------------------------------------------
+
+Notice: The current default version of Matlab is 2015b, which recommends GCC 4.7. Hence a warning message will show up. Though our test with GCC 4.9 works just fine.
+
+## AUTHORS 
+    NYUAD HPC Apps Team:
+    --------------------
+        - Benoit Marchand
+        - Guowei He
+        - Jorge Naranjo
+
+## SEE ALSO
+
+Please refer to the online documentation available [here](https://nyuad-hpc.github.io/dalman/html/dalma.html)
+
