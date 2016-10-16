@@ -27,6 +27,7 @@ The most important specification are, the number of cpus per normal compute node
 * BeeGFS Parallel Filesystem for regular files
 * Lustre Parallel Filesystem for large files
 
+We provide Fat, GPU nodes for extra computing requirements. Contact us to tailor your job script.
 
 ## EXPLANATION
 A long list. So what does it mean?

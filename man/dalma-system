@@ -56,6 +56,9 @@ Lustre Parallel Filesystem for large files
 .
 .IP "" 0
 .
+.P
+We provide Fat, GPU nodes for extra computing requirements\. Contact us to tailor your job script\.
+.
 .SH "EXPLANATION"
 A long list\. So what does it mean?
 .
