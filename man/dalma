@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "DALMA" "" "September 2016" "NYUAD" "Dalma Manual"
+.TH "DALMA" "" "October 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
 Here you will find a list of all the available topics for help related to \fBDalma\fR and how to call for help
@@ -77,6 +77,9 @@ Users can request help on any specific topic using the following command:
 \fBrun_job_threads\fR : How to run parallel (threaded/openmp) jobs
 .
 .IP "\(bu" 4
+\fBrun_job_bigmem\fR : How to run memory bond jobs
+.
+.IP "\(bu" 4
 \fBrun_job_array\fR : What is a job array and how to use it
 .
 .IP "\(bu" 4
@@ -101,7 +104,7 @@ Users can request help on any specific topic using the following command:
 \fBrun_gaussian_tcplinda\fR : How to run Gaussian in parallel using TcpLinda
 .
 .IP "\(bu" 4
-\fBrun_job_bigmem\fR : How to run memory bond jobs
+\fBrun_gnu_parallel\fR : How to run GNU Parallel
 .
 .IP "" 0
 .

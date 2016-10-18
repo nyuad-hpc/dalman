@@ -7,7 +7,7 @@ You want to know the system configuration of Dalma, in order to make the most ou
 
 ## DESCRIPTION  
 
-The most important specification is the number of cpus per node: 28, and memory available per node: 128GB. Detailed configuration:
+The most important specification on compute node, are the number of cpus per node: 28, and memory per node: 128GB. Detailed configuration:
 
 * 234 compute nodes
 * Two Intel Xeon E5-2680 v4 Broadwell CPUs per node
@@ -29,7 +29,7 @@ The most important specification is the number of cpus per node: 28, and memory 
 A long list. So what does it mean?
 
 * For parallel jobs, utilize the whole node (28 cores) to maximize the performance. E.g., set `OMP_NUM_THREADS` for hybrid or OpenMP jobs, or set the number of MPI ranks equals the number of nodes times 28 for pure MPI jobs.
-* Use maximum 128GB of memory per node. If you need more, use fat node.
+* Use maximum 100GB of memory per node. If you need more, use fat node. Why not 128GB? We need to reserve memory for system itself and etc.
 * For pre-compiled binaries, try `Centos` or `RHEL` version.
 * Before generating tons of data, evaluate your storage requirements and select the most suitable file system.
 

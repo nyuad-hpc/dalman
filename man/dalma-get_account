@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "DALMA\-GET_ACCOUNT" "" "August 2016" "NYUAD" "Dalma Manual"
+.TH "DALMA\-GET_ACCOUNT" "" "September 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
 Here you will find information on how to get an account on \'Dalma\'
@@ -11,6 +11,9 @@ Account generation ,renewal and approval are done in the NYU High Performance Co
 .
 .P
 Please follow the instructions with detailed screenshots in this web page\. \fIhttps://wikis\.nyu\.edu/display/ADRC/Account+Management+on+Dalma\fR
+.
+.P
+Meanwhile, please join or proceed to iLearn (NYU Home web site) and select course "TEC 300"\. After finishing this course, job submission will be enabled for you on Dalma in 2 business days\. See here for detailed instructions: \fIhttps://wikis\.nyu\.edu/display/ADRC/Joining+Dalma+Online+Training+on+iLearn\fR
 .
 .SH "AUTHORS"
 .

@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "DALMA\-RUN_GNU_PARALLEL" "" "September 2016" "NYUAD" "Dalma Manual"
+.TH "DALMA\-RUN_GNU_PARALLEL" "" "October 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
 This page explains how to use GNU Parallel to run large batch of small jobs\.

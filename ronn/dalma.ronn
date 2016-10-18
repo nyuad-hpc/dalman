@@ -44,6 +44,8 @@ Users can request help on any specific topic using the following command:
 [run_gaussian_tcplinda]: ../html/dalma-run_gaussian_tcplinda.html "run_gaussian_tcplinda"
 [run_job_bigmem]: ../html/dalma-run_job_bigmem.html "run_job_bigmem"
 [run_gnu_parallel]: ../html/dalma-run_gnu_parallel.html "run_gnu_parallel"
+[run_matlab_mex]: ../html/dalma-run_matlab_mex.html  "run_matlab_mex"
+
 
 ## MAIN TOPICS
 
@@ -69,6 +71,7 @@ Users can request help on any specific topic using the following command:
 - [run_job_serial][]	   	: How to run serial jobs
 - [run_job_mpi][] 	   	: How to run parallel (mpi) jobs
 - [run_job_threads][]	   	: How to run parallel (threaded/openmp) jobs
+- [run_job_bigmem][]	   	: How to run memory bond jobs
 - [run_job_array][]	   	: What is a job array and how to use it
 - [run_job_dependencies][]   	: How to run jobs with dependencies
 - [run_python][]		: How to run Python, personalized environments and Anaconda
@@ -77,8 +80,9 @@ Users can request help on any specific topic using the following command:
 - [run_wien2k][]		: How to run WIEN2K in Dalma
 - [run_matlab][]		: How to run Matlab, serial and parallel toolbox
 - [run_gaussian_tcplinda][]	: How to run Gaussian in parallel using TcpLinda
-- [run_job_bigmem][]	   	: How to run memory bond jobs
 - [run_gnu_parallel][]      : How to run GNU Parallel
+- [run_matlab_mex][]		: How to compile Matlab MEX function
+
 
 
 ## EXAMPLES 

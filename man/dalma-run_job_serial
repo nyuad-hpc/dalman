@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "DALMA\-RUN_JOB_SERIAL" "" "August 2016" "NYUAD" "Dalma Manual"
+.TH "DALMA\-RUN_JOB_SERIAL" "" "September 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
 You want to run a job with serial application\.
@@ -92,11 +92,30 @@ This command shows more verbose information on your jobs, even the completed one
 .
 .nf
 
-sacct \-u <your\-account\-name>
+sacct \-\-format="JobID,CPUTime,MaxRSS" \-j <your\-job\-id>
 .
 .fi
 .
 .IP "" 0
+.
+.P
+\fBCancel your jobs\fR
+.
+.P
+At some point, if you need to cancel your job
+.
+.IP "" 4
+.
+.nf
+
+scancel <your\-job\-id>
+.
+.fi
+.
+.IP "" 0
+.
+.P
+see \fBslurm_commands\fR page in the index for more info\.
 .
 .SS "MORE ON SLURM DIRECTIVES"
 Normally, all lines begin with \fB#\fR is commented out in bash script\. However, all SLURM directives start with \fB#SBATCH\fR\. To comment out a SLURM directive, use \fB##SBATCH\fR to begin the line\. E\.g\.,
