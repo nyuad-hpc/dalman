@@ -2,13 +2,16 @@ Dalma Man Pages (dalman)
 ====
 
 ## SYNOPSIS  
-Ths page explains how to use Java on Dalma.
+
+You want to run Java on Dalma.
 
 ## DESCRIPTION
 
-To submit Java task as a job. Follow the instructions below.
+Ths page explains how to use Java on Dalma.
 
 ### LOADING JAVA MODULE
+
+To run small, short Java program on login node, or in interactive session, load the Java module first.
 
 Run this in terminal:
 
@@ -18,7 +21,7 @@ module load jdk
 
 ### SUBMIT A JAVA JOB
 
-To accomplish this, follow the steps:
+To submit a batch job with Java program, follow the steps:
 
 1.- `Prepare a SLURM job script following the example below.`
 
