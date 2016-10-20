@@ -1,0 +1,92 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "DALMA\-RUN_JAVA" "" "October 2016" "NYUAD" "Dalma Manual"
+.
+.SH "SYNOPSIS"
+Ths page explains how to use Java on Dalma\.
+.
+.SH "DESCRIPTION"
+To submit Java task as a job\. Follow the instructions below\.
+.
+.SS "LOADING JAVA MODULE"
+Run this in terminal:
+.
+.IP "" 4
+.
+.nf
+
+module load jdk
+.
+.fi
+.
+.IP "" 0
+.
+.SS "SUBMIT A JAVA JOB"
+To accomplish this, follow the steps:
+.
+.P
+1\.\- \fBPrepare a SLURM job script following the example below\.\fR
+.
+.P
+Job script for a serial Matlab job\. Save it using a meaningful filename\. E\.g\., "java\-job\.sh"
+.
+.IP "" 4
+.
+.nf
+
+#!/bin/bash
+# Set number of nodes to run
+#SBATCH \-\-nodes=1
+# Set number of tasks to run
+#SBATCH \-\-ntasks=1
+# Set number of cores per task (default is 1)
+#SBATCH \-\-cpus\-per\-task=1
+# Walltime format hh:mm:ss
+#SBATCH \-\-time=00:30:00
+# Output and error files
+#SBATCH \-o job\.%J\.out
+#SBATCH \-e job\.%J\.err
+
+# **** Actual commands start here ****
+# Load modules here (safety measure)
+module purge
+module load jdk
+
+# Replace this with your actual command\.
+java \-version
+.
+.fi
+.
+.IP "" 0
+.
+.P
+2\.\- \fBSubmit the job\fR
+.
+.P
+Run this in terminal:
+.
+.IP "" 4
+.
+.nf
+
+sbatch java\-job\.sh
+.
+.fi
+.
+.IP "" 0
+.
+.SH "AUTHORS"
+.
+.nf
+
+NYUAD HPC Apps Team:
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+    \- Benoit Marchand
+    \- Guowei He
+    \- Jorge Naranjo
+.
+.fi
+.
+.SH "SEE ALSO"
+Please refer to the online documentation available here \fIhttps://nyuad\-hpc\.github\.io/dalman/html/dalma\.html\fR
