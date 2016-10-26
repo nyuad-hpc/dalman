@@ -76,7 +76,36 @@ JOBID PARTITION NAME USER ST TIME NODES NODELIST(REASON)
 
 \----------------------------------------------------------
 
-Notice that 6318 is the job array id, while the number after `_`, `1-18` is the `$SLURM_ARRAY_TASK_ID`. One can specify job `6318_6` to handle 6th line of input. 
+Notice that 6318 is the job array id, while the number after `_`, `1-18` is the `$SLURM_ARRAY_TASK_ID`. One can specify job `6318_6` to handle 6th line of input.
+
+### CANCELLING JOBS FROM JOB ARRAY
+
+In the previous example, if you want to cancel the 3rd job in job array 6318, you can run this.
+
+
+\----------------------------------------------------------
+
+```
+# Cancel job 6318_3 in job array 6318. You can get information on all your jobs by `squeue -u <your-net-id>`
+
+scancel 6318_3
+```
+
+\----------------------------------------------------------
+
+But if you use the JOBID from qstat, scancel will not cancel the job.
+
+If you want to cancel the whole job array, e.g., every jobs in the job array, here is an example.
+
+\----------------------------------------------------------
+
+```
+# Cancel all jobs in job array 6318. Change 6318 to your actual ${SLURM_ARRAY_JOB_ID}
+
+scancel 6318
+```
+
+\----------------------------------------------------------
 
 ## AUTHORS 
     NYUAD HPC Apps Team:
