@@ -142,6 +142,32 @@ JOBID PARTITION NAME USER ST TIME NODES NODELIST(REASON)
 
 <p>Notice that 6318 is the job array id, while the number after <code>_</code>, <code>1-18</code> is the <code>$SLURM_ARRAY_TASK_ID</code>. One can specify job <code>6318_6</code> to handle 6th line of input.</p>
 
+<h3 id="CANCELLING-JOBS-FROM-JOB-ARRAY">CANCELLING JOBS FROM JOB ARRAY</h3>
+
+<p>In the previous example, if you want to cancel the 3rd job in job array 6318, you can run this.</p>
+
+<p>----------------------------------------------------------</p>
+
+<pre><code># Cancel job 6318_3 in job array 6318. You can get information on all your jobs by `squeue -u &lt;your-net-id>`
+
+scancel 6318_3
+</code></pre>
+
+<p>----------------------------------------------------------</p>
+
+<p>But if you use the JOBID from qstat, scancel will not cancel the job.</p>
+
+<p>If you want to cancel the whole job array, e.g., every jobs in the job array, here is an example.</p>
+
+<p>----------------------------------------------------------</p>
+
+<pre><code># Cancel all jobs in job array 6318. Change 6318 to your actual ${SLURM_ARRAY_JOB_ID}
+
+scancel 6318
+</code></pre>
+
+<p>----------------------------------------------------------</p>
+
 <h2 id="AUTHORS">AUTHORS</h2>
 
 <pre><code>NYUAD HPC Apps Team:
@@ -158,7 +184,7 @@ JOBID PARTITION NAME USER ST TIME NODES NODELIST(REASON)
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'>NYUAD</li>
-    <li class='tc'>August 2016</li>
+    <li class='tc'>October 2016</li>
     <li class='tr'>dalma-run_job_array</li>
   </ol>
 

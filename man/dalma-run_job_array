@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "DALMA\-RUN_JOB_ARRAY" "" "August 2016" "NYUAD" "Dalma Manual"
+.TH "DALMA\-RUN_JOB_ARRAY" "" "October 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
 Ths page explains how to Running a Slurm job array\.
@@ -108,6 +108,51 @@ JOBID PARTITION NAME USER ST TIME NODES NODELIST(REASON)
 .
 .P
 Notice that 6318 is the job array id, while the number after \fB_\fR, \fB1\-18\fR is the \fB$SLURM_ARRAY_TASK_ID\fR\. One can specify job \fB6318_6\fR to handle 6th line of input\.
+.
+.SS "CANCELLING JOBS FROM JOB ARRAY"
+In the previous example, if you want to cancel the 3rd job in job array 6318, you can run this\.
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.IP "" 4
+.
+.nf
+
+# Cancel job 6318_3 in job array 6318\. You can get information on all your jobs by `squeue \-u <your\-net\-id>`
+
+scancel 6318_3
+.
+.fi
+.
+.IP "" 0
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.P
+But if you use the JOBID from qstat, scancel will not cancel the job\.
+.
+.P
+If you want to cancel the whole job array, e\.g\., every jobs in the job array, here is an example\.
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.IP "" 4
+.
+.nf
+
+# Cancel all jobs in job array 6318\. Change 6318 to your actual ${SLURM_ARRAY_JOB_ID}
+
+scancel 6318
+.
+.fi
+.
+.IP "" 0
+.
+.P
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
 .
 .SH "AUTHORS"
 .
