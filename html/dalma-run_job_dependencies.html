@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv='content-type' value='text/html;charset=utf8'>
   <meta name='generator' value='Ronn/v0.7.3 (http://github.com/rtomayko/ronn/tree/0.7.3)'>
-  <title>Dalma Man Pages (dalman) </title>
+  <title>Job Dependency</title>
   <style type='text/css' media='all'>
   /* style: man */
   body#manpage {margin:0}
@@ -66,7 +66,7 @@
     <li class='tr'>dalma-run_job_dependencies</li>
   </ol>
 
-  <h1>Dalma Man Pages (dalman) </h1>
+  <h1>Job Dependency</h1>
 <h2 id="SYNOPSIS">SYNOPSIS</h2>
 
 <p>You want to submit several jobs that have dependencies, to create a workflow. E.g., Job B will only start after Job A is finished. Job C will only start after Job B is finished. And so on.</p>
@@ -76,51 +76,49 @@
 <p>SLURM provide powerful mechanism to define job dependencies, by the job submission command <strong>sbatch -d <var>type</var>:<var>id</var></strong>. The keyword <strong><var>id</var></strong> could be job id or job array id. There are 4 available <strong><var>type</var></strong> :</p>
 
 <ul>
-<li><p><code>after</code>: clause is satisfied after the job, or all tasks in the job array start</p></li>
-<li><p><code>afterany</code>: clause is satisfied after the job, or all tasks in the job array complete</p></li>
-<li><p><code>afterok</code>: clause is satisfied after the job, or all tasks in the job array complete successfully</p></li>
-<li><p><code>afternotok</code>: clause is satisfied after the job, or all tasks in the job array complete with at least
-one tasks not completing successfully</p></li>
+<li><p><code>afterany</code>: This job could begin after specified jobs have terminated.</p></li>
+<li><p><code>afterok</code>: This job could begin after specified jobs have <code>successfully</code> terminated (e.g., exit code zero).</p></li>
+<li><p><code>afternotok</code>: This job could begin after specified jobs have failed.</p></li>
+<li><p><code>after</code>: This job could begin after specified jobs have begun. <code>(e.g., if you use this keyword, and specify job2 depends on job1, job2 could start immediately once job1 starts!)</code></p></li>
 </ul>
 
 
 <h2 id="EXAMPLES">EXAMPLES</h2>
 
-<p>----------------------------------------------------------</p>
+<h3 id="You-want-to-submit-a-job-that-will-start-after-another-job-is-terminated">You want to submit a job that will start after another job is terminated</h3>
 
-<p>Wait for specific job array elements</p>
+<p>Let say you first submitted a job. You run this in terminal, and the job id shows in the screen.</p>
 
-<p> <code>sbatch --depend=after:123_4 my.job</code></p>
+<pre><code>
+sbatch job1.sh
+Submitted batch job 123456
+</code></pre>
 
-<p> <code>sbatch --depend=afterok:123_4:123_8 my.job2</code></p>
+<p>Then you have a second job. You want to make sure the second job could only start running after the first job is successfully terminated. You could run this in the terminal.</p>
 
-<p>----------------------------------------------------------</p>
+<pre><code>
+sbatch -d afterok:123456 job2.sh
+or
+sbatch --dependency=afterok:123456 job2.sh
+</code></pre>
 
-<p>Wait for the job array to completed</p>
+<p>In this case, for example, if you cancel the first job, the first job will not be terminated sucessfully. The second job will change its state to DependencyNeverSatisfied, and will not start running.</p>
 
-<p>  <code>sbatch --depend=afterany:123 my.job</code></p>
+<p>Alternatively, you could have the second job ready to start after the first job is terminated, whether sucessfully or not. The command will be:</p>
 
-<p>----------------------------------------------------------</p>
-
-<p>Wait for entire job array to complete successfully</p>
-
-<p> <code>sbatch --depend=afterok:123 my.job</code></p>
-
-<p>----------------------------------------------------------</p>
-
-<p>Wait for entire job array to complete and at least one task fails</p>
-
-<p> <code>sbatch --depend=afternotok:123 my.job</code></p>
-
-<p>----------------------------------------------------------</p>
+<pre><code>
+sbatch -d afterany:123456 job2.sh
+or
+sbatch --dependency=afterany:123456 job2.sh
+</code></pre>
 
 <h2 id="AUTHORS">AUTHORS</h2>
 
 <pre><code>NYUAD HPC Apps Team:
---------------------
-    - Benoit Marchand
-    - Guowei He
-    - Jorge Naranjo
+ --------------------
+     - Benoit Marchand
+     - Guowei He
+     - Jorge Naranjo
 </code></pre>
 
 <h2 id="SEE-ALSO">SEE ALSO</h2>
@@ -130,7 +128,7 @@ one tasks not completing successfully</p></li>
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'>NYUAD</li>
-    <li class='tc'>August 2016</li>
+    <li class='tc'>November 2016</li>
     <li class='tr'>dalma-run_job_dependencies</li>
   </ol>
 

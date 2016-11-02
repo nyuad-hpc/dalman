@@ -1,64 +1,67 @@
-Dalma Man Pages (dalman) 
+Job Dependency
 ====
 
 ## SYNOPSIS  
 
-You want to submit several jobs that have dependencies, to create a workflow. E.g., Job B will only start after Job A is finished. Job C will only start after Job B is finished. And so on. 
+You want to submit several jobs that have dependencies, to create a workflow. E.g., Job B will only start after Job A is finished. Job C will only start after Job B is finished. And so on.
 
 ## DESCRIPTION  
 
 SLURM provide powerful mechanism to define job dependencies, by the job submission command **sbatch -d <type>:<id>**. The keyword **<id>** could be job id or job array id. There are 4 available **<type>** :
 
-  * `after`: clause is satisfied after the job, or all tasks in the job array start
 
-  * `afterany`: clause is satisfied after the job, or all tasks in the job array complete
+  * `afterany`: This job could begin after specified jobs have terminated.
 
-  * `afterok`: clause is satisfied after the job, or all tasks in the job array complete successfully
+  * `afterok`: This job could begin after specified jobs have `successfully` terminated (e.g., exit code zero).
 
-  * `afternotok`: clause is satisfied after the job, or all tasks in the job array complete with at least
-one tasks not completing successfully
+  * `afternotok`: This job could begin after specified jobs have failed.
 
+  * `after`: This job could begin after specified jobs have begun. `(e.g., if you use this keyword, and specify job2 depends on job1, job2 could start immediately once job1 starts!)`
 
 ## EXAMPLES
 
-\----------------------------------------------------------
+### You want to submit a job that will start after another job is terminated
 
-Wait for specific job array elements
+Let say you first submitted a job. You run this in terminal, and the job id shows in the screen.
 
- `sbatch --depend=after:123_4 my.job`
+```
 
- `sbatch --depend=afterok:123_4:123_8 my.job2`
+sbatch job1.sh
+Submitted batch job 123456
 
-\----------------------------------------------------------
+```
+ 
+Then you have a second job. You want to make sure the second job could only start running after the first job is successfully terminated. You could run this in the terminal.
+ 
+```
 
-Wait for the job array to completed
+sbatch -d afterok:123456 job2.sh
+or
+sbatch --dependency=afterok:123456 job2.sh
 
-  `sbatch --depend=afterany:123 my.job`
+```
 
-\----------------------------------------------------------
+In this case, for example, if you cancel the first job, the first job will not be terminated sucessfully. The second job will change its state to DependencyNeverSatisfied, and will not start running.
 
-Wait for entire job array to complete successfully
+Alternatively, you could have the second job ready to start after the first job is terminated, whether sucessfully or not. The command will be:
 
- `sbatch --depend=afterok:123 my.job`
+```
 
-\----------------------------------------------------------
+sbatch -d afterany:123456 job2.sh
+or
+sbatch --dependency=afterany:123456 job2.sh
 
-Wait for entire job array to complete and at least one task fails
-
- `sbatch --depend=afternotok:123 my.job`
-
-\----------------------------------------------------------
-
-
-
-
+```
+ 
+ 
 ## AUTHORS 
-	NYUAD HPC Apps Team:
-	--------------------
-		- Benoit Marchand
-		- Guowei He
-		- Jorge Naranjo
-
+    NYUAD HPC Apps Team:
+     --------------------
+         - Benoit Marchand
+         - Guowei He
+         - Jorge Naranjo
+ 
 ## SEE ALSO
-
+ 
 Please refer to the online documentation available [here](https://nyuad-hpc.github.io/dalman/html/dalma.html)
+
