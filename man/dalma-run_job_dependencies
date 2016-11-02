@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "DALMA\-RUN_JOB_DEPENDENCIES" "" "August 2016" "NYUAD" "Dalma Manual"
+.TH "DALMA\-RUN_JOB_DEPENDENCIES" "" "November 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
 You want to submit several jobs that have dependencies, to create a workflow\. E\.g\., Job B will only start after Job A is finished\. Job C will only start after Job B is finished\. And so on\.
@@ -10,70 +10,80 @@ You want to submit several jobs that have dependencies, to create a workflow\. E
 SLURM provide powerful mechanism to define job dependencies, by the job submission command \fBsbatch \-d \fItype\fR:\fIid\fR\fR\. The keyword \fB\fIid\fR\fR could be job id or job array id\. There are 4 available \fB\fItype\fR\fR :
 .
 .IP "\(bu" 4
-\fBafter\fR: clause is satisfied after the job, or all tasks in the job array start
+\fBafterany\fR: This job could begin after specified jobs have terminated\.
 .
 .IP "\(bu" 4
-\fBafterany\fR: clause is satisfied after the job, or all tasks in the job array complete
+\fBafterok\fR: This job could begin after specified jobs have \fBsuccessfully\fR terminated (e\.g\., exit code zero)\.
 .
 .IP "\(bu" 4
-\fBafterok\fR: clause is satisfied after the job, or all tasks in the job array complete successfully
+\fBafternotok\fR: This job could begin after specified jobs have failed\.
 .
 .IP "\(bu" 4
-\fBafternotok\fR: clause is satisfied after the job, or all tasks in the job array complete with at least one tasks not completing successfully
+\fBafter\fR: This job could begin after specified jobs have begun\. \fB(e\.g\., if you use this keyword, and specify job2 depends on job1, job2 could start immediately once job1 starts!)\fR
 .
 .IP "" 0
 .
 .SH "EXAMPLES"
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.
+.SS "You want to submit a job that will start after another job is terminated"
+Let say you first submitted a job\. You run this in terminal, and the job id shows in the screen\.
+.
+.IP "" 4
+.
+.nf
+
+
+sbatch job1\.sh
+Submitted batch job 123456
+.
+.fi
+.
+.IP "" 0
 .
 .P
-Wait for specific job array elements
+Then you have a second job\. You want to make sure the second job could only start running after the first job is successfully terminated\. You could run this in the terminal\.
+.
+.IP "" 4
+.
+.nf
+
+
+sbatch \-d afterok:123456 job2\.sh
+or
+sbatch \-\-dependency=afterok:123456 job2\.sh
+.
+.fi
+.
+.IP "" 0
 .
 .P
-\fBsbatch \-\-depend=after:123_4 my\.job\fR
+In this case, for example, if you cancel the first job, the first job will not be terminated sucessfully\. The second job will change its state to DependencyNeverSatisfied, and will not start running\.
 .
 .P
-\fBsbatch \-\-depend=afterok:123_4:123_8 my\.job2\fR
+Alternatively, you could have the second job ready to start after the first job is terminated, whether sucessfully or not\. The command will be:
 .
-.P
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.IP "" 4
 .
-.P
-Wait for the job array to completed
+.nf
+
+
+sbatch \-d afterany:123456 job2\.sh
+or
+sbatch \-\-dependency=afterany:123456 job2\.sh
 .
-.P
-\fBsbatch \-\-depend=afterany:123 my\.job\fR
+.fi
 .
-.P
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
-.
-.P
-Wait for entire job array to complete successfully
-.
-.P
-\fBsbatch \-\-depend=afterok:123 my\.job\fR
-.
-.P
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
-.
-.P
-Wait for entire job array to complete and at least one task fails
-.
-.P
-\fBsbatch \-\-depend=afternotok:123 my\.job\fR
-.
-.P
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.IP "" 0
 .
 .SH "AUTHORS"
 .
 .nf
 
 NYUAD HPC Apps Team:
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
-    \- Benoit Marchand
-    \- Guowei He
-    \- Jorge Naranjo
+ \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+     \- Benoit Marchand
+     \- Guowei He
+     \- Jorge Naranjo
 .
 .fi
 .
