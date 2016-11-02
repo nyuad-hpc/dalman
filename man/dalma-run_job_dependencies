@@ -41,7 +41,7 @@ Submitted batch job 123456
 .IP "" 0
 .
 .P
-Then you have a second job\. You want to make sure the second job could only start running after the first job is successfully terminated\. You could run this in the terminal\. Notice that in the real case, you have to replace 123456 to your actual job id\.
+Then you have a second job\. You want to make sure the second job could only start running after the first job is successfully terminated\. You could run this in the terminal\. \fBNotice that in the real case, you have to replace 123456 to your actual job id\fR\.
 .
 .IP "" 4
 .

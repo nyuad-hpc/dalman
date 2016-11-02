@@ -94,7 +94,7 @@ sbatch job1.sh
 Submitted batch job 123456
 </code></pre>
 
-<p>Then you have a second job. You want to make sure the second job could only start running after the first job is successfully terminated. You could run this in the terminal. Notice that in the real case, you have to replace 123456 to your actual job id.</p>
+<p>Then you have a second job. You want to make sure the second job could only start running after the first job is successfully terminated. You could run this in the terminal. <code>Notice that in the real case, you have to replace 123456 to your actual job id</code>.</p>
 
 <pre><code>
 sbatch -d afterok:123456 job2.sh
