@@ -41,7 +41,7 @@ Submitted batch job 123456
 .IP "" 0
 .
 .P
-Then you have a second job\. You want to make sure the second job could only start running after the first job is successfully terminated\. You could run this in the terminal\.
+Then you have a second job\. You want to make sure the second job could only start running after the first job is successfully terminated\. You could run this in the terminal\. Notice that in the real case, you have to replace 123456 to your actual job id\.
 .
 .IP "" 4
 .
@@ -55,9 +55,6 @@ sbatch \-\-dependency=afterok:123456 job2\.sh
 .fi
 .
 .IP "" 0
-.
-.P
-In this case, for example, if you cancel the first job, the first job will not be terminated sucessfully\. The second job will change its state to DependencyNeverSatisfied, and will not start running\.
 .
 .P
 Alternatively, you could have the second job ready to start after the first job is terminated, whether sucessfully or not\. The command will be:
