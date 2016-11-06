@@ -15,6 +15,8 @@ However, If there is any information that can not be found here please visit the
 
 Raise a ticket with email <a href="mailto:nyuad.it.help@nyu.edu" target="_blank">nyuad.it.help@nyu.edu</a>. Or, contact us directly with email <a href="mailto:dalma.admins@nyu.edu" target="_blank">dalma.admins@nyu.edu</a>. We are sitting in A2-131 and A2-132. Looking forward to see you!
 
+For more information on IT service desk, kindly visit webpage <a href="http://www.nyu.edu/life/information-technology/help-and-service-status/nyu-it-service-desk.html" target="_blank">http://www.nyu.edu/life/information-technology/help-and-service-status/nyu-it-service-desk.html</a>
+
 ## DESCRIPTION  
 
 Users can request help on any specific topic using the following command:
