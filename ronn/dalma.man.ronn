@@ -11,6 +11,10 @@ This place will contain most of the documentation/recipes needed to get you to w
 
 However, If there is any information that can not be found here please visit the [How To's section](https://wikis.nyu.edu/pages/viewpage.action?pageId=69765337 "How to's")
 
+## CONTACT US
+ 
+Raise a ticket with email <a href="mailto:nyuad.it.help@nyu.edu" target="_blank">nyuad.it.help@nyu.edu</a>. Or, contact us directly with email <a href="mailto:dalma.admins@nyu.edu" target="_blank">dalma.admins@nyu.edu</a>. We are sitting in A2-131 and  A2-132. Looking forward to see you!
+
 ## DESCRIPTION  
 
 Users can request help on any specific topic using the following command:

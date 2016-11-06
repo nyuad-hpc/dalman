@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "DALMA" "" "October 2016" "NYUAD" "Dalma Manual"
+.TH "DALMA" "" "November 2016" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
 Here you will find a list of all the available topics for help related to \fBDalma\fR and how to call for help
@@ -11,6 +11,9 @@ This place will contain most of the documentation/recipes needed to get you to w
 .
 .P
 However, If there is any information that can not be found here please visit the How To\'s section \fIhttps://wikis\.nyu\.edu/pages/viewpage\.action?pageId=69765337\fR
+.
+.SH "CONTACT US"
+Raise a ticket with email \fInyuad\.it\.help@nyu\.edu\fR\. Or, contact us directly with email \fIdalma\.admins@nyu\.edu\fR\. We are sitting in A2\-131 and A2\-132\. Looking forward to see you!
 .
 .SH "DESCRIPTION"
 Users can request help on any specific topic using the following command:
