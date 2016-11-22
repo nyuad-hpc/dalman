@@ -8,9 +8,9 @@ There are basically two methods: either to use Python through  _Anaconda_ or the
 
 This section describes the use of python with _Anaconda_. For more info about this, please visit: <a href="https://wikis.nyu.edu/display/ADRC/Python+-+Using+Anaconda" target="_blank">Python - Using Anaconda</a>
 
-To know how to use a personalised Python environment, visit <a href="https://wikis.nyu.edu/display/ADRC/Python+-+Create+and+manage+your+own+Python+environment" target="_blank">Python - Using python in Dalma - Installing Modules</a>
+To install packages using pip, visit <a href="https://wikis.nyu.edu/display/ADRC/Python+-+Create+and+manage+your+own+Python+environment" target="_blank">Python - Using python in Dalma - Installing Modules</a>
 
-To create your own Conda environment, visit <a href="https://wikis.nyu.edu/display/ADRC/Python+-+Create+Your+Own+Environment+using+Anaconda" target="_blank">Python - Create Your Own Environment using Anaconda</a>
+To install packages using Conda, visit <a href="https://wikis.nyu.edu/display/ADRC/Python+-+Create+Your+Own+Environment+using+Anaconda" target="_blank">Python - Create Your Own Environment using Anaconda</a>
 
 
 ## DESCRIPTION
