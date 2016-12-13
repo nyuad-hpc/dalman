@@ -13,9 +13,11 @@ However, If there is any information that can not be found here please visit the
 
 ## CONTACT US
 
-Raise a ticket with email <a href="mailto:nyuad.it.help@nyu.edu" target="_blank">nyuad.it.help@nyu.edu</a>. Or, contact us directly with email <a href="mailto:dalma.admins@nyu.edu" target="_blank">dalma.admins@nyu.edu</a>. We are sitting in A2-131 and A2-132. Looking forward to see you!
+To contact us, kindly send an email to <a href="mailto:nyuad.it.help@nyu.edu" target="_blank">nyuad.it.help@nyu.edu</a>. For more information on IT service desk, kindly visit <a href="http://www.nyu.edu/life/information-technology/help-and-service-status/nyu-it-service-desk.html" target="_blank">this webpage</a>
 
-For more information on IT service desk, kindly visit <a href="http://www.nyu.edu/life/information-technology/help-and-service-status/nyu-it-service-desk.html" target="_blank">this webpage</a>
+## JOB SUBMISSION
+
+To submit a job, kindly pass our HPC training on iLearn. <a href="https://wikis.nyu.edu/display/ADRC/Joining+Dalma+Online+Training+on+iLearn" target"_blank">https://wikis.nyu.edu/display/ADRC/Joining+Dalma+Online+Training+on+iLearn</a>. 
 
 ## DESCRIPTION  
 
