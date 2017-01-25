@@ -72,6 +72,20 @@ sbatch \-\-dependency=afterany:123456 job2\.sh
 .
 .IP "" 0
 .
+.P
+You could also specify multiple job depencencies on 1 job\. E\.g\., if you want job3 starts only after job1 and job2 are successfully finished, the command will be:
+.
+.IP "" 4
+.
+.nf
+
+
+sbatch \-d afterok:<jobid\-of\-job1>:<jobid\-of\-job2> job3\.sh
+.
+.fi
+.
+.IP "" 0
+.
 .SH "AUTHORS"
 .
 .nf
