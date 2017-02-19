@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "DALMA\-RUN_R" "" "September 2016" "NYUAD" "Dalma Manual"
+.TH "DALMA\-RUN_R" "" "December 2016" "NYUAD" "Dalma Manual"
 If you are from CGSB, please refer to the documentation by NYU Gencore: https://docs\.google\.com/document/d/1f7NBLrtwiopCu4AMf97WbQRkemw5qHtEXrzP9dVS\-RQ/edit
 .
 .SH "SYNOPSIS"

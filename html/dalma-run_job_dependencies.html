@@ -110,6 +110,12 @@ or
 sbatch --dependency=afterany:123456 job2.sh
 </code></pre>
 
+<p>You could also specify multiple job depencencies on 1 job. E.g., if you want job3 starts only after job1 and job2 are successfully finished, the command will be:</p>
+
+<pre><code>
+sbatch -d afterok:&lt;jobid-of-job1>:&lt;jobid-of-job2> job3.sh
+</code></pre>
+
 <h2 id="AUTHORS">AUTHORS</h2>
 
 <pre><code>NYUAD HPC Apps Team:
@@ -126,7 +132,7 @@ sbatch --dependency=afterany:123456 job2.sh
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'>NYUAD</li>
-    <li class='tc'>November 2016</li>
+    <li class='tc'>January 2017</li>
     <li class='tr'>dalma-run_job_dependencies</li>
   </ol>
 

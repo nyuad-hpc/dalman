@@ -11,7 +11,7 @@ To accomplish this, follow the steps:
 
 1.- Specify the resouces required in Slurm directives in job script. Use 1 node, 1 core, serial queue.
 
-2.- Submit the job.
+2.- Submit the job on login nodes. Please be aware that job submission is not possible on compute nodes.
 
 ## EXAMPLE
 
