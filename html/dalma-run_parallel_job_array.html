@@ -99,15 +99,15 @@
 
 <p>----------------------------------------------------------</p>
 
-<p>4.- Run our job array tool, slurm_parallel_ja_submit.sh, with command text file as argument. E.g., <code>$TOOLDIR/slurm_parallel_ja_submit.sh commands.txt</code>. The job script will be automatically created. Change the walltime if necessary. The command to submit this job array display on screen. Run this command to submit the job array. You can run the same command to resubmit later.</p>
+<p>4.- Run our job array tool, slurm_parallel_ja_submit.sh, with command text file as argument. E.g., <code>$TOOLDIR/slurm_parallel_ja_submit.sh commands.txt</code>. The job script will be automatically created. Change the walltime if necessary. The command to submit this job array wll display on screen. Run this command to submit the job array. You can run the same command to resubmit later.</p>
 
 <p>----------------------------------------------------------</p>
 
 <p>  Example:</p>
 
-<p>  <code>$TOOLDIR/slurm_parallel_ja_submit.sh commands/native_2000</code></p>
+<p>  <code>$TOOLDIR/slurm_parallel_ja_submit.sh commands/native_2000</code> # commands are in commands/native_2000</p>
 
-<p>  <code>sbatch --array=1-8 job.7242.sh</code></p>
+<p>  <code>sbatch --array=1-8 job.7242.sh</code> # job.7242.sh is the job script automatically generated.</p>
 
 <p>  <code>Submitted batch job 6298</code> # 6298 is the job id</p>
 
