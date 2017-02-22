@@ -51,7 +51,7 @@ Ths page explains how to run a series of jobs with one command\.
 \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
 .
 .P
-4\.\- Run our job array tool, slurm_parallel_ja_submit\.sh, with command text file as argument\. E\.g\., \fB$TOOLDIR/slurm_parallel_ja_submit\.sh commands\.txt\fR\. The job script will be automatically created\. Change the walltime if necessary\. The command to submit this job array display on screen\. Run this command to submit the job array\. You can run the same command to resubmit later\.
+4\.\- Run our job array tool, slurm_parallel_ja_submit\.sh, with command text file as argument\. E\.g\., \fB$TOOLDIR/slurm_parallel_ja_submit\.sh commands\.txt\fR\. The job script will be automatically created\. Change the walltime if necessary\. The command to submit this job array wll display on screen\. Run this command to submit the job array\. You can run the same command to resubmit later\.
 .
 .P
 \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
@@ -60,10 +60,10 @@ Ths page explains how to run a series of jobs with one command\.
 Example:
 .
 .P
-\fB$TOOLDIR/slurm_parallel_ja_submit\.sh commands/native_2000\fR
+\fB$TOOLDIR/slurm_parallel_ja_submit\.sh commands/native_2000\fR # commands are in commands/native_2000
 .
 .P
-\fBsbatch \-\-array=1\-8 job\.7242\.sh\fR
+\fBsbatch \-\-array=1\-8 job\.7242\.sh\fR # job\.7242\.sh is the job script automatically generated\.
 .
 .P
 \fBSubmitted batch job 6298\fR # 6298 is the job id

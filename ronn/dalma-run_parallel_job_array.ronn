@@ -34,15 +34,15 @@ Ths page explains how to run a series of jobs with one command.
 
 \----------------------------------------------------------
  
-4.- Run our job array tool, slurm_parallel_ja_submit.sh, with command text file as argument. E.g., `$TOOLDIR/slurm_parallel_ja_submit.sh commands.txt`. The job script will be automatically created. Change the walltime if necessary. The command to submit this job array display on screen. Run this command to submit the job array. You can run the same command to resubmit later.
+4.- Run our job array tool, slurm_parallel_ja_submit.sh, with command text file as argument. E.g., `$TOOLDIR/slurm_parallel_ja_submit.sh commands.txt`. The job script will be automatically created. Change the walltime if necessary. The command to submit this job array wll display on screen. Run this command to submit the job array. You can run the same command to resubmit later.
 
 \----------------------------------------------------------
  
   Example:
 
-  `$TOOLDIR/slurm_parallel_ja_submit.sh commands/native_2000`
+  `$TOOLDIR/slurm_parallel_ja_submit.sh commands/native_2000` # commands are in commands/native_2000
 
-  `sbatch --array=1-8 job.7242.sh`
+  `sbatch --array=1-8 job.7242.sh` # job.7242.sh is the job script automatically generated.
   
   `Submitted batch job 6298` # 6298 is the job id
 
