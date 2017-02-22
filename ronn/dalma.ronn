@@ -41,6 +41,7 @@ Users can request help on any specific topic using the following command:
 [run_job_mpi]: ../html/dalma-run_job_mpi.html "run_job_mpi"
 [run_job_threads]: ../html/dalma-run_job_threads.html "run_job_threads"
 [run_job_array]: ../html/dalma-run_job_array.html "run_job_array"
+[run_parallel_job_array]: ../html/dalma-run_parallel_job_array.html  "run_parallel_job_array"
 [run_job_dependencies]: ../html/dalma-run_job_dependencies.html  "run_job_dependencies"
 [run_python]: ../html/dalma-run_python.html  "run_python"
 [run_r]: ../html/dalma-run_r.html  "run_r"
@@ -80,6 +81,7 @@ Users can request help on any specific topic using the following command:
 - [run_job_threads][]	   	: How to run parallel (threaded/openmp) jobs
 - [run_job_bigmem][]	   	: How to run memory bond jobs
 - [run_job_array][]	   	: What is a job array and how to use it
+- [run_parallel_job_array][]    : What is a parallel job array and how to use it
 - [run_job_dependencies][]   	: How to run jobs with dependencies
 - [run_python][]		: How to run Python, personalized environments and Anaconda
 - [run_r][]		   	: How to run R,  personalized environments and Anaconda
