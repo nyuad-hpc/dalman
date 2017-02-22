@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv='content-type' value='text/html;charset=utf8'>
   <meta name='generator' value='Ronn/v0.7.3 (http://github.com/rtomayko/ronn/tree/0.7.3)'>
-  <title>Dalma Man Pages (dalman) </title>
+  <title>Dalma Parallel Job Array</title>
   <style type='text/css' media='all'>
   /* style: man */
   body#manpage {margin:0}
@@ -65,16 +65,16 @@
     <li class='tr'>dalma-run_parallel_job_array</li>
   </ol>
 
-  <h1>Dalma Man Pages (dalman) </h1>
+  <h1>Dalma Parallel Job Array</h1>
 <h2 id="SYNOPSIS">SYNOPSIS</h2>
 
-<p>Ths page explains how to Running a series of jobs with one command.</p>
+<p>Ths page explains how to run a series of jobs with one command.</p>
 
 <h2 id="DESCRIPTION">DESCRIPTION</h2>
 
 <p>1.- Login Dalma.</p>
 
-<p>2.- Always create a new folder for each job array to prevent cross contamination. Use /fastscratch unless you are going to read / write very large sequential files in parallel.</p>
+<p>2.- Always create a new folder for each job array to prevent cross contamination.</p>
 
 <p>  ----------------------------------------------------------</p>
 
@@ -99,19 +99,15 @@
 
 <p>----------------------------------------------------------</p>
 
-<p>4.- Run our job array tool, slurm_lck_ja_submit.sh, with command text file as argument. E.g., <code>$TOOLDIR/slurm_parallel_ja_submit.sh commands.txt</code>. The legacy <code>pbs_parallel_ja_submit.sh</code> will work as well. The job script will be automatically created and submitted. A job ID will pop up on screen. Mark it down for future reference:</p>
+<p>4.- Run our job array tool, slurm_parallel_ja_submit.sh, with command text file as argument. E.g., <code>$TOOLDIR/slurm_parallel_ja_submit.sh commands.txt</code>. The job script will be automatically created. Change the walltime if necessary. The command to submit this job array display on screen. Run this command to submit the job array. You can run the same command to resubmit later.</p>
 
 <p>----------------------------------------------------------</p>
 
 <p>  Example:</p>
 
-<p>  <code>$TOOLDIR/slurm_parallel_ja_submit.sh commands.txt</code></p>
+<p>  <code>$TOOLDIR/slurm_parallel_ja_submit.sh commands/native_2000</code></p>
 
-<p>  or</p>
-
-<p>  (not recommened) <code>$TOOLDIR/pbs_parallel_ja_submit.sh commands.txt</code></p>
-
-<p>  Screen output:</p>
+<p>  <code>sbatch --array=1-8 job.7242.sh</code></p>
 
 <p>  <code>Submitted batch job 6298</code> # 6298 is the job id</p>
 
@@ -148,7 +144,7 @@
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'>NYUAD</li>
-    <li class='tc'>December 2016</li>
+    <li class='tc'>February 2017</li>
     <li class='tr'>dalma-run_parallel_job_array</li>
   </ol>
 

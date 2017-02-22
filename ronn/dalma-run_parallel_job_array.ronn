@@ -1,14 +1,14 @@
-Dalma Man Pages (dalman) 
+Dalma Parallel Job Array
 ====
 
 ## SYNOPSIS  
-Ths page explains how to Running a series of jobs with one command.
+Ths page explains how to run a series of jobs with one command.
 
 ## DESCRIPTION
 
 1.- Login Dalma.
 
-2.- Always create a new folder for each job array to prevent cross contamination. Use /fastscratch unless you are going to read / write very large sequential files in parallel.
+2.- Always create a new folder for each job array to prevent cross contamination.
 
   \----------------------------------------------------------
 
@@ -34,19 +34,15 @@ Ths page explains how to Running a series of jobs with one command.
 
 \----------------------------------------------------------
  
-4.- Run our job array tool, slurm_lck_ja_submit.sh, with command text file as argument. E.g., `$TOOLDIR/slurm_parallel_ja_submit.sh commands.txt`. The legacy `pbs_parallel_ja_submit.sh` will work as well. The job script will be automatically created and submitted. A job ID will pop up on screen. Mark it down for future reference:
+4.- Run our job array tool, slurm_parallel_ja_submit.sh, with command text file as argument. E.g., `$TOOLDIR/slurm_parallel_ja_submit.sh commands.txt`. The job script will be automatically created. Change the walltime if necessary. The command to submit this job array display on screen. Run this command to submit the job array. You can run the same command to resubmit later.
 
 \----------------------------------------------------------
  
   Example:
 
-  `$TOOLDIR/slurm_parallel_ja_submit.sh commands.txt`
-  
-  or
-  
-  (not recommened) `$TOOLDIR/pbs_parallel_ja_submit.sh commands.txt`
+  `$TOOLDIR/slurm_parallel_ja_submit.sh commands/native_2000`
 
-  Screen output:
+  `sbatch --array=1-8 job.7242.sh`
   
   `Submitted batch job 6298` # 6298 is the job id
 
