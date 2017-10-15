@@ -1,19 +1,13 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "DALMA\-GET_ACCOUNT" "" "February 2017" "NYUAD" "Dalma Manual"
+.TH "DALMA\-GET_ACCOUNT" "" "October 2017" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
 Here you will find information on how to get an account on \'Dalma\'
 .
 .SH "DESCRIPTION"
-Account generation ,renewal and approval are done in the NYU High Performance Computing (HPC) account management site, IdentityIQ (IIQ) : \fIhttps://iiq\.home\.nyu\.edu/identityiq\fR\. Use your NetID to log in\.
-.
-.P
-Please follow the instructions with detailed screenshots in this web page\. \fIhttps://wikis\.nyu\.edu/display/ADRC/Accounts\fR
-.
-.P
-Meanwhile, please join or proceed to iLearn (NYU Home web site) and select course "TEC 300"\. After finishing this course, job submission will be enabled for you on Dalma in 2 business days\. See here for detailed instructions: \fIhttps://wikis\.nyu\.edu/display/ADRC/Joining+Dalma+Online+Training+on+iLearn\fR\. If you are not a paid employee in NYU (e\.g\., visitors, undergrads), please contact us directly by nyuad\.it\.help@nyu\.edu
+Refer to https://wikis\.nyu\.edu/display/ADRC/Accounts for more information\.
 .
 .SH "AUTHORS"
 .
