@@ -50,7 +50,6 @@ Users can request help on any specific topic using the following command:
 [run_matlab]: ../html/dalma-run_matlab.html  "run_matlab"
 [run_gaussian_tcplinda]: ../html/dalma-run_gaussian_tcplinda.html "run_gaussian_tcplinda"
 [run_job_bigmem]: ../html/dalma-run_job_bigmem.html "run_job_bigmem"
-[run_gnu_parallel]: ../html/dalma-run_gnu_parallel.html "run_gnu_parallel"
 [run_matlab_mex]: ../html/dalma-run_matlab_mex.html  "run_matlab_mex"
 [run_java]: ../html/dalma-run_java.html "run_java"
 
