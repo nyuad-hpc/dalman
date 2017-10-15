@@ -1,11 +1,11 @@
-Dalma Man Pages (dalman) 
+To Run Python on Dalma
 ====
 
-## SYNOPSIS  
+Run `module load python` to use Python on Dalma.
 
 To install packages using pip, visit <a href="https://wikis.nyu.edu/display/ADRC/Python+-+Create+and+manage+your+own+Python+environment" target="_blank">Python - Using python in Dalma - Installing Modules</a>
 
-We do not support Anaconda officially. But you could install it to your $HOME directly.
+If you need advanced support of Python (E.g., multiple versions of Python), contact us directly on dalma.admins@nyu.edu
 
 ## AUTHORS 
 	NYUAD HPC Apps Team:
