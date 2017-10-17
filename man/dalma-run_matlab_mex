@@ -1,7 +1,7 @@
 .\" generated with Ronn/v0.7.3
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
-.TH "DALMA\-RUN_MATLAB_MEX" "" "October 2017" "NYUAD" "Dalma Manual"
+.TH "DALMA\-RUN_MATLAB_MEX" "" "February 2017" "NYUAD" "Dalma Manual"
 .
 .SH "SYNOPSIS"
 This page explains how to compile MEX function in Matlab\.
