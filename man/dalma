@@ -16,7 +16,7 @@ However, If there is any information that can not be found here please visit the
 Raise a ticket with email \fInyuad\.it\.help@nyu\.edu\fR\. Or, contact us directly with email \fIdalma\.admins@nyu\.edu\fR\. We are sitting in A2\-131 and A2\-132\. Looking forward to see you!
 .
 .P
-For more information on IT service desk, kindly visit webpage \fIhttp://www\.nyu\.edu/life/information\-technology/help\-and\-service\-status/nyu\-it\-service\-desk\.html\fR
+For more information on IT service desk, kindly visit this webpage \fIhttp://www\.nyu\.edu/life/information\-technology/help\-and\-service\-status/nyu\-it\-service\-desk\.html\fR
 .
 .SH "DESCRIPTION"
 Users can request help on any specific topic using the following command:
@@ -29,40 +29,43 @@ Users can request help on any specific topic using the following command:
 .SS "where \'topic\' can be one of:"
 .
 .IP "\(bu" 4
-\fBstorage\fR : Display information about the different filesystems and how to use them
+get_account \fI\.\./html/dalma\-get_account\.html\fR : Requesting/renewing an account in Dalma
 .
 .IP "\(bu" 4
-\fBqueues\fR : Display the different login information and when to use them
+login \fI\.\./html/dalma\-login\.html\fR : How to log into the system, from inside and outside NYUAD
 .
 .IP "\(bu" 4
-\fBmodules\fR : NYUME login description\. How to access to the available software in the system
+system \fI\.\./html/dalma\-system\.html\fR : System description
 .
 .IP "\(bu" 4
-\fBsoftware\fR : List of the available login
+storage \fI\.\./html/dalma\-storage\.html\fR : Display information about the different filesystems and how to use them
 .
 .IP "\(bu" 4
-\fBsystem\fR : System description
+[archive][] : How to use the archive storage system
 .
 .IP "\(bu" 4
-\fBlogin\fR : How to log into the system, from inside and outside NYUAD
+queues \fI\.\./html/dalma\-queues\.html\fR : Display the different login information and when to use them
 .
 .IP "\(bu" 4
-\fBcompiling\fR : Compilation best practices and guidelines
+modules \fI\.\./html/dalma\-modules\.html\fR : NYUME login description\. How to access to the available software in the system
 .
 .IP "\(bu" 4
-\fBget_account\fR : Requesting/renewing an account in Dalma
+compiling \fI\.\./html/dalma\-compiling\.html\fR : Compilation best practices and guidelines
 .
 .IP "\(bu" 4
-\fBdata_movement\fR : How to move data efficiently in/out Dalma
+data_movement \fI\.\./html/dalma\-data_movement\.html\fR : How to move data efficiently in/out Dalma
 .
 .IP "\(bu" 4
-\fBslurm_environment\fR : Environment variables set by SLURM during the job lifetime
+slurm_environment \fI\.\./html/dalma\-slurm_environment\.html\fR : Environment variables set by SLURM during the job lifetime
 .
 .IP "\(bu" 4
-\fBslurm_commands\fR : Commands most commonly used by users
+slurm_commands \fI\.\./html/dalma\-slurm_commands\.html\fR : Commands most commonly used by users
 .
 .IP "\(bu" 4
-\fBslurm_sbatch\fR : sbatch options to be used inside the submission script or invoking \'sbatch\' from the command line
+slurm_sbatch \fI\.\./html/dalma\-slurm_sbatch\.html\fR : sbatch options to be used inside the submission script or invoking \'sbatch\' from the command line
+.
+.IP "\(bu" 4
+[slurm_show_usage][] : Utility to show how many cores you are currently using and your account limits
 .
 .IP "" 0
 .
@@ -71,43 +74,52 @@ Users can request help on any specific topic using the following command:
 .SS "with the following options users can have access to recipes:"
 .
 .IP "\(bu" 4
-\fBrun_job_interactive\fR : How to run jobs interactively
+run_job_interactive \fI\.\./html/dalma\-run_job_interactive\.html\fR : How to run jobs interactively
 .
 .IP "\(bu" 4
-\fBrun_job_serial\fR : How to run serial jobs
+run_job_serial \fI\.\./html/dalma\-run_job_serial\.html\fR : How to run serial jobs
 .
 .IP "\(bu" 4
-\fBrun_job_mpi\fR : How to run parallel (mpi) jobs
+run_job_mpi \fI\.\./html/dalma\-run_job_mpi\.html\fR : How to run parallel (mpi) jobs
 .
 .IP "\(bu" 4
-\fBrun_job_threads\fR : How to run parallel (threaded/openmp) jobs
+run_job_threads \fI\.\./html/dalma\-run_job_threads\.html\fR : How to run parallel (threaded/openmp) jobs
 .
 .IP "\(bu" 4
-\fBrun_job_bigmem\fR : How to run memory bond jobs
+run_job_bigmem \fI\.\./html/dalma\-run_job_bigmem\.html\fR : How to run memory bond jobs
 .
 .IP "\(bu" 4
-\fBrun_job_array\fR : What is a job array and how to use it
+run_job_array \fI\.\./html/dalma\-run_job_array\.html\fR : What is a job array and how to use it
 .
 .IP "\(bu" 4
-\fBrun_job_dependencies\fR : How to run jobs with dependencies
+run_job_dependencies \fI\.\./html/dalma\-run_job_dependencies\.html\fR : How to run jobs with dependencies
 .
 .IP "\(bu" 4
-\fBrun_python\fR : How to run Python, personalized environments and Anaconda
+run_python \fI\.\./html/dalma\-run_python\.html\fR : How to run Python, personalized environments and Anaconda
 .
 .IP "\(bu" 4
-\fBrun_r\fR : How to run R, personalized environments and Anaconda
+run_r \fI\.\./html/dalma\-run_r\.html\fR : How to run R, personalized environments and Anaconda
 .
 .IP "\(bu" 4
-\fBrun_perl\fR : How to run Perl in Dalma
+run_perl \fI\.\./html/dalma\-run_perl\.html\fR : How to run Perl in Dalma
 .
 .IP "\(bu" 4
-\fBrun_wien2k\fR : How to run WIEN2K in Dalma
+run_wien2k \fI\.\./html/dalma\-run_wien2k\.html\fR : How to run WIEN2K in Dalma
 .
 .IP "\(bu" 4
-\fBrun_matlab\fR : How to run Matlab, serial and parallel toolbox
+run_matlab \fI\.\./html/dalma\-run_matlab\.html\fR : How to run Matlab, serial and parallel toolbox
 .
 .IP "\(bu" 4
-\fBrun_gaussian_tcplinda\fR : How to run Gaussian in parallel using TcpLinda
+run_gaussian_tcplinda \fI\.\./html/dalma\-run_gaussian_tcplinda\.html\fR : How to run Gaussian in parallel using TcpLinda
+.
+.IP "\(bu" 4
+run_gnu_parallel \fI\.\./html/dalma\-run_gnu_parallel\.html\fR : How to run GNU Parallel
+.
+.IP "\(bu" 4
+run_matlab_mex \fI\.\./html/dalma\-run_matlab_mex\.html\fR : How to compile Matlab MEX function
+.
+.IP "\(bu" 4
+run_java \fI\.\./html/dalma\-run_java\.html\fR : How to run Java
 .
 .IP "" 0
 .
@@ -119,6 +131,9 @@ Users can request help on any specific topic using the following command:
 .
 .P
 \fBman dalma\-modules\fR
+.
+.P
+\fBman dalma\-system\fR
 .
 .P
 \fBman dalma\-run_jobs_mpi\fR

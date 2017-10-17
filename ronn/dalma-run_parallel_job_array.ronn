@@ -1,69 +1,98 @@
-Dalma Parallel Job Array
+Dalma Man Pages (dalman) 
 ====
 
 ## SYNOPSIS  
-Ths page explains how to run a series of jobs with one command.
+
+`slurm_parallel_job_array_submit.sh [-t HH:MM:SS] [-p partition] [-C avx2|sse] [-N #cores] commands-file`
+
+The "slurm_parallel_job_array_submit.sh" tool allows the rapid submission and execution of a large number of short running jobs in an efficient and simple way.
 
 ## DESCRIPTION
 
-1.- Login Dalma.
+Several types of problems can be brolen down into small short running jobs that can run independently.  For instance processing a large number of input files or performing a parametric analysis - eg varying some input parameters on a single problem to find the best fit.  While you can use a regular SLURM job array to process such problems, this is by no means the most efficient method as you need to wait for each job to be scheduled independently.  
 
-2.- Always create a new folder for each job array to prevent cross contamination.
+The "slurm_parallel_job_array_submit.sh" tool allows for the rapid submission and execution of a large number of short running jobs in an efficient and simple way.  Simply prepare a list of all jobs you wish to execute in a single file which you pass as argument to "slurm_parallel_job_array_submit.sh".
 
-  \----------------------------------------------------------
+Note that the tool supports OpenMP parallel applications - see below.
 
-  `mkdir my-job-arry-workspace`
-  
-  `cd my-job-array-workspace`
+For example to run a series of R scripts on the same input but varying the paramemters:
 
-  \----------------------------------------------------------
+	Jobs File (commands.txt)
+	============================
+	`Rscript MyCode.R 0.05 input1
+	Rscript MyCode.R 0.10 input1
+	Rscript MyCode.R 0.15 input1
+	Rscript MyCode.R 0.20 input1
+	...
+	Rscript MyCode.R 0.80 input1
+	Rscript MyCode.R 0.85 input1
+	Rscript MyCode.R 0.90 input1
+	Rscript MyCode.R 0.95 input1`
 
-3.- Prepare a text file contains all the commands to be run by the job array. One command per line:
-
-\----------------------------------------------------------
-
-  `Example, in commands.txt:`
- 
-  ```
-  ./lapack_example 1
-  ./lapack_example 2
-  ./helloworld 3
-  ./lapack_example 4
-  ./lapack_example 5
-  ```
-
-\----------------------------------------------------------
- 
-4.- Run our job array tool, slurm_parallel_ja_submit.sh, with command text file as argument. E.g., `$TOOLDIR/slurm_parallel_ja_submit.sh commands.txt`. The job script will be automatically created. Change the walltime if necessary. The command to submit this job array wll display on screen. Run this command to submit the job array. You can run the same command to resubmit later.
-
-\----------------------------------------------------------
- 
-  Example:
-
-  `$TOOLDIR/slurm_parallel_ja_submit.sh commands/native_2000` # commands are in commands/native_2000
-
-  `sbatch --array=1-8 job.7242.sh` # job.7242.sh is the job script automatically generated.
-  
-  `Submitted batch job 6298` # 6298 is the job id
-
-\----------------------------------------------------------
-
-5.- Output will be continuously appended to “output.log” in the working folder. Use squeue to check job status. Notice that the tasks might not be completed sequentially, as the CPUs are competing for jobs for best performance:
-
-\----------------------------------------------------------
- 
-  `Example output in out.log:`
+	To execute
+	==========
+	`> slurm_parallel_job_array_submit.sh commands.txt`
 
 
-  ```
-  For n = 1 the approx. condition number is 0.100E+01
-  For n = 2 the approx. condition number is 0.169E+02
-  helloworld
-  For n = 4 the approx. condition number is 0.645E+03
-  For n = 5 the approx. condition number is 0.287E+02
-  ```
-  
-\----------------------------------------------------------
+This will automatically submit the jobs are a job array where each job array instance regroups many jobs and runs them in parallel on compute nodes.  Moreover the output of each job will be concatenated in order in a single output file per node:
+
+	Output File
+	===========
+	`> cat jobs-437798_1.out
+	============= job 1 ============
+	(output job 1)
+	============= job 2 ============
+	(output job 2)
+	============= job 3 ============
+	(output job 3)
+	============= job 4 ============
+	(output job 4)
+	...`
+
+	> cat jobs-437798_1.err
+	`============= job 1 ============
+	(error output job 1)
+	============= job 2 ============
+	(error output job 2)
+	============= job 3 ============
+	(error output job 3)
+	============= job 4 ============
+	(error output job 4)
+	...`
+
+When jobs run they inherit the environment of your login shell.  So all modules that you load, and environment variables that you set, prior to calling "slurm_parallel_job_array_submit.sh" are passed on to your jobs.  Note that the jobs in the commands.txt file will each be allocated 2 cores to run in OpenMP mode.
+
+	`> module purge
+	> module load R/3.4.1
+	> export SOMEVARIABLENAME="1 2 3 4"
+	> export OMP_NUM_THREADS=2
+	> slurm_parallel_job_array_submit.sh commands.txt`
+
+This tool allows you to set a few parameters:
+
+	1) Set maximum run time :  -t HH:MM:SS
+
+		example: allow the job array instances to run for up to 24 hours
+
+		`> slurm_parallel_job_array_submit.sh -t 24:00:00 commands.txt`
+
+	2) Select the target partition: -p partition
+
+		example: use the serial partition
+
+		`> slurm_parallel_job_array_submit.sh -p serial commands.txt`
+
+	3) Select the type of node: -C type
+
+		example: use "avx2" nodes  (other choice is "sse")
+
+		`> slurm_parallel_job_array_submit.sh -C avx2 commands.txt`
+
+	4) Set the maximum number of nodes to use: -N nodes
+
+		example: Allow up to 10 nodes - eg up to 10 job array instance can run concurrently
+
+		`> slurm_parallel_job_array_submit.sh -N 10 commands.txt`
 
 ## AUTHORS 
     NYUAD HPC Apps Team:

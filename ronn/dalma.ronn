@@ -41,7 +41,6 @@ Users can request help on any specific topic using the following command:
 [run_job_mpi]: ../html/dalma-run_job_mpi.html "run_job_mpi"
 [run_job_threads]: ../html/dalma-run_job_threads.html "run_job_threads"
 [run_job_array]: ../html/dalma-run_job_array.html "run_job_array"
-[run_parallel_job_array]: ../html/dalma-run_parallel_job_array.html  "run_parallel_job_array"
 [run_job_dependencies]: ../html/dalma-run_job_dependencies.html  "run_job_dependencies"
 [run_python]: ../html/dalma-run_python.html  "run_python"
 [run_r]: ../html/dalma-run_r.html  "run_r"
@@ -50,8 +49,10 @@ Users can request help on any specific topic using the following command:
 [run_matlab]: ../html/dalma-run_matlab.html  "run_matlab"
 [run_gaussian_tcplinda]: ../html/dalma-run_gaussian_tcplinda.html "run_gaussian_tcplinda"
 [run_job_bigmem]: ../html/dalma-run_job_bigmem.html "run_job_bigmem"
+[run_gnu_parallel]: ../html/dalma-run_gnu_parallel.html "run_gnu_parallel"
 [run_matlab_mex]: ../html/dalma-run_matlab_mex.html  "run_matlab_mex"
 [run_java]: ../html/dalma-run_java.html "run_java"
+[run_parallel_job_array]: ../html-run_parallel_job_array.html
 
 
 ## MAIN TOPICS
@@ -62,6 +63,7 @@ Users can request help on any specific topic using the following command:
 - [login][]          	: How to log into the system, from inside and outside NYUAD
 - [system][]     	: System description
 - [storage][]        	: Display information about the different filesystems and how to use them
+- [archive][]		: How to use the archive storage system
 - [queues][]         	: Display the different login information and when to use them
 - [modules][]        	: NYUME login description. How to access to the available software in the system 
 - [compiling][]      	: Compilation best practices and guidelines
@@ -69,6 +71,7 @@ Users can request help on any specific topic using the following command:
 - [slurm_environment][] : Environment variables set by SLURM during the job lifetime
 - [slurm_commands][] 	: Commands most commonly used by users 
 - [slurm_sbatch][] 	: sbatch options to be used inside the submission script or  invoking 'sbatch' from the command line
+- [slurm_show_usage][]	: Utility to show how many cores you are currently using and your account limits
  
 ## RECIPE TOPICS
 
@@ -80,7 +83,6 @@ Users can request help on any specific topic using the following command:
 - [run_job_threads][]	   	: How to run parallel (threaded/openmp) jobs
 - [run_job_bigmem][]	   	: How to run memory bond jobs
 - [run_job_array][]	   	: What is a job array and how to use it
-- [run_parallel_job_array][]    : What is a parallel job array and how to use it
 - [run_job_dependencies][]   	: How to run jobs with dependencies
 - [run_python][]		: How to run Python, personalized environments and Anaconda
 - [run_r][]		   	: How to run R,  personalized environments and Anaconda
@@ -88,6 +90,7 @@ Users can request help on any specific topic using the following command:
 - [run_wien2k][]		: How to run WIEN2K in Dalma
 - [run_matlab][]		: How to run Matlab, serial and parallel toolbox
 - [run_gaussian_tcplinda][]	: How to run Gaussian in parallel using TcpLinda
+- [run_gnu_parallel][]      : How to run GNU Parallel
 - [run_matlab_mex][]		: How to compile Matlab MEX function
 - [run_java][]              : How to run Java
 

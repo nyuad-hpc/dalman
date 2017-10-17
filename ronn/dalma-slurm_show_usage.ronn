@@ -1,0 +1,151 @@
+Dalma Man Pages (dalman) 
+====
+
+## SYNOPSIS  
+
+`slurm_show_usage [-h] [-n #] [-a]`
+
+The "slurm_show_usage" tool displays the number of cores you are currently using and the limits that apply to your account(s).
+
+## DESCRIPTION
+
+Sometimes when submitting jobs to SLURM you will see (eg squeue) that you job is pending on resource allocation limits (AssocGrpCpuLimit). This is because either yourself or the sum of all others within the same account(s) are currently using all resources you are permitted.  In order to find which limit and which account has reached its limit you can use "slurm_show_usage".   
+
+The tool will list each account you belong and the account hierarchy along with how much is being used.
+
+        `> slurm_show_usage
+        --------------------------------------------------------------------------------
+        slurm_show_usage V1.0 - 2017 NYUAD Proprietary Software
+
+        User line show the usage and limit for user=ronaldo within each account it belong.
+        Account lines show the usage and limit for all users in that account.
+        The indentation on Account lines represent the level of sub-accounts
+        up to the present account.
+
+        --------------------------------------------------------------------------------
+        Usage  Limit     TYPE     Account
+        --------------------------------------------------------------------------------
+          11       100  User     cgsb_ser             (How many cores you are using in "cgsb_ser" account)
+         149      1400  Account  cgsb_ser             (How many cores all "cgsb_ser" users are currently using)
+         149      1400  Account      cgsb             (How many cores are used by all sub-accounts under "cgsb")
+        2197      6608  Account          institute    (How many cores are used by all "institute" users)
+        5372      6608  Account              nyuad    (How many cores are used in the cluster by "nyuad")
+        --------------------------------------------------------------------------------
+           0       700  User     cgsb_par                      
+           0      1400  Account  cgsb_par                      
+         149      1400  Account      cgsb                          
+        2197      6608  Account          institute                     
+        5372      6608  Account              nyuad                         
+        --------------------------------------------------------------------------------`
+
+
+The "-n" parameter allows you to see whether you could submit a job without hitting your allocation limits or that of the accounts in the account hierarchy.
+
+        `> slurm_show_usage -n 90
+        --------------------------------------------------------------------------------
+        slurm_show_usage V1.0 - 2017 NYUAD Proprietary Software
+
+        Checking for 90 cores availability
+        Highlighted numbers show user / account limits that would
+        prevent a 90 core job to run based on current usage.
+
+        User line show the usage and limit for user=ronaldo within each account it belong.
+        Account lines show the usage and limit for all users in that account.
+        The indentation on Account lines represent the level of sub-accounts
+        up to the present account.
+
+        --------------------------------------------------------------------------------
+         Usage  Limit     TYPE     Account
+        --------------------------------------------------------------------------------
+            **11**       100  User     cgsb_ser                      
+           148      1400  Account  cgsb_ser                      
+           148      1400  Account      cgsb                          
+          2196      6608  Account          institute                     
+          5371      6608  Account              nyuad                         
+        --------------------------------------------------------------------------------
+             0       700  User     cgsb_par                      
+             0      1400  Account  cgsb_par                      
+           148      1400  Account      cgsb                          
+          2196      6608  Account          institute                     
+          5371      6608  Account              nyuad                         
+        --------------------------------------------------------------------------------`
+
+The "-a" parameter show all accounts currently in use throughput the cluster.
+
+        `> slurm_show_usage -a
+        --------------------------------------------------------------------------------
+        slurm_show_usage V1.0 - 2017 NYUAD Proprietary Software
+
+        Account lines show the usage and limit for all users in that account.
+        The indentation on Account lines represent the level of sub-accounts
+        up to the present account.
+
+        --------------------------------------------------------------------------------
+         Usage  Limit     TYPE     Account
+        --------------------------------------------------------------------------------
+          2688      2800  Account  physics_par                   
+          2688      2800  Account      physics                       
+          3003      6608  Account          faculty                       
+          5372      6608  Account              nyuad                         
+        --------------------------------------------------------------------------------
+           840 UNLIMITED  Account  condo_serdal                  
+        --------------------------------------------------------------------------------
+           149      1400  Account  cgsb_ser                      
+           149      1400  Account      cgsb                          
+          2197      6608  Account          institute                     
+          5372      6608  Account              nyuad                         
+        --------------------------------------------------------------------------------
+           172      1400  Account  gencore                       
+          5372      6608  Account      nyuad                         
+        --------------------------------------------------------------------------------
+            32       280  Account  cpcm_ser                      
+          2048      5600  Account      cpcm                          
+          2197      6608  Account          institute                     
+          5372      6608  Account              nyuad                         
+        --------------------------------------------------------------------------------
+           112      2800  Account  chemistry_par                 
+           114      2800  Account      chemistry                     
+          3003      6608  Account          faculty                       
+          5372      6608  Account              nyuad                         
+        --------------------------------------------------------------------------------
+          2016      5600  Account  cpcm_par                      
+          2048      5600  Account      cpcm                          
+          2197      6608  Account          institute                     
+          5372      6608  Account              nyuad                         
+        --------------------------------------------------------------------------------
+           168      1400  Account  computerscience_par           
+           200      1400  Account      computerscience               
+          3003      6608  Account          faculty                       
+          5372      6608  Account              nyuad                         
+        --------------------------------------------------------------------------------
+             2       280  Account  chemistry_ser                 
+           114      2800  Account      chemistry                     
+          3003      6608  Account          faculty                       
+          5372      6608  Account              nyuad                         
+        --------------------------------------------------------------------------------
+            22 UNLIMITED  Account  condo_nlp                     
+        --------------------------------------------------------------------------------
+            32       280  Account  computerscience_ser           
+           200      1400  Account      computerscience               
+          3003      6608  Account          faculty                       
+          5372      6608  Account              nyuad                         
+        --------------------------------------------------------------------------------
+             1       280  Account  socialscience_ser             
+             1      1400  Account      socialscience                 
+          3003      6608  Account          faculty                       
+          5372      6608  Account              nyuad                         
+        --------------------------------------------------------------------------------`
+
+
+
+## AUTHORS 
+    NYUAD HPC Apps Team:
+    --------------------
+        - Benoit Marchand
+        - Guowei He
+        - Jorge Naranjo
+
+## SEE ALSO
+
+Please refer to the online documentation available [here](https://nyuad-hpc.github.io/dalman/html/dalma.html)
+
