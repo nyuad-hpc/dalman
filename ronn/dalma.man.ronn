@@ -27,18 +27,19 @@ Users can request help on any specific topic using the following command:
 
 ### where 'topic' can be one of:
 
+- **get_account**    	: Requesting/renewing an account in Dalma
+- **login**          	: How to log into the system, from inside and outside NYUAD
+- **system**       	  : System description
 - **storage**        	: Display information about the different filesystems and how to use them
+- **archive**         : How to use the archive storage system
 - **queues**         	: Display the different login information and when to use them
 - **modules**        	: NYUME login description. How to access to the available software in the system 
-- **software**       	: List of the available login
-- **system**       	    : System description
-- **login**          	: How to log into the system, from inside and outside NYUAD
 - **compiling**      	: Compilation best practices and guidelines
-- **get_account**    	: Requesting/renewing an account in Dalma
 - **data_movement**  	: How to move data efficiently in/out Dalma
 - **slurm_environment** : Environment variables set by SLURM during the job lifetime
 - **slurm_commands** 	: Commands most commonly used by users 
 - **slurm_sbatch** 	: sbatch options to be used inside the submission script or  invoking 'sbatch' from the command line
+- **slurm_show_usage**  : Utility to show how many cores you are currently using and your account limits
  
 ## RECIPE TOPICS
 
@@ -50,13 +51,17 @@ Users can request help on any specific topic using the following command:
 - **run_job_threads**	   	: How to run parallel (threaded/openmp) jobs
 - **run_job_bigmem**    : How to run memory bond jobs
 - **run_job_array**	   	: What is a job array and how to use it
+- **run_parallel_job_array**  : How to run a job array in parallel
 - **run_job_dependencies**   	: How to run jobs with dependencies
-- **run_python**		: How to run Python, personalized environments and Anaconda
-- **run_r**		   	: How to run R,  personalized environments and Anaconda
-- **run_perl**			: How to run Perl in Dalma
-- **run_wien2k**		: How to run WIEN2K in Dalma	
+- **run_python**		: How to run Python on Dalma
+- **run_r**		   	: How to run R on Dalma
+- **run_perl**			: How to run Perl on Dalma
+- **run_wien2k**		: How to run WIEN2K on Dalma	
 - **run_matlab**		: How to run Matlab, serial and parallel toolbox
 - **run_gaussian_tcplinda**     : How to run Gaussian in parallel using TcpLinda
+- **run_matlab_mex**            : How to compile Matlab MEX function
+- **run_java**                  : How to run Java
+
 
 ## EXAMPLES 
 
