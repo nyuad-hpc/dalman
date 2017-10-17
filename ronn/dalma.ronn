@@ -54,7 +54,7 @@ Users can request help on any specific topic using the following command:
 [run_gnu_parallel]: ../html/dalma-run_gnu_parallel.html "run_gnu_parallel"
 [run_matlab_mex]: ../html/dalma-run_matlab_mex.html  "run_matlab_mex"
 [run_java]: ../html/dalma-run_java.html "run_java"
-[run_parallel_job_array]: ../html-run_parallel_job_array.html
+[run_parallel_job_array]: ../html/dalma-run_parallel_job_array.html
 
 
 ## MAIN TOPICS
@@ -93,7 +93,7 @@ Users can request help on any specific topic using the following command:
 - [run_matlab][]		: How to run Matlab, serial and parallel toolbox
 - [run_gaussian_tcplinda][]	: How to run Gaussian in parallel using TcpLinda
 - [run_gnu_parallel][]      : How to run GNU Parallel
-- [slurm_parallel_job_array][]	: How to run a job array in parallel
+- [run_parallel_job_array][]	: How to run a job array in parallel
 - [run_matlab_mex][]		: How to compile Matlab MEX function
 - [run_java][]              : How to run Java
 
