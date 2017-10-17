@@ -116,7 +116,7 @@ run_gaussian_tcplinda \fI\.\./html/dalma\-run_gaussian_tcplinda\.html\fR : How t
 run_gnu_parallel \fI\.\./html/dalma\-run_gnu_parallel\.html\fR : How to run GNU Parallel
 .
 .IP "\(bu" 4
-[slurm_parallel_job_array][] : How to run a job array in parallel
+run_parallel_job_array \fI\.\./html/dalma\-run_parallel_job_array\.html\fR : How to run a job array in parallel
 .
 .IP "\(bu" 4
 run_matlab_mex \fI\.\./html/dalma\-run_matlab_mex\.html\fR : How to compile Matlab MEX function
