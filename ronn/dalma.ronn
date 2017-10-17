@@ -54,7 +54,7 @@ Users can request help on any specific topic using the following command:
 [run_gnu_parallel]: ../html/dalma-run_gnu_parallel.html "run_gnu_parallel"
 [run_matlab_mex]: ../html/dalma-run_matlab_mex.html  "run_matlab_mex"
 [run_java]: ../html/dalma-run_java.html "run_java"
-[run_parallel_job_array]: ../html-run_parallel_job_array.html
+[run_parallel_job_array]: ../html/dalma-run_parallel_job_array.html
 
 
 ## MAIN TOPICS
