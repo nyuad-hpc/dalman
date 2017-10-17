@@ -41,7 +41,7 @@ system \fI\.\./html/dalma\-system\.html\fR : System description
 storage \fI\.\./html/dalma\-storage\.html\fR : Display information about the different filesystems and how to use them
 .
 .IP "\(bu" 4
-[archive][] : How to use the archive storage system
+archive \fI\.\./html/dalma\-archive\.html\fR : How to use the archive storage system
 .
 .IP "\(bu" 4
 queues \fI\.\./html/dalma\-queues\.html\fR : Display the different login information and when to use them
@@ -65,7 +65,7 @@ slurm_commands \fI\.\./html/dalma\-slurm_commands\.html\fR : Commands most commo
 slurm_sbatch \fI\.\./html/dalma\-slurm_sbatch\.html\fR : sbatch options to be used inside the submission script or invoking \'sbatch\' from the command line
 .
 .IP "\(bu" 4
-[slurm_show_usage][] : Utility to show how many cores you are currently using and your account limits
+slurm_show_usage \fI\.\./html/dalma\-slurm_show_usage\.html\fR : Utility to show how many cores you are currently using and your account limits
 .
 .IP "" 0
 .
@@ -114,6 +114,9 @@ run_gaussian_tcplinda \fI\.\./html/dalma\-run_gaussian_tcplinda\.html\fR : How t
 .
 .IP "\(bu" 4
 run_gnu_parallel \fI\.\./html/dalma\-run_gnu_parallel\.html\fR : How to run GNU Parallel
+.
+.IP "\(bu" 4
+[slurm_parallel_job_array][] : How to run a job array in parallel
 .
 .IP "\(bu" 4
 run_matlab_mex \fI\.\./html/dalma\-run_matlab_mex\.html\fR : How to compile Matlab MEX function

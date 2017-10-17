@@ -27,6 +27,7 @@ Users can request help on any specific topic using the following command:
 [login]: ../html/dalma-login.html  "login"
 [system]: ../html/dalma-system.html  "system"
 [storage]: ../html/dalma-storage.html  "storage"
+[archive]: ../html/dalma-archive.html "archive"
 [queues]: ../html/dalma-queues.html  "queues"
 [modules]: ../html/dalma-modules.html  "modules"
 [compiling]: ../html/dalma-compiling.html  "compiling"
@@ -35,6 +36,7 @@ Users can request help on any specific topic using the following command:
 [slurm_environment]: ../html/dalma-slurm_environment.html  "slurm_environment"
 [slurm_commands]: ../html/dalma-slurm_commands.html  "slurm_commands"
 [slurm_sbatch]: ../html/dalma-slurm_sbatch.html  "slurm_sbatch"
+[slurm_show_usage]: ../html/dalma-slurm_show_usage.html "slurm_show_usage"
 
 [run_job_interactive]: ../html/dalma-run_job_interactive.html "run_job_interactive"
 [run_job_serial]: ../html/dalma-run_job_serial.html "run_job_serial"
@@ -91,6 +93,7 @@ Users can request help on any specific topic using the following command:
 - [run_matlab][]		: How to run Matlab, serial and parallel toolbox
 - [run_gaussian_tcplinda][]	: How to run Gaussian in parallel using TcpLinda
 - [run_gnu_parallel][]      : How to run GNU Parallel
+- [slurm_parallel_job_array][]	: How to run a job array in parallel
 - [run_matlab_mex][]		: How to compile Matlab MEX function
 - [run_java][]              : How to run Java
 
