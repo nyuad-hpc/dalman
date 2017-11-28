@@ -1,53 +1,7 @@
 Create a Personalized R Environment
 ====
 
-## SYNOPSIS  
-
-NYUAD HPC team provides a global R software environment which can be used through "Linux environment modules". However, we do not install additional R modules to the global environment.  So if you need, say the "coda" module, you will need to install it in your own environment.  
-
-## DESCRIPTION  
-
-### Install R Modules
-
-1.- Login Dalma.
-
-2.- (One time setup) Run this in terminal:
-
-`$RECIPESDIR/localize-R.sh`
-
-3.- Logout Dalma and login again.
-
-4.- Now you should be able to install R packages locally. For certain packages, gcc must be loaded before installation:
-
-`module load gcc`
-
-Then you enter R. Run this in terminal:
-
-`R`
-
-Then, inside R:
-
-`install.packages('coda',lib='~/R.local')`
-
-The command above will install package `coda` to your local folder `~/R.local`, which is in the R search path. The general formula is:
-
-`install.packages('<package-name>',lib='~/R.local')`
-
-### Remove R Modules
-
-In R, if you want to remove a package called coda:
-
-`remove.packages('coda',lib='~/R.local')`
-
-### Update R Modules
-
-In R, if you want to update a package called coda:
-
-`update.packages('coda',lib='~/R.local')`
-
-### List R Modules
-
-`installed.packages()`
+Refer to https://wikis.nyu.edu/display/ADRC/R+-+Create+and+manage+your+own+R+environment for more information.
 
 ## AUTHORS 
 	NYUAD HPC Apps Team:
