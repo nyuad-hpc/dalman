@@ -2,7 +2,7 @@
 .\" http://github.com/rtomayko/ronn/tree/0.7.3
 .
 .TH "DALMA\-RUN_R" "" "November 2017" "NYUAD" "Dalma Manual"
-Refer to https://wikis\.nyu\.edu/display/ADRC/R+\-+Create+and+manage+your+own+R+environment for more information\.
+Refer to here \fIhttps://wikis\.nyu\.edu/display/ADRC/R+\-+Create+and+manage+your+own+R+environment\fR for more information\.
 .
 .SH "AUTHORS"
 .

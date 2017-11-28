@@ -1,7 +1,7 @@
 Create a Personalized R Environment
 ====
 
-Refer to https://wikis.nyu.edu/display/ADRC/R+-+Create+and+manage+your+own+R+environment for more information.
+Refer to [here](https://wikis.nyu.edu/display/ADRC/R+-+Create+and+manage+your+own+R+environment) for more information.
 
 ## AUTHORS 
 	NYUAD HPC Apps Team:
